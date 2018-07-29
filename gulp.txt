@@ -1,0 +1,10 @@
+cd /d
+Z:/home/localhost/www/cl_land_biorecin_dif_mob
+
+npm i gulp --save-dev
+
+npm install --save-dev gulp-autoprefixer
+npm install --save-dev gulp-less
+npm install browser-sync gulp --save-dev
+npm install --save-dev gulp-rigger
+npm install --save-dev gulp-watch
