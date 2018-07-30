@@ -24,7 +24,7 @@ var path = {
         style: 'dev/less/style.less'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-        html: 'dev/*.html',
+        html: 'dev/**/*.html',
         js: 'dev/js/*.js',
         style: 'dev/less/*.less'
     }
