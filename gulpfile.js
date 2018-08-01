@@ -26,7 +26,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'dev/**/*.html',
         js: 'dev/js/*.js',
-        style: 'dev/less/*.less'
+        style: 'dev/less/**/*.less'
     }
 };
 

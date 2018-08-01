@@ -1231,3 +1231,21 @@ section {
 .main-menu__item a:hover {
   color: #000;
 }
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about--est {
+  background: url(/img/about/screen1.jpg) center top no-repeat;
+  color: #fff;
+}
+.about--merch {
+  background: url(/img/about/screen2.jpg) center top no-repeat;
+  color: #000;
+}
+.about--distil {
+  background: url(/img/about/screen3.jpg) center top no-repeat;
+  color: #fff;
+}

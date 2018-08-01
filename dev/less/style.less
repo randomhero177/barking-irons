@@ -18,30 +18,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .clearfix:before, .clearfix:after { display: table; line-height: 0; content: ""; }
 .clearfix:after { clear: both; }
 
-.main-menu {
-  &__list {
-    display: flex;
 
-  }
+@import 'components/main-menu.less';
+@import 'components/footer.less';
 
-  &__dropdown{
-    display: none;
-  }
-
-  &__item {
-    text-transform: uppercase;
-    &:hover {
-      display: block;
-    }
-    & a {
-      color: #000;
-      &:hover {
-        color: #000;
-      }
-    }
-  }
-
-  &__link {
-
-  }
-}
+@import 'pages/about.less';
