@@ -1302,7 +1302,7 @@ section {
 .footer__menu {
   display: flex;
   align-items: center;
-  height: 45px;
+  height: 105px;
 }
 .footer__menu--end {
   justify-content: flex-end;
@@ -1310,7 +1310,9 @@ section {
 .footer__menu-link {
   color: #aeaeae;
 }
-.footer__menu-link:hover {
+.footer__menu-link:hover,
+.footer__menu-link:active,
+.footer__menu-link:focus {
   color: #76797d;
   text-decoration: none;
 }

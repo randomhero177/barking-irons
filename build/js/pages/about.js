@@ -19,6 +19,7 @@ $(document).ready(function() {
       },
       init: function(){
           About.slider();
+          setAnchors('.about');
       }
     }
     About.init();
