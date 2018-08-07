@@ -30,3 +30,18 @@ function smoothScroll(elem){
     })
 
   }
+
+  (function () {
+    var block = $('.header__search-wrap'),
+    menuSearchBtn = $('.main-menu__search'),
+    menuCloseBtn = $('.header__search-btn');
+
+    menuSearchBtn.click(function(e){
+      e.preventDefault();
+      block.removeClass('hidden')
+    });
+    menuCloseBtn.click(function(e){
+      e.preventDefault();
+      block.addClass('hidden');
+    })
+  })();

@@ -160,6 +160,14 @@ transform: @transform;
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
+
+.hover(@color) {
+	&:hover, &:active, &:focus {
+		color: @color;
+		text-decoration: none;
+	}
+}
+
 .table {
 display: table;
 width: 100%;
