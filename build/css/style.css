@@ -1236,6 +1236,12 @@ section {
 }
 .main-menu__list {
   display: flex;
+  height: 78px;
+  padding: 22.5px 0;
+  align-items: center;
+}
+.main-menu__list--about {
+  justify-content: flex-end;
 }
 .main-menu__dropdown {
   display: none;
@@ -1255,7 +1261,7 @@ section {
   color: #000;
 }
 .main-menu__item--bag {
-  padding-left: 45px;
+  padding-left: 60px;
 }
 .main-menu__item--bag:before {
   content: '';
@@ -1264,7 +1270,70 @@ section {
   height: 100%;
   width: 1px;
   top: 0;
-  left: 15px;
+  left: 25px;
+  background: #aeaeae;
+}
+.main-menu__bag {
+  position: relative;
+  padding-left: 35.25px;
+}
+.main-menu__bag:hover,
+.main-menu__bag:active,
+.main-menu__bag:focus {
+  text-decoration: none;
+}
+.main-menu__bag:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 36px;
+  left: 0;
+  top: -11px;
+  background: url(/img/icons/bag.png) center center no-repeat;
+}
+.main-menu__search {
+  width: 35px;
+  display: block;
+  padding-left: 12px;
+}
+.main-menu__search:before {
+  content: '';
+  display: block;
+  left: 0;
+  top: -2px;
+  width: 25px;
+  height: 26px;
+  background: url(/img/icons/search.png) center center no-repeat;
+}
+.main-menu__logo {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 60px;
+}
+.main-menu__logo:hover,
+.main-menu__logo:active,
+.main-menu__logo:focus {
+  text-decoration: none;
+}
+.main-menu__logo:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -8px;
+  top: -7px;
+  width: 21px;
+  height: 35px;
+  background: url(/img/icons/logo.png) center center no-repeat;
+}
+.main-menu__logo:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  right: 22.5px;
   background: #aeaeae;
 }
 .main-menu__anchors {
@@ -1292,6 +1361,11 @@ section {
 }
 .main-menu__anchors-item:last-child a:hover {
   color: #c72a2a;
+  text-decoration: none;
+}
+.main-menu__link:hover,
+.main-menu__link:active,
+.main-menu__link:focus {
   text-decoration: none;
 }
 .footer {
@@ -1374,6 +1448,15 @@ section {
 }
 .text-mb {
   margin-bottom: 30px;
+}
+.header {
+  position: relative;
+}
+.header__search {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  border-top: 1px solid #000;
 }
 .about {
   height: 100vh;

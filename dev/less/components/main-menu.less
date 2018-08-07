@@ -3,7 +3,12 @@
 .main-menu {
   &__list {
     display: flex;
-
+    height: 78px;
+    padding: @pad*1.5 0;
+    align-items: center;
+    &--about {
+      justify-content: flex-end;
+    }
   }
 
   &__dropdown{
@@ -26,7 +31,7 @@
     }
 
     &--bag {
-      padding-left: @pad*3;
+      padding-left: @pad*4;
       &:before {
         content: '';
         display: block;
@@ -34,15 +39,76 @@
         height: 100%;
         width: 1px;
         top: 0;
-        left: @pad*1.5-@pad/2;
+        left: 25px;
         background: @grey;
       }
     }
   }
 
-  &__link {
-
+  &__bag {
+    position: relative;
+    padding-left: @pad*2.35;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 27px;
+      height: 36px;
+      left: 0;
+      top: -11px;
+      background: url(/img/icons/bag.png) center center no-repeat;
+    }
   }
+
+  &__search {
+    width: 35px;
+    display: block;
+    padding-left: 12px;
+
+    &:before {
+      content: '';
+      display: block;
+      left: 0;
+      top: -2px;
+      width: 25px;
+      height: 26px;
+      background: url(/img/icons/search.png) center center no-repeat;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    padding-left: @pad*2;
+    padding-right: @pad*4;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -8px;
+      top:-7px;
+      width: 21px;
+      height: 35px;
+      background: url(/img/icons/logo.png) center center no-repeat;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      top: 0;
+      right: @pad*2-@pad/2;
+      background: @grey;
+    }
+  }
+
 
   &__anchors {
     background: @primary;
@@ -69,6 +135,12 @@
           text-decoration: none;
         }
       }
+    }
+  }
+
+  &__link {
+    &:hover, &:active, &:focus {
+      text-decoration: none;
     }
   }
 }
