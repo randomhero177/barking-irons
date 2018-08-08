@@ -1,19 +1,30 @@
 <section class="instagram">
 <!-- InstaWidget -->
-<a href="https://instawidget.net/v/user/liverpoolfc" id="link-e830d9e03b47ce1aba5225195967782276cc395dce82e42e705dc402c226a1d9">@liverpoolfc</a>
-<script src="https://instawidget.net/js/instawidget.js?u=e830d9e03b47ce1aba5225195967782276cc395dce82e42e705dc402c226a1d9&width=900px"></script>
-	<div class="instagram__row">
-		<div class="instagram__item">
-			<img src="img/instagram/inst-1.jpg" alt="instagram">
-		</div>
-		<div class="instagram__item">
-			<img src="img/instagram/inst-2.jpg" alt="instagram">
-		</div>
-		<div class="instagram__item">
-			<img src="img/instagram/inst-3.jpg" alt="instagram">
-		</div>
-		<div class="instagram__item">
-			<img src="img/instagram/inst-4.jpg" alt="instagram">
-		</div>
+	<div class="" id="instagram">
+
 	</div>
+	<script>
+		$(window).load(function(){
+			/*
+		  $.getScript('https://instawidget.net/js/instawidget.js?u=a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2&width=100%', function() {
+		    alert('Load is completed');
+		  });
+			*/
+			function instawidget_adjust_height(e) {
+				if (e.origin === "http://instawidget.net" || e.origin === "https://instawidget.net") {
+					document.getElementById("a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2").style.height = e.data + "px";
+				}
+			}
+
+			function instawidget_render_iframe() {
+				var link = document.getElementById('link-a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2');
+				if (link) { link.style.display = 'none'; }
+				var block = document.getElementById('instagram');
+				console.log(block);
+				block.innerHTML = "<iframe id=\"a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2\" style=\"border:0;width:100%; height: 476px; margin:0;padding:0;\" scrolling=\"no\" frameborder=\"no\" src=\"https://instawidget.net/embed?u=a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2\"></iframe>";
+			}
+
+			instawidget_render_iframe();
+		});
+	</script>
 </section>

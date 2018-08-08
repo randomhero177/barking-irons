@@ -2,15 +2,37 @@
 <html lang="ru" class="no-js">
   //= components/header.html
   <body>
-	<div class="overflow">
+	<div class="overflow loading loading--full loading--fixed" id="main">
 		//= components/menu.html
+    <section class="main-screen" id="main-screen">
+      <div class="container">
+        <div class="main-screen__slider owl-carousel owl-theme" id="about-established">
+          <div class="main-screen__slider-item">
+            <img src="img/header/heder-1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+          </div>
+          <div class="main-screen__slider-item">
+            <img src="img/header/heder-2.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+          </div>
+          <div class="main-screen__slider-item">
+            <video id="example_video_2" class="video-js vjs-default-skin js-full-video"
+									controls preload="auto" width="1000"
+									data-setup='{"example_option":true}'>
+									<source src="img/header/01_miss-nothing.mp4" type="video/mp4" />
+									<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+								</video>
+          </div>
+        </div>
+      </div>
+    </section>
 		//= components/instagram.html
 
-    	//= components/footer.html
+  	//= components/footer.html
 	</div>
 
 
 
 	<script src="js/common.js"></script>
+  <script src="js/components/instagram.js"></script>
+  <script src="js/pages/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.loading {
+  position: relative;
+
+  &--full {
+    &:before {
+      display: block;
+      content: "";
+      background: rgba(255,255,255,.8);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 150;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 350px;
+      height: 350px;
+      background: url(/img/icons/loading.svg) center center no-repeat;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -175px;
+      margin-left: -175px;
+      z-index: 151;
+    }
+  }
+
+  &--fixed {
+    &:before {
+      position: fixed;
+    }
+    &:after {
+      position: fixed;
+    }
+  }
+}
