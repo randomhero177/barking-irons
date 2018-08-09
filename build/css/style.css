@@ -1559,7 +1559,11 @@ section {
   min-height: 300px;
 }
 .main-screen__slider {
+  background: #000;
   position: relative;
+}
+.main-screen__slider-item {
+  text-align: center;
 }
 .main-screen__slider .owl-nav button.owl-prev,
 .main-screen__slider .owl-nav button.owl-next {
