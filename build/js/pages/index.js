@@ -19,10 +19,18 @@ $(document).ready(function() {
       })
     },
     mainLoad: function() {
-      let block = $('#main');
+      let block = $('#main'),
+        instagram = $('.instagram');
+
       setTimeout(function(){
         block.removeClass('loading loading--full loading--fixed');
-      }, 3000)
+        instagram.addClass('loading loading--full');
+      }, 5000);
+      setTimeout(function(){
+        instagram.removeClass('loading loading--full');
+      }, 12000);
+
+
     },
     instagram: function(){
       let block = $('.instagram');
