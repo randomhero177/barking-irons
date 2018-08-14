@@ -1563,16 +1563,35 @@ section {
 .flex-list {
   display: flex;
 }
-.flex-list--equal {
-  margin-left: -15px;
-  margin-right: -15px;
+.flex-list--pad {
+  padding-top: 15px;
 }
-.flex-list--equal .flex-list__item {
-  padding: 15px;
+.flex-list--pad .flex-list__item {
+  padding-bottom: 15px;
+}
+.flex-list--pad .flex-list__item:nth-child(2n+1) {
+  padding-left: 15px;
+  padding-right: 7.5px;
+}
+.flex-list--pad .flex-list__item:nth-child(2n+2) {
+  padding-left: 7.5px;
+  padding-right: 15px;
 }
 .flex-list--equal .flex-list__item {
   flex-grow: 1;
   flex-basis: 0;
+}
+.flex-list--center {
+  justify-content: center;
+}
+.flex-list--50 {
+  flex-wrap: wrap;
+}
+.flex-list--50 .flex-list__item {
+  width: 50%;
+}
+.flex-list--50 .flex-list__item:nth-child(2n+1) {
+  text-align: right;
 }
 /* PAGES */
 .main-screen__slider {
