@@ -1,0 +1,33 @@
+.collection {
+  padding-bottom: @pad*2;
+  &__same-category {
+
+    &-item{
+      position: relative;
+      &--more {
+        background: @primary;
+      }
+    }
+
+    &-link {
+      color: @inverse;
+      display: block;
+      padding: @pad*3;
+      font-size: @fz*1.25;
+      .hover(@inverse);
+    }
+
+    &-desc {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: @pad*2 @pad;
+      & a {
+        display: block;
+        color: @primary;
+        .hover(@primary);
+      }
+    }
+  }
+}
