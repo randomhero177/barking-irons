@@ -19,7 +19,13 @@
     font-size: @fz;
   }
 
-  &-mb {
+  &-mb, &-container p {
     margin-bottom: @pad*2;
+  }
+
+  &-container {
+    &--bt {
+      border-top: 1px solid @primary;
+    }
   }
 }

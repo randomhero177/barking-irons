@@ -1447,8 +1447,12 @@ section {
 .text-init {
   font-size: 17px;
 }
-.text-mb {
+.text-mb,
+.text-container p {
   margin-bottom: 30px;
+}
+.text-container--bt {
+  border-top: 1px solid #000;
 }
 .header {
   position: relative;
