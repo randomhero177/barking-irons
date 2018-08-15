@@ -24,12 +24,12 @@ $(document).ready(function() {
       c.collectionSliderBlock.owlCarousel({
           loop:true,
           items:2,
-          nav:true,
+          nav: false,
           video:true,
           lazyLoad:true,
           dots: 0
         })
-      })
+
     },
     mainLoad: function() {
       var block = $('#main'),
@@ -53,6 +53,7 @@ $(document).ready(function() {
     },
     init: function(){
       HomePage.mainSlider();
+      HomePage.collectionSlider();
       HomePage.mainLoad();
       //HomePage.instagram();
     }

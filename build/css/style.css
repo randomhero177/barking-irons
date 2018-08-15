@@ -1661,6 +1661,25 @@ section {
 .main-screen__slider .owl-nav button.owl-next {
   right: 15px;
 }
+.main-screen__collection-item {
+  position: relative;
+}
+.main-screen__collection-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 30px;
+}
+.main-screen__collection-title a {
+  color: #000;
+}
+.main-screen__collection-title a:hover,
+.main-screen__collection-title a:active,
+.main-screen__collection-title a:focus {
+  color: #000;
+  text-decoration: none;
+}
 .about {
   height: 100vh;
   min-height: 900px;

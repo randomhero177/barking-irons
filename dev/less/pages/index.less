@@ -17,4 +17,22 @@
       right: 15px;
     }
   }
+
+  &__collection {
+    &-item {
+      position: relative;
+    }
+
+    &-title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: @pad @pad*2;
+      & a {
+        color: @primary;
+        .hover(@primary);
+      }
+    }
+  }
 }
