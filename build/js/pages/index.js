@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-  let HomePage = {
+  var HomePage = {
     config: {
-      sliderBlock: $('.main-screen__slider'),
+      mainSliderBlock: $('.main-screen__slider'),
+      collectionSliderBlock: $('#collection-slider')
     },
-    slider: function(){
-      let c = HomePage.config;
-      c.sliderBlock.each(function(i, el){
+    mainSlider: function(){
+      var c = HomePage.config;
+      c.mainSliderBlock.each(function(i, el){
         let curId = $(this).attr('id');
         $('#' + curId).owlCarousel({
           loop:true,
@@ -18,8 +19,20 @@ $(document).ready(function() {
         })
       })
     },
+    collectionSlider: function() {
+      var c = HomePage.config;
+      c.collectionSliderBlock.owlCarousel({
+          loop:true,
+          items:2,
+          nav:true,
+          video:true,
+          lazyLoad:true,
+          dots: 0
+        })
+      })
+    },
     mainLoad: function() {
-      let block = $('#main'),
+      var block = $('#main'),
         instagram = $('.instagram');
 
       setTimeout(function(){
@@ -33,13 +46,13 @@ $(document).ready(function() {
 
     },
     instagram: function(){
-      let block = $('.instagram');
+      var block = $('.instagram');
       setTimeout(function(){
         block.removeClass('loading loading--full');
       }, 7000)
     },
     init: function(){
-      HomePage.slider();
+      HomePage.mainSlider();
       HomePage.mainLoad();
       //HomePage.instagram();
     }

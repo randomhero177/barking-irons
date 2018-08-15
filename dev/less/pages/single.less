@@ -5,10 +5,58 @@
 
   &-page {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     
-    &__slider {
+    &__item {
+      padding: @pad*4 @pad*2;
+      width: 40%;
+      &-bread {
+        text-transform: uppercase;
+        font-size: @fz*1.25;
+      }
 
+      & a {
+        color: @primary;
+        .hover(@primary);
+      }
+      &-price {
+        font-size: @fz*1.5;
+        &--old {
+          text-decoration: line-through;
+        }
+        &--new {
+          color: #a81e2b;
+        }
+      }
+
+      &-mg {
+        margin-bottom: @pad*2;
+      }
+
+      &-shop {
+        text-align: right;
+      }
+
+      &-btn {
+        background: @primary;
+        color: @inverse;
+        display: inline-block;
+        padding: @pad*1.5 @pad*3;
+      }
+
+      &--info {
+        padding-right: @pad*5;
+      }
+
+      &-social {
+        &-icons {
+          margin: @pad 0;
+        }
+      }
+    }
+
+    &__slider {
+      text-align: center;
       &-wrap {
         height: 100%;
         position: absolute;
@@ -16,6 +64,11 @@
         left: 0;
         top: 0;
       }
+    }
+
+    &__rel {
+      position: relative;
+      z-index: 3;
     }
   }
 
