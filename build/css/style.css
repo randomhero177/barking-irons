@@ -1724,22 +1724,14 @@ section {
 .single-body {
   background: #eeeeee;
 }
-.single__slider {
-  background: #000;
+.single-page {
   position: relative;
+  height: 100vh;
 }
-.single__slider-item {
-  text-align: center;
-}
-.single__slider .owl-nav button.owl-prev,
-.single__slider .owl-nav button.owl-next {
+.single-page__slider-wrap {
+  height: 100%;
   position: absolute;
-  top: 50%;
-  margin-top: -68px;
-}
-.single__slider .owl-nav button.owl-prev {
-  left: 15px;
-}
-.single__slider .owl-nav button.owl-next {
-  right: 15px;
+  width: 100%;
+  left: 0;
+  top: 0;
 }

@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-  let HomePage = {
+  let SinglePage = {
     config: {
       sliderBlock: $('.main-screen__slider'),
     },
     slider: function(){
-      let c = HomePage.config;
+      let c = SinglePage.config;
       c.sliderBlock.each(function(i, el){
         let curId = $(this).attr('id');
         $('#' + curId).owlCarousel({
@@ -39,10 +39,10 @@ $(document).ready(function() {
       }, 7000)
     },
     init: function(){
-      HomePage.slider();
-      HomePage.mainLoad();
-      //HomePage.instagram();
+      SinglePage.slider();
+      SinglePage.mainLoad();
+      //SinglePage.instagram();
     }
   }
-  HomePage.init();
+  SinglePage.init();
 });

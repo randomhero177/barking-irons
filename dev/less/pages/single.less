@@ -3,22 +3,21 @@
     background: #eeeeee;
   }
 
-  &__slider {
-    background: @primary;
-    &-item {
-      text-align: center;
-    }
+  &-page {
     position: relative;
-    & .owl-nav button.owl-prev, & .owl-nav button.owl-next {
-      position: absolute;
-      top: 50%;
-      margin-top: -68px;
-    }
-    & .owl-nav button.owl-prev {
-      left: 15px;
-    }
-    & .owl-nav button.owl-next {
-      right: 15px;
+    height: 100vh;
+    
+    &__slider {
+
+      &-wrap {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
     }
   }
+
+
 }
