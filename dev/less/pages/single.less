@@ -6,13 +6,39 @@
   &-page {
     position: relative;
     min-height: 100vh;
-    
+
+    &__container {
+      position: relative;
+    }
     &__item {
       padding: @pad*4 @pad*2;
-      width: 40%;
+      width: 45%;
+
+      &-toggle {
+        position: relative;
+        padding-left: @pad;
+        cursor: pointer;
+        &:before {
+          content: '+';
+          display: inline-block;
+          position: absolute;
+          left: 0;
+        }
+        &.in {
+          &:before {
+            content: '-';
+          }
+        }
+
+        &-txt {
+          display: none;
+        }
+
+      }
+
       &-bread {
         text-transform: uppercase;
-        font-size: @fz*1.25;
+        margin-bottom: @pad/2;
       }
 
       & a {
@@ -63,6 +89,15 @@
         width: 100%;
         left: 0;
         top: 0;
+        & * {
+          max-height: 100%;
+          position: relative;
+        }
+      }
+      &-item {
+        & img {
+          width: auto;
+        }
       }
     }
 

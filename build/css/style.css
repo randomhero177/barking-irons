@@ -1435,8 +1435,11 @@ section {
   padding-bottom: 30px;
 }
 .heading__text {
-  margin: : 0;
+  margin: 0;
   font-size: 46.75px;
+}
+.text-big {
+  font-size: 34px;
 }
 .text-medium {
   font-size: 29.75px;
@@ -1448,6 +1451,9 @@ section {
   font-size: 17px;
 }
 .text-small {
+  font-size: 15.3px;
+}
+.text-xsmall {
   font-size: 12.75px;
 }
 .text-mb,
@@ -1661,6 +1667,9 @@ section {
 .main-screen__slider .owl-nav button.owl-next {
   right: 15px;
 }
+.main-screen__collection {
+  padding: 15px;
+}
 .main-screen__collection-item {
   position: relative;
 }
@@ -1753,13 +1762,33 @@ section {
   position: relative;
   min-height: 100vh;
 }
+.single-page__container {
+  position: relative;
+}
 .single-page__item {
   padding: 60px 30px;
-  width: 40%;
+  width: 45%;
+}
+.single-page__item-toggle {
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.single-page__item-toggle:before {
+  content: '+';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+.single-page__item-toggle.in:before {
+  content: '-';
+}
+.single-page__item-toggle-txt {
+  display: none;
 }
 .single-page__item-bread {
   text-transform: uppercase;
-  font-size: 21.25px;
+  margin-bottom: 7.5px;
 }
 .single-page__item a {
   color: #000;
@@ -1806,6 +1835,13 @@ section {
   width: 100%;
   left: 0;
   top: 0;
+}
+.single-page__slider-wrap * {
+  max-height: 100%;
+  position: relative;
+}
+.single-page__slider-item img {
+  width: auto;
 }
 .single-page__rel {
   position: relative;

@@ -27,7 +27,8 @@ $(document).ready(function() {
           nav: false,
           video:true,
           lazyLoad:true,
-          dots: 0
+          dots: 0,
+          margin: 15
         })
 
     },
