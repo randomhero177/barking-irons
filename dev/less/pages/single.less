@@ -6,14 +6,12 @@
   &-page {
     position: relative;
     min-height: 100vh;
+    padding-top: @pad*4;
 
     &__container {
       position: relative;
     }
     &__item {
-      padding: @pad*4 @pad*2;
-      width: 45%;
-
       &-toggle {
         position: relative;
         padding-left: @pad;
@@ -71,7 +69,7 @@
       }
 
       &--info {
-        padding-right: @pad*5;
+        padding-right: @pad*8;
       }
 
       &-social {
@@ -90,8 +88,13 @@
         left: 0;
         top: 0;
         & * {
-          max-height: 100%;
+          height: 100%;
           position: relative;
+
+        }
+        & * img {
+          height: auto;
+          max-height: 100%;
         }
       }
       &-item {
@@ -99,6 +102,29 @@
           width: auto;
         }
       }
+
+      &-dots{
+        align-items: baseline;
+
+        &-wrap {
+          margin-top: @pad*15;
+        }
+
+        & .owl-dot {
+          counter-increment: section;
+          padding: 0;
+          padding-left: @pad/2;
+          background: none;
+          border: 0;
+
+          &:before {
+            content: '0' counter(section);
+            display: inline-block;
+
+          }
+        }
+      } 
+      
     }
 
     &__rel {

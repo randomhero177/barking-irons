@@ -6,32 +6,31 @@ $(document).ready(function() {
       toggleEl: $('.single-page__item-toggle')
     },
     slider: function(){
-      let c = SinglePage.config;
+      var c = SinglePage.config;
       c.sliderBlock.owlCarousel({
         loop:true,
         items:1,
-        nav:true,
+        nav:false,
         video:true,
         lazyLoad:true,
-        dots: 1
+        dots: 1,
+        dotsContainer: '#single-slider-dots',
       })
     },
     toggle: function(){
       var c = SinglePage.config,
         el = c.toggleEl;
-        el.each(function(i, el){
-
-          $(this).click(function(e){
-            var href = $(this).data('href');
-            $('#' + href).toggle(400);
-            $(this).toggleClass('in');
-          })
+      el.each(function(i, el){
+        $(this).click(function(e){
+          var href = $(this).data('href');
+          $('#' + href).toggle(400);
+          $(this).toggleClass('in');
         })
+      })
     },
     init: function(){
       SinglePage.slider();
       SinglePage.toggle();
-      console.log('sdfsdf');
     }
   }
   SinglePage.init();
