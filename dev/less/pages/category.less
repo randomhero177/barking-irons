@@ -5,14 +5,28 @@
   grid-template-rows: repeat(3,100px);
   justify-content: center;
   align-content: end;
+
+
+  &-box {
+    font-size: 0;
+    &__item {
+      display: inline-block;
+      width: 33.333333333%;
+      &--big {
+        width: 66.6666%;
+        float: right;
+      }
+    }
+
+  }
 }
 
 .box {
   background-color: #444;
   color: #fff;
-  
+
   padding: 20px;
-  
+
 }
 
 .item1 {
@@ -27,4 +41,3 @@
 .item3 {
   grid-column: e("3 / 5");
 }
-

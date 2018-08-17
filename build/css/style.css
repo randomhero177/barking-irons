@@ -1876,6 +1876,17 @@ section {
   justify-content: center;
   align-content: end;
 }
+.category-box {
+  font-size: 0;
+}
+.category-box__item {
+  display: inline-block;
+  width: 33.33333333%;
+}
+.category-box__item--big {
+  width: 66.6666%;
+  float: right;
+}
 .box {
   background-color: #444;
   color: #fff;
