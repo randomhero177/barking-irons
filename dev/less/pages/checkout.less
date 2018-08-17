@@ -1,0 +1,36 @@
+.checkout {
+ &__table {
+  border-top: 1px solid @primary;
+  &-item {
+
+  }
+ }
+
+ &__item {
+  padding: @pad @pad*2;
+
+  & + .checkout__item {
+    border-top: 1px dashed @primary;
+  }
+  &-img {
+    max-width: 300px;
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: @pad; 
+  }
+
+  &-info {
+    flex-grow: 2;
+  }
+
+ }
+
+ &__list {
+  border-right: 1px solid @primary;
+  flex-grow: 2;
+ }
+}

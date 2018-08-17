@@ -1901,3 +1901,28 @@ section {
   color: #000;
   text-decoration: none;
 }
+.checkout__table {
+  border-top: 1px solid #000;
+}
+.checkout__item {
+  padding: 15px 30px;
+}
+.checkout__item + .checkout__item {
+  border-top: 1px dashed #000;
+}
+.checkout__item-img {
+  max-width: 300px;
+}
+.checkout__item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+.checkout__item-info {
+  flex-grow: 2;
+}
+.checkout__list {
+  border-right: 1px solid #000;
+  flex-grow: 2;
+}

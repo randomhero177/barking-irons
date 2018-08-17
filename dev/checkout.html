@@ -2,22 +2,159 @@
 <html lang="ru" class="no-js">
   //= components/header.html
   <body>
-	<div class="overflow">
-		//= components/menu.html
+  <div class="overflow">
+    //= components/menu.html
     <section class="checkout">
       <div class="container">
-        <div class="checkout__table">
+        <div class="checkout__table flex-list">
           <div class="checkout__table-item checkout__list">
-            <div class="checkout__list-item"></div>
-            <div class="checkout__list-item"></div>
-            <div class="checkout__list-shipping"></div>
+
+            <div class="checkout__item flex-list">
+              <div class="checkout__item-img flex-list__item">
+                <img src="img/img7.jpg" alt="img">
+              </div>
+              <div class="checkout__item-info flex-list flex-list--equal flex-list__item">
+                <div class="checkout__item-desc flex-list__item">
+                  <div class="checkout__item-heading">
+                    <div class="checkout__item-title">
+                      WAR IS OVER TEE
+                    </div>
+                    <div class="checkout__item-title checkout__item-color">
+                      WHITE
+                    </div>  
+                  </div>
+                  <div>
+                    <div class="text-xsmall">
+                      SIZE:  M                    
+                    </div>
+                    <div class="text-xsmall">
+                      QTY:   2 +/-
+                    </div>  
+                  </div>
+                  
+                  <div class="text-xsmall checkout__item-control-group">
+                    <div>
+                      * SAVE FOR LATER   
+                    </div>
+                    <div>
+                      X REMOVE  
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__item-desc checkout__item-total flex-list__item">
+                  <div>
+                    TOTAL: <span>$75.00</span>
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+
+            <div class="checkout__item flex-list">
+              <div class="checkout__item-img flex-list__item">
+                <img src="img/img8.jpg" alt="img">
+              </div>
+              <div class="checkout__item-info flex-list flex-list--equal flex-list__item">
+                <div class="checkout__item-desc flex-list__item">
+                  <div class="checkout__item-heading">
+                    <div class="checkout__item-title">
+                      WAR IS OVER TEE
+                    </div>
+                    <div class="checkout__item-title checkout__item-color">
+                      WHITE
+                    </div>  
+                  </div>
+                  <div>
+                    <div class="text-xsmall">
+                      SIZE:  M                    
+                    </div>
+                    <div class="text-xsmall">
+                      QTY:   2 +/-
+                    </div>  
+                  </div>
+                  
+                  <div class="text-xsmall checkout__item-control-group">
+                    <div>
+                      * SAVE FOR LATER   
+                    </div>
+                    <div>
+                      X REMOVE  
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__item-desc checkout__item-total flex-list__item">
+                  <div>
+                    TOTAL: <span>$75.00</span>
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+
+            <div class="checkout__item checkout__item-shipping">
+              <div>
+                Select shipping method
+              </div>
+              <div>
+                <form action="">
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="male"> $6 Flat Rate Shipping domestically
+                    </div>
+                    <div>
+                      Delivery within 3-4 days
+                    </div>
+                  </div>
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="female"> UPS 2nd Day option
+                    </div>
+                    <div>
+                      2 business days
+                    </div>
+                  </div>
+                  
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="female"> UPS NEXT DAY option
+                    </div>
+                    <div>
+                      1 business day
+                    </div>
+                  </div>
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="other"> $45 International Flat Rate
+                    </div>
+                    <div>
+                      5-10 business days
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="checkout__totals">
+            <div class="checkout__totals-item checkout__totals-sutotal">
+              <div class="flex-list flex-list--spb">
+                <div class="flex-list__item">Subtotal</div>
+                <div class="flex-list__item">$1740.00</div>
+              </div>
+            </div>
+            <div class="checkout__totals-item checkout__totals-sutotal">
+              <div>Shipping </div>
+              <div class="flex-list flex-list--spb">
+                <div class="flex-list__item">UPS 2-Day Delivery</div>
+                <div class="flex-list__item">$ 0.00</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-	</div>
+  </div>
 
   //= components/footer.html
-	<script src="js/pages/about.js"></script>
+  <script src="js/pages/about.js"></script>
   </body>
 </html>

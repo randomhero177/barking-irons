@@ -18,101 +18,238 @@
   	<script src="js/global/jquery.min.js"></script>
   </head>
   <body>
-	<div class="overflow">
-		<header class="header">
-			<div class="container">
-				<div class="row main-menu">
-					<nav class="col-sm-9">
-						<ul class="main-menu__list">
-							<li class="main-menu__item">
-								<a href="/" class="main-menu__logo">BARKING IRONS</a>
-							</li>
-							<li class="main-menu__item">
-								<a href="" class="main-menu__link">Collections</a>
-								<ul class="main-menu__dropdown">
-									<li>
-										<a href="#">BILLY JOEL</a>
-									</li>
-									<li>
-										<a href="#">KINGS OF LEON</a>
-									</li>
-									<li>
-										<a href="#">ROCKSTAR GAMES</a>
-									</li>
-								</ul>
-								<div class="main-menu__dropdown archive">
-										<a href="#">ARCHIVE</a>
-								</div>
-							</li>
-							<li class="main-menu__item dropdown">
-								<a href="" class="main-menu__link">Shop</a>
-								<ul class="main-menu__dropdown">
-									<li>
-										<a href="#">T-SHIRTS</a>
-									</li>
-									<li>
-										<a href="#">SHIRTS</a>
-									</li>
-									<li>
-										<a href="#">OUTERWEAR</a>
-									</li>
-									<li>
-										<a href="#">ACCESSORIES</a>
-									</li>
-								</ul>
-							</li>
-							<li class="main-menu__item"><a href="" class="main-menu__link">Mix-Tapes</a></li>
-							<li class="main-menu__item"><a href="" class="main-menu__link">Spirits</a></li>
-						</ul>
-					</nav>
-					<div class="header__right  col-sm-3">
-						<div class="main-menu__list main-menu__list--about">
-							<div class="main-menu__item"><a href="about.html" class="main-menu__link">About</a></div>
-							<div class="main-menu__item"><a href="#" class="main-menu__search"></a></div>
-							<div class="main-menu__item main-menu__item--bag"><a href="" class="main-menu__bag">(<span id="in-bag-count">0</span>)</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header__search-wrap hidden">
-				<div class="header__search">
-					<div class="container">
-						<form class="header__search-form" action="search.html" method="GET">
-							<input type="text" name="search" value="" placeholder="SEARCH HERE" class="header__search-control">
-							<button type="button" class="header__search-btn">X</button>
-						</form>
-					</div>
-				</div>
-				<div class="header__suggestions">
-					<div class="container">
-						<ul class="header__suggestions-list">
-							<li class="header__suggestions-item">
-								<a href="#" class="header__suggestions-link">Suggestions</a>
-							</li>
-							<li class="header__suggestions-item">
-								<a href="#" class="header__suggestions-link">Bags</a>
-							</li>
-							<li class="header__suggestions-item">
-								<a href="#" class="header__suggestions-link">T-SHIRTS</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		
-		</header>
+  <div class="overflow">
+    <header class="header">
+    	<div class="container">
+    		<div class="row main-menu">
+    			<nav class="col-sm-9">
+    				<ul class="main-menu__list">
+    					<li class="main-menu__item">
+    						<a href="/" class="main-menu__logo">BARKING IRONS</a>
+    					</li>
+    					<li class="main-menu__item">
+    						<a href="" class="main-menu__link">Collections</a>
+    						<ul class="main-menu__dropdown">
+    							<li>
+    								<a href="#">BILLY JOEL</a>
+    							</li>
+    							<li>
+    								<a href="#">KINGS OF LEON</a>
+    							</li>
+    							<li>
+    								<a href="#">ROCKSTAR GAMES</a>
+    							</li>
+    						</ul>
+    						<div class="main-menu__dropdown archive">
+    								<a href="#">ARCHIVE</a>
+    						</div>
+    					</li>
+    					<li class="main-menu__item dropdown">
+    						<a href="" class="main-menu__link">Shop</a>
+    						<ul class="main-menu__dropdown">
+    							<li>
+    								<a href="#">T-SHIRTS</a>
+    							</li>
+    							<li>
+    								<a href="#">SHIRTS</a>
+    							</li>
+    							<li>
+    								<a href="#">OUTERWEAR</a>
+    							</li>
+    							<li>
+    								<a href="#">ACCESSORIES</a>
+    							</li>
+    						</ul>
+    					</li>
+    					<li class="main-menu__item"><a href="" class="main-menu__link">Mix-Tapes</a></li>
+    					<li class="main-menu__item"><a href="" class="main-menu__link">Spirits</a></li>
+    				</ul>
+    			</nav>
+    			<div class="header__right  col-sm-3">
+    				<div class="main-menu__list main-menu__list--about">
+    					<div class="main-menu__item"><a href="about.html" class="main-menu__link">About</a></div>
+    					<div class="main-menu__item"><a href="#" class="main-menu__search"></a></div>
+    					<div class="main-menu__item main-menu__item--bag"><a href="" class="main-menu__bag">(<span id="in-bag-count">0</span>)</a></div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="header__search-wrap hidden">
+    		<div class="header__search">
+    			<div class="container">
+    				<form class="header__search-form" action="search.html" method="GET">
+    					<input type="text" name="search" value="" placeholder="SEARCH HERE" class="header__search-control">
+    					<button type="button" class="header__search-btn">X</button>
+    				</form>
+    			</div>
+    		</div>
+    		<div class="header__suggestions">
+    			<div class="container">
+    				<ul class="header__suggestions-list">
+    					<li class="header__suggestions-item">
+    						<a href="#" class="header__suggestions-link">Suggestions</a>
+    					</li>
+    					<li class="header__suggestions-item">
+    						<a href="#" class="header__suggestions-link">Bags</a>
+    					</li>
+    					<li class="header__suggestions-item">
+    						<a href="#" class="header__suggestions-link">T-SHIRTS</a>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    
+    </header>
     <section class="checkout">
       <div class="container">
-        <div class="checkout__table">
+        <div class="checkout__table flex-list">
           <div class="checkout__table-item checkout__list">
-            <div class="checkout__list-item"></div>
-            <div class="checkout__list-item"></div>
-            <div class="checkout__list-shipping"></div>
+
+            <div class="checkout__item flex-list">
+              <div class="checkout__item-img flex-list__item">
+                <img src="img/img7.jpg" alt="img">
+              </div>
+              <div class="checkout__item-info flex-list flex-list--equal flex-list__item">
+                <div class="checkout__item-desc flex-list__item">
+                  <div class="checkout__item-heading">
+                    <div class="checkout__item-title">
+                      WAR IS OVER TEE
+                    </div>
+                    <div class="checkout__item-title checkout__item-color">
+                      WHITE
+                    </div>  
+                  </div>
+                  <div>
+                    <div class="text-xsmall">
+                      SIZE:  M                    
+                    </div>
+                    <div class="text-xsmall">
+                      QTY:   2 +/-
+                    </div>  
+                  </div>
+                  
+                  <div class="text-xsmall checkout__item-control-group">
+                    <div>
+                      * SAVE FOR LATER   
+                    </div>
+                    <div>
+                      X REMOVE  
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__item-desc checkout__item-total flex-list__item">
+                  <div>
+                    TOTAL: <span>$75.00</span>
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+
+            <div class="checkout__item flex-list">
+              <div class="checkout__item-img flex-list__item">
+                <img src="img/img8.jpg" alt="img">
+              </div>
+              <div class="checkout__item-info flex-list flex-list--equal flex-list__item">
+                <div class="checkout__item-desc flex-list__item">
+                  <div class="checkout__item-heading">
+                    <div class="checkout__item-title">
+                      WAR IS OVER TEE
+                    </div>
+                    <div class="checkout__item-title checkout__item-color">
+                      WHITE
+                    </div>  
+                  </div>
+                  <div>
+                    <div class="text-xsmall">
+                      SIZE:  M                    
+                    </div>
+                    <div class="text-xsmall">
+                      QTY:   2 +/-
+                    </div>  
+                  </div>
+                  
+                  <div class="text-xsmall checkout__item-control-group">
+                    <div>
+                      * SAVE FOR LATER   
+                    </div>
+                    <div>
+                      X REMOVE  
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__item-desc checkout__item-total flex-list__item">
+                  <div>
+                    TOTAL: <span>$75.00</span>
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+
+            <div class="checkout__item checkout__item-shipping">
+              <div>
+                Select shipping method
+              </div>
+              <div>
+                <form action="">
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="male"> $6 Flat Rate Shipping domestically
+                    </div>
+                    <div>
+                      Delivery within 3-4 days
+                    </div>
+                  </div>
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="female"> UPS 2nd Day option
+                    </div>
+                    <div>
+                      2 business days
+                    </div>
+                  </div>
+                  
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="female"> UPS NEXT DAY option
+                    </div>
+                    <div>
+                      1 business day
+                    </div>
+                  </div>
+                  <div class="flex-list flex-list--spb">
+                    <div>
+                      <input type="radio" name="gender" value="other"> $45 International Flat Rate
+                    </div>
+                    <div>
+                      5-10 business days
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="checkout__totals">
+            <div class="checkout__totals-item checkout__totals-sutotal">
+              <div class="flex-list flex-list--spb">
+                <div class="flex-list__item">Subtotal</div>
+                <div class="flex-list__item">$1740.00</div>
+              </div>
+            </div>
+            <div class="checkout__totals-item checkout__totals-sutotal">
+              <div>Shipping </div>
+              <div class="flex-list flex-list--spb">
+                <div class="flex-list__item">UPS 2-Day Delivery</div>
+                <div class="flex-list__item">$ 0.00</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-	</div>
+  </div>
 
   <footer class="footer">
   	<div class="container">
@@ -166,6 +303,6 @@
   <script src="js/global/owl.carousel.min.js"></script>
   <script src="js/global/bootstrap.min.js"></script>
   <script src="js/common.js"></script>
-	<script src="js/pages/about.js"></script>
+  <script src="js/pages/about.js"></script>
   </body>
 </html>
