@@ -38,7 +38,7 @@ function smoothScroll(elem){
 
     menuSearchBtn.click(function(e){
       e.preventDefault();
-      block.removeClass('hidden')
+      block.toggleClass('hidden')
     });
     menuCloseBtn.click(function(e){
       e.preventDefault();

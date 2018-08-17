@@ -3,10 +3,26 @@
     font-size: 0;
     &__item {
       display: inline-block;
+      position: relative;
       width: 33.333333333%;
+      float: left;
+
       &--big {
         width: 66.6666%;
         float: right;
+      }
+
+      &-title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 15px 30px;
+        font-size: @fz;
+        & a {
+          color: @primary;
+          .hover(@primary);
+        }
       }
     }
 
