@@ -21,30 +21,30 @@
                     </div>
                     <div class="checkout__item-title checkout__item-color">
                       WHITE
-                    </div>  
+                    </div>
                   </div>
                   <div>
                     <div class="text-xsmall">
-                      SIZE:  M                    
+                      SIZE:  M
                     </div>
                     <div class="text-xsmall">
                       QTY:   2 +/-
-                    </div>  
+                    </div>
                   </div>
-                  
+
                   <div class="text-xsmall checkout__item-control-group">
                     <div>
-                      * SAVE FOR LATER   
+                      * SAVE FOR LATER
                     </div>
                     <div>
-                      X REMOVE  
+                      X REMOVE
                     </div>
                   </div>
                 </div>
                 <div class="checkout__item-desc checkout__item-total flex-list__item">
                   <div>
                     TOTAL: <span>$75.00</span>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,69 +62,77 @@
                     </div>
                     <div class="checkout__item-title checkout__item-color">
                       WHITE
-                    </div>  
+                    </div>
                   </div>
                   <div>
                     <div class="text-xsmall">
-                      SIZE:  M                    
+                      SIZE:  M
                     </div>
                     <div class="text-xsmall">
                       QTY:   2 +/-
-                    </div>  
+                    </div>
                   </div>
-                  
+
                   <div class="text-xsmall checkout__item-control-group">
                     <div>
-                      * SAVE FOR LATER   
+                      * SAVE FOR LATER
                     </div>
                     <div>
-                      X REMOVE  
+                      X REMOVE
                     </div>
                   </div>
                 </div>
                 <div class="checkout__item-desc checkout__item-total flex-list__item">
                   <div>
                     TOTAL: <span>$75.00</span>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>
 
 
-            <div class="checkout__item checkout__item-shipping">
-              <div>
+            <div class="checkout__item pt40">
+              <div class="heading">
                 Select shipping method
               </div>
-              <div>
+              <div class="text-xsmall">
                 <form action="">
-                  <div class="flex-list flex-list--spb">
-                    <div>
-                      <input type="radio" name="gender" value="male"> $6 Flat Rate Shipping domestically
+                  <div class="flex-list checkout__item-shipping">
+                    <div class="checkout__radio-wrap">
+                      <input type="radio" name="gender" value="male" class="checkout__radio-btn">
+                      <span class="checkout__radio-btn-fake"></span>
+                      $6 Flat Rate Shipping domestically
                     </div>
                     <div>
                       Delivery within 3-4 days
                     </div>
                   </div>
-                  <div class="flex-list flex-list--spb">
-                    <div>
-                      <input type="radio" name="gender" value="female"> UPS 2nd Day option
+                  <div class="flex-list checkout__item-shipping">
+                    <div class="checkout__radio-wrap">
+                      <input type="radio" name="gender" value="female" class="checkout__radio-btn">
+                      <span class="checkout__radio-btn-fake"></span>
+                       UPS 2nd Day option
                     </div>
                     <div>
                       2 business days
                     </div>
                   </div>
-                  
-                  <div class="flex-list flex-list--spb">
-                    <div>
-                      <input type="radio" name="gender" value="female"> UPS NEXT DAY option
+
+                  <div class="flex-list checkout__item-shipping">
+                    <div class="checkout__radio-wrap">
+                      <input type="radio" name="gender" value="female" class="checkout__radio-btn">
+                      <span class="checkout__radio-btn-fake"></span>
+                      UPS NEXT DAY option
                     </div>
                     <div>
                       1 business day
                     </div>
                   </div>
-                  <div class="flex-list flex-list--spb">
-                    <div>
-                      <input type="radio" name="gender" value="other"> $45 International Flat Rate
+                  <div class="flex-list checkout__item-shipping">
+                    <div class="checkout__radio-wrap">
+                      <input type="radio" name="gender" value="other" class="checkout__radio-btn">
+                      <span class="checkout__radio-btn-fake"></span>
+                      $45 International Flat Rate
                     </div>
                     <div>
                       5-10 business days
@@ -134,20 +142,48 @@
               </div>
             </div>
           </div>
-          <div class="checkout__totals">
-            <div class="checkout__totals-item checkout__totals-sutotal">
-              <div class="flex-list flex-list--spb">
-                <div class="flex-list__item">Subtotal</div>
-                <div class="flex-list__item">$1740.00</div>
+
+          <div class="checkout__totals text-xsmall">
+            <form class="checkout__form" action="index.html" method="post" id="checkout-form">
+              <div class="checkout__totals-item checkout__totals-sutotal">
+                <div class="flex-list flex-list--spb">
+                  <div class="flex-list__item">Subtotal</div>
+                  <div class="flex-list__item">$1740.00</div>
+                </div>
               </div>
-            </div>
-            <div class="checkout__totals-item checkout__totals-sutotal">
-              <div>Shipping </div>
-              <div class="flex-list flex-list--spb">
-                <div class="flex-list__item">UPS 2-Day Delivery</div>
-                <div class="flex-list__item">$ 0.00</div>
+              <div class="checkout__totals-item">
+                <div>Shipping </div>
+                <div class="flex-list flex-list--spb">
+                  <div class="flex-list__item">UPS 2-Day Delivery</div>
+                  <div class="flex-list__item">$ 0.00</div>
+                </div>
               </div>
-            </div>
+              <div class="checkout__totals-item">
+                <div class="flex-list flex-list--spb">
+                  <div class="flex-list__item">Tax</div>
+                  <div class="flex-list__item">$ 0.00</div>
+                </div>
+              </div>
+              <div class="checkout__totals-item">
+                <div class="flex-list flex-list--spb">
+                  <div class="flex-list__item">Total</div>
+                  <div class="flex-list__item">$1740.00</div>
+                </div>
+              </div>
+              <div class="checkout__totals-item">
+                <div class="">
+                  + USE Promotion code
+                </div>
+                <div class="flex-list flex-list--spb checkout__promocode">
+                  <div class="flex-list__item">
+                    <input type="text" name="promoCode" value="" class="form-control checkout__promocode-inp">
+                  </div>
+                  <div class="flex-list__item checkout__promocode-btn">submit</div>
+                </div>
+              </div>
+              <button type="button" name="button" class="btn btn-block btn-checkout">CHECKOUT NOW</button>
+            </form>
+
           </div>
         </div>
       </div>
