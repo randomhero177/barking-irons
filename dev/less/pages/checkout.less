@@ -1,19 +1,28 @@
 .checkout {
  &__table {
   border-top: 1px solid @primary;
-  &-item {
-
-  }
  }
 
  &__item {
   padding: @pad @pad*2;
-
+  position: relative;
   & + .checkout__item {
-    border-top: 1px dashed @primary;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(/img/icons/dashed.png) center center;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+    }
   }
   &-img {
     max-width: 300px;
+    & img {
+      max-width: 300px;
+    }
   }
 
   &-desc {
@@ -80,9 +89,9 @@
       position: absolute;
       z-index: 5;
       left: 0;
-      top: 0;
+      top: -50%;
       width: 100%;
-      height: 100%;
+      height: 150%;
       cursor: pointer;
       &-fake {
         &:before {
