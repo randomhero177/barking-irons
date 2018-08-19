@@ -1,16 +1,17 @@
+@header-border: #636363;
 
 .header {
   position: relative;
   &__search {
-    border-bottom: 1px solid #636363;
+    border-bottom: 1px solid @header-border;
     padding-bottom: @pad;
 
 
     &-wrap {
       background: @inverse;
-      border-top: 1px solid #636363;
+      border-top: 1px solid @header-border;
 
-      z-index: 5;
+      z-index: 3;
       padding: @pad 0;
       position: absolute;
       width: 100%;

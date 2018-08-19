@@ -1307,6 +1307,9 @@ section {
   left: 25px;
   background: #aeaeae;
 }
+.main-menu__item--bag:hover .main-menu__checkout {
+  display: block;
+}
 .main-menu__bag {
   position: relative;
   padding-left: 35.25px;
@@ -1400,6 +1403,46 @@ section {
 .main-menu__link:hover,
 .main-menu__link:active,
 .main-menu__link:focus {
+  text-decoration: none;
+}
+.main-menu__checkout {
+  position: absolute;
+  width: 500px;
+  right: -30px;
+  top: 99%;
+  z-index: 6;
+  padding-top: 21px;
+  display: none;
+}
+.main-menu__checkout-info {
+  background: #fff;
+  padding: 15px 30px 30px;
+  border-left: 1px solid #b5b5b5;
+}
+.main-menu__checkout-img {
+  max-width: 200px;
+}
+.main-menu__checkout-view {
+  border-top: 2px solid #b5b5b5;
+  background: #fff;
+  padding: 15px 0;
+  text-align: center;
+  display: block;
+  border-left: 1px solid #b5b5b5;
+}
+.main-menu__checkout-btn {
+  background: #b5b5b5;
+  border: 1px solid #b5b5b5;
+  padding: 15px 0;
+  text-align: center;
+}
+.main-menu__checkout-btn a {
+  color: #fff;
+}
+.main-menu__checkout-btn a:hover,
+.main-menu__checkout-btn a:active,
+.main-menu__checkout-btn a:focus {
+  color: #fff;
   text-decoration: none;
 }
 .footer {
@@ -1506,7 +1549,7 @@ section {
 .header__search-wrap {
   background: #fff;
   border-top: 1px solid #636363;
-  z-index: 5;
+  z-index: 3;
   padding: 15px 0;
   position: absolute;
   width: 100%;
@@ -1733,15 +1776,15 @@ section {
   justify-content: center;
 }
 .about--est {
-  background: url(/img/about/screen1.jpg) center top no-repeat;
+  background: url(../img/about/screen1.jpg) center top no-repeat;
   color: #fff;
 }
 .about--merch {
-  background: url(/img/about/screen2.jpg) center top no-repeat;
+  background: url(../img/about/screen2.jpg) center top no-repeat;
   color: #000;
 }
 .about--distil {
-  background: url(/img/about/screen3.jpg) center center no-repeat;
+  background: url(../img/about/screen3.jpg) center center no-repeat;
   color: #fff;
 }
 .about__slider {
@@ -1792,6 +1835,9 @@ section {
   padding-right: 15px;
 }
 .single-body {
+  background: #eeeeee;
+}
+.single-body .main-menu__item-dropdown {
   background: #eeeeee;
 }
 .single-body .header__search-wrap {

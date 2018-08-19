@@ -75,6 +75,10 @@
         left: 25px;
         background: @grey;
       }
+
+      &:hover .main-menu__checkout{
+        display: block;
+      }
     }
   }
 
@@ -174,6 +178,45 @@
   &__link {
     &:hover, &:active, &:focus {
       text-decoration: none;
+    }
+  }
+
+  &__checkout {
+    position: absolute;
+    width: 500px;
+    right: -@pad*2;
+    top: 99%;
+    z-index: 6;
+    padding-top: 21px;
+    display: none;
+
+    &-info {
+      background: @inverse;
+      padding: @pad @pad*2 @pad*2;
+      border-left: 1px solid @btn-grey;
+    }
+
+    &-img {
+      max-width: 200px;
+    }
+
+    &-view {
+      border-top: 2px solid @btn-grey;
+      background: @inverse;
+      padding: @pad 0;
+      text-align: center;
+      display: block;
+      border-left: 1px solid @btn-grey;
+    }
+    &-btn {
+      background: @btn-grey;
+      border: 1px solid @btn-grey;
+      padding: @pad 0;
+      text-align: center;
+      & a {
+        color: @inverse;
+        .hover(@inverse);
+      }
     }
   }
 }

@@ -1,11 +1,10 @@
 $(document).ready(function() {
-
-    let About = {
+    var About = {
       config: {
         sliderBlock: $('.about__slider'),
       },
       slider: function(){
-        let c = About.config;
+        var c = About.config;
         c.sliderBlock.each(function(i, el){
           let curId = $(this).attr('id');
           $('#' + curId).owlCarousel({

@@ -1,8 +1,10 @@
+@single-bg: #eeeeee;
+
 .single {
   &-body {
-    background: #eeeeee;
-    & .header__search-wrap, & .header__search-control, & .header__search-btn {
-      
+    background: @single-bg;
+    & .main-menu__item-dropdown {
+      background: @single-bg;
     }
     & .header__search-wrap {
       border-bottom: 1px solid @primary;
@@ -129,8 +131,8 @@
 
           }
         }
-      } 
-      
+      }
+
     }
 
     &__rel {
