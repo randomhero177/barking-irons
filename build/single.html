@@ -180,6 +180,14 @@
             </div>
           </div>
           <div class="col-md-6 single-page__item text-small">
+            <div class="selector-wrapper js product-form__item hidden">
+              <select class="single-option-selector product-form__input" id="single-size-select">
+                <option value="S" selected="selected">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
             <div class="single-page__item-shop">
               <div class="single-page__item-price single-page__item-mg">
                 <span class="single-page__item-price--old">$75.00</span>
@@ -187,13 +195,11 @@
               </div>
               <div class="single-page__size-list single-page__item-mg">
                 <span>SIZE:</span>
-                <span>
-                  <span>XS</span>
-                  <span>S</span>
-                  <span>M</span>
-                  <span>L</span>
-                  <span>XL</span>
-                  <span>XXL</span>
+                <span class="single-page__size-available" id="size-available">
+                  <span data-selected="selected" data-value="S">S</span>
+                  <span data-value="M">M</span>
+                  <span data-value="L">L</span>
+                  <span data-value="XXL">XXL</span>
                 </span>
                 <div>
                   <a href="#">+ SIZE GUIDE</a>
@@ -218,7 +224,7 @@
               </div>
               <div class="single-page__slider-dots-wrap flex-list flex-list--end flex-list--pad">
                 <div class="flex-list__item">IMAGE</div>
-                <div class="single-page__slider-dots flex-list" id="single-slider-dots"></div>  
+                <div class="single-page__slider-dots flex-list" id="single-slider-dots"></div>
               </div>
             </div>
           </div>

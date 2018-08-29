@@ -3,7 +3,9 @@ $(document).ready(function() {
   var SinglePage = {
     config: {
       sliderBlock: $('#single-slider'),
-      toggleEl: $('.single-page__item-toggle')
+      toggleEl: $('.single-page__item-toggle'),
+      sizeList: $('#size-available'),
+      sizeSelect: $('#single-size-select')
     },
     slider: function(){
       var c = SinglePage.config;
@@ -28,9 +30,21 @@ $(document).ready(function() {
         })
       })
     },
+    sizeSelect: function(){
+      var c = SinglePage.config,
+        sizeEl = c.sizeList.find('span');
+      c.sizeList.find('span').click(function(e){
+        e.preventDefault();
+        var curValue = $(this).data('value');
+        sizeEl.attr('data-selected', false)
+        $(this).attr('data-selected', 'selected');
+        c.sizeSelect.val(curValue);
+      })
+    },
     init: function(){
       SinglePage.slider();
       SinglePage.toggle();
+      SinglePage.sizeSelect();
     }
   }
   SinglePage.init();

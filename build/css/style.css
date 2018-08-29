@@ -1034,55 +1034,55 @@ input.btn {
   font-family: ApercuPro;
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/ApercuPro/ApercuPro-Regular.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Regular.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 700;
   font-style: normal;
-  src: url(../fonts/ApercuPro/ApercuPro-Bold.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Bold.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 700;
   font-style: italic;
-  src: url(../fonts/ApercuPro/ApercuPro-BoldItalic.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-BoldItalic.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 400;
   font-style: italic;
-  src: url(../fonts/ApercuPro/ApercuPro-Italic.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Italic.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 300;
   font-style: normal;
-  src: url(../fonts/ApercuPro/ApercuPro-Light.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Light.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 300;
   font-style: italic;
-  src: url(../fonts/ApercuPro/ApercuPro-LightItalic.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-LightItalic.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 600;
   font-style: normal;
-  src: url(../fonts/ApercuPro/ApercuPro-Medium.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Medium.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuPro;
   font-weight: 600;
   font-style: italic;
-  src: url(../fonts/ApercuPro/ApercuPro-MediumItalic.otf);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-MediumItalic.otf?10987073659873091161);
 }
 @font-face {
   font-family: ApercuProMono;
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/ApercuPro/ApercuPro-Mono.otf);
+  src: url(../fonts/ApercuPro/https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Mono.otf?10987073659873091161);
 }
 style html {
   -ms-text-size-adjust: 100%;
@@ -1847,6 +1847,7 @@ section {
   position: relative;
   min-height: 100vh;
   padding-top: 60px;
+  background: #eeeeee;
 }
 .single-page__container {
   position: relative;
@@ -1949,6 +1950,15 @@ section {
 .single-page__rel {
   position: relative;
   z-index: 3;
+}
+.single-page__size-available span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+}
+.single-page__size-list [data-selected="selected"] {
+  font-weight: bold;
+  font-size: 17px;
 }
 .category-box {
   font-size: 0;
