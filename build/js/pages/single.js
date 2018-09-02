@@ -5,7 +5,8 @@ $(document).ready(function() {
       sliderBlock: $('#single-slider'),
       toggleEl: $('.single-page__item-toggle'),
       sizeList: $('#size-available'),
-      sizeSelect: $('#single-size-select')
+      sizeSelect: $('#single-size-select'),
+      productSelect: $('#single-product-select')
     },
     slider: function(){
       var c = SinglePage.config;
@@ -33,13 +34,30 @@ $(document).ready(function() {
     sizeSelect: function(){
       var c = SinglePage.config,
         sizeEl = c.sizeList.find('span');
+
+
       c.sizeList.find('span').click(function(e){
         e.preventDefault();
         var curValue = $(this).data('value');
         sizeEl.attr('data-selected', false)
         $(this).attr('data-selected', 'selected');
         c.sizeSelect.val(curValue);
-      })
+
+
+
+        var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
+
+        $('#single-product-select option').removeAttr('selected');
+        prodOption.attr('selected', true);
+        console.log(c.productSelect.val());
+      });
+
+
+      var curValue = $('#size-available [data-selected="selected"]').data('value');
+
+      c.sizeSelect.val(curValue);
+      var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
+      prodOption.attr('selected', true);
     },
     init: function(){
       SinglePage.slider();
