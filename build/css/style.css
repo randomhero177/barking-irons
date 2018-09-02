@@ -1082,7 +1082,7 @@ input.btn {
   font-family: ApercuProMono;
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/ApercuPro/https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Mono.otf?10987073659873091161);
+  src: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/ApercuPro-Mono.otf?10987073659873091161);
 }
 style html {
   -ms-text-size-adjust: 100%;
@@ -1347,21 +1347,20 @@ section {
   position: relative;
   padding-left: 30px;
   padding-right: 60px;
+  display: block;
 }
 .main-menu__logo:hover,
 .main-menu__logo:active,
 .main-menu__logo:focus {
   text-decoration: none;
 }
-.main-menu__logo:before {
-  content: '';
+.main-menu__logo-img {
   display: block;
   position: absolute;
   left: -8px;
   top: -7px;
   width: 21px;
   height: 35px;
-  background: url(../img/icons/logo.png) center center no-repeat;
 }
 .main-menu__logo:after {
   content: '';
@@ -1399,6 +1398,9 @@ section {
 .main-menu__anchors-item:last-child a:hover {
   color: #c72a2a;
   text-decoration: none;
+}
+.main-menu__link.active {
+  font-weight: bold;
 }
 .main-menu__link:hover,
 .main-menu__link:active,
@@ -1549,7 +1551,7 @@ section {
 .header__search-wrap {
   background: #fff;
   border-top: 1px solid #636363;
-  z-index: 3;
+  z-index: 4;
   padding: 15px 0;
   position: absolute;
   width: 100%;
