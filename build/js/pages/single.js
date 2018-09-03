@@ -43,13 +43,8 @@ $(document).ready(function() {
         $(this).attr('data-selected', 'selected');
         c.sizeSelect.val(curValue);
 
-
-
-        var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
-
-        $('#single-product-select option').removeAttr('selected');
-        prodOption.attr('selected', true);
-        console.log(c.productSelect.val());
+        var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; }).val();
+        c.productSelect.val(prodOption);
       });
 
 
