@@ -1224,7 +1224,7 @@ section {
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav [class*='owl-']:hover {
-  background: url(../img/icons/slider-arrow.png) center center no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/slider-arrow.png) center center no-repeat;
   width: 51px;
   height: 136px;
   color: rgba(255, 255, 255, 0);
