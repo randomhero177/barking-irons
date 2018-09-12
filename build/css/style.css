@@ -1,5 +1,6 @@
 /****buttons*****/
 /****buttons*****/
+/****colors*****/
 .blue {
   color: #4891a2;
 }
@@ -39,6 +40,17 @@
 .pink {
   color: #F827A4;
 }
+/****screen*****/
+/*
+Extra small devices Phones (<768px) (Class names : .visible-xs-block, hidden-xs)
+
+Small devices Tablets (≥768px) (Class names : .visible-sm-block, hidden-sm)
+
+Medium devices Desktops (≥992px) (Class names : .visible-md-block, hidden-md)
+
+Large devices Desktops (≥1200px) (Class names : .visible-lg-block, hidden-lg)
+
+*/
 .fulljustify {
   text-align: justify;
 }
@@ -63,12 +75,6 @@
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-.alignleft {
-  float: left;
-}
-.alignright {
-  float: right;
-}
 strong {
   font-weight: bold;
 }
@@ -77,12 +83,6 @@ em {
 }
 img {
   max-width: 100%;
-}
-header,
-section,
-footer {
-  position: relative;
-  box-sizing: border-box;
 }
 .wrapper {
   margin: 0 auto;
@@ -94,18 +94,6 @@ footer {
 .border-box {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.before {
-  position: absolute;
-  display: block;
-  content: "";
-  background-size: 100% 100%;
-}
-.open {
-  font-family: 'Open Sans', sans-serif;
-}
-.cond {
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 .table {
   display: table;
@@ -1218,6 +1206,9 @@ section {
 .clearfix:after {
   clear: both;
 }
+.overflow {
+  padding-top: 70px;
+}
 .owl-carousel .owl-nav {
   margin-top: 0;
 }
@@ -1245,12 +1236,19 @@ section {
 }
 .main-menu__list {
   display: flex;
-  height: 78px;
+  height: 70px;
   padding: 22.5px 0;
   align-items: center;
+  font-size: 15.3px;
 }
 .main-menu__list--about {
   justify-content: flex-end;
+}
+.main-menu__link {
+  color: #000;
+}
+.main-menu__link:hover {
+  color: #000;
 }
 .main-menu__item {
   text-transform: uppercase;
@@ -1294,15 +1292,22 @@ section {
 .main-menu__item a:hover {
   color: #000;
 }
-.main-menu__item--bag:before {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  top: 0;
-  left: 5px;
-  background: #aeaeae;
+.main-menu__item--bag {
+  border-left: 1px solid #aeaeae;
+}
+@media (max-width: 767px) {
+  .main-menu__item--bag {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #aeaeae;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu__item--bag {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #aeaeae;
+  }
 }
 .main-menu__item--bag:hover .main-menu__checkout {
   display: block;
@@ -1312,6 +1317,16 @@ section {
   padding-left: 35.25px;
   display: flex;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .main-menu__bag {
+    padding-left: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu__bag {
+    padding-left: 15px;
+  }
 }
 .main-menu__bag-count {
   padding-top: 10px;
@@ -1397,7 +1412,7 @@ section {
   right: -30px;
   top: 99%;
   z-index: 6;
-  padding-top: 21px;
+  padding-top: 10px;
   display: none;
 }
 .main-menu__checkout-info {
@@ -1430,6 +1445,47 @@ section {
 .main-menu__checkout-btn a:focus {
   color: #fff;
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .main-menu__right {
+    float: right;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-menu__right {
+    float: right;
+  }
+}
+.main-menu__mobile {
+  background: #fff;
+}
+.main-menu__mobile-item {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+.main-menu__mobile-item + .main-menu__mobile-item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -60px;
+  top: -1px;
+  height: 1px;
+  width: 1000%;
+  background: #000;
+}
+.main-menu__mobile-icon {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.main-menu__mobile-icon.active {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .footer {
   background: #fff;
@@ -1526,7 +1582,13 @@ section {
   border-top: 1px solid #000;
 }
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #fff;
 }
 .header__search {
   border-bottom: 1px solid #636363;

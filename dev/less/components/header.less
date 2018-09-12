@@ -1,7 +1,14 @@
 @header-border: #636363;
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: @header-height;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: @inverse;
+
   &__search {
     border-bottom: 1px solid @header-border;
     padding-bottom: @pad;

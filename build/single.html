@@ -22,7 +22,7 @@
 		<header class="header">
 			<div class="container">
 				<div class="row main-menu">
-					<nav class="col-sm-9">
+					<nav class="col-xs-5 col-sm-4 col-md-9">
 						<ul class="main-menu__list">
 							<li class="main-menu__item">
 								<a href="/" class="main-menu__logo">
@@ -31,7 +31,7 @@
 		
 								</a>
 							</li>
-							<li class="main-menu__item">
+							<li class="main-menu__item hidden-sm hidden-xs">
 								<a href="category.html" class="main-menu__link">Collections</a>
 								<ul class="main-menu__item-dropdown">
 									<li>
@@ -50,7 +50,7 @@
 								</div>
 							-->
 							</li>
-							<li class="main-menu__item dropdown">
+							<li class="main-menu__item  hidden-sm hidden-xs">
 								<a href="" class="main-menu__link">Shop</a>
 								<ul class="main-menu__item-dropdown">
 									<li>
@@ -67,14 +67,18 @@
 									</li>
 								</ul>
 							</li>
-							<li class="main-menu__item"><a href="" class="main-menu__link">Mix-Tapes</a></li>
-							<li class="main-menu__item"><a href="" class="main-menu__link">Spirits</a></li>
+							<li class="main-menu__item hidden-sm hidden-xs"><a href="" class="main-menu__link">Mix-Tapes</a></li>
+							<li class="main-menu__item hidden-sm hidden-xs"><a href="" class="main-menu__link">Spirits</a></li>
 						</ul>
 					</nav>
-					<div class="header__right  col-sm-3">
+					<div class="main-menu__right  col-xs-7 col-sm-6 col-md-3">
 						<div class="main-menu__list main-menu__list--about">
-							<div class="main-menu__item"><a href="about.html" class="main-menu__link">About</a></div>
-							<div class="main-menu__item"><a href="#" class="main-menu__search"><img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/search.png?7967595314032897309" alt="search"></a></div>
+							<div class="main-menu__item hidden-sm hidden-xs"><a href="about.html" class="main-menu__link">About</a></div>
+							<div class="main-menu__item">
+								<a href="#" class="main-menu__search">
+									<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/search.png?7967595314032897309" alt="search">
+								</a>
+							</div>
 							<div class="main-menu__item main-menu__item--bag">
 		
 								<a href="checkout.html" class="main-menu__bag">
@@ -115,6 +119,9 @@
 									</div>
 								</div>
 							</div>
+							<div class="main-menu__item  main-menu__item--hamburger hidden-lg">
+								<img src="img/icons/hamburger.png" alt="mobile-menu" id="mobile-menu-icon" width="30px" class="main-menu__mobile-icon">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,7 +151,50 @@
 					</div>
 				</div>
 			</div>
-		
+			<div class="main-menu__mobile hidden" id="mobile-menu">
+				<div class="container">
+					<ul class="main-menu__mobile-list">
+						<li class="main-menu__mobile-item">
+							<a href="category.html" class="main-menu__link">Collections</a>
+							<ul class="main-menu__item-dropdown">
+								<li>
+									<a href="category.html">BILLY JOEL</a>
+								</li>
+								<li>
+									<a href="category.html">KINGS OF LEON</a>
+								</li>
+								<li>
+									<a href="category.html">ROCKSTAR GAMES</a>
+								</li>
+							</ul>
+							<!--
+							<div class="main-menu__item-dropdown archive">
+									<a href="#">ARCHIVE</a>
+							</div>
+						-->
+						</li>
+						<li class="main-menu__mobile-item">
+							<a href="" class="main-menu__link">Shop</a>
+							<ul class="main-menu__item-dropdown">
+								<li>
+									<a href="#">T-SHIRTS</a>
+								</li>
+								<li>
+									<a href="#">SHIRTS</a>
+								</li>
+								<li>
+									<a href="#">OUTERWEAR</a>
+								</li>
+								<li>
+									<a href="#">ACCESSORIES</a>
+								</li>
+							</ul>
+						</li>
+						<li class="main-menu__mobile-item"><a href="" class="main-menu__link">Mix-Tapes</a></li>
+						<li class="main-menu__mobile-item"><a href="" class="main-menu__link">Spirits</a></li>
+					</ul>	
+				</div>
+			</div>
 		</header>
 
     <section class="single-page">

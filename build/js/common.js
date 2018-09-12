@@ -99,4 +99,13 @@ function smoothScroll(elem){
 		block.addClass('hidden');
 	})
 })();
+
+(function(){
+  var mIcon = $('#mobile-menu-icon'),
+    mMenu = $('#mobile-menu');
+  mIcon.click(function(){
+    $(this).toggleClass('active');
+    mMenu.toggleClass('hidden');
+  });
+})();
 })

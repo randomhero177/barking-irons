@@ -3,15 +3,22 @@
 .main-menu {
   &__list {
     display: flex;
-    height: 78px;
+    height: @header-height;
     padding: @pad*1.5 0;
     align-items: center;
+    font-size: @fz*0.9;
+
     &--about {
       justify-content: flex-end;
     }
   }
 
-
+  &__link {
+    color: #000;
+    &:hover {
+      color: #000;
+    }
+  }
 
   &__item {
     text-transform: uppercase;
@@ -64,17 +71,18 @@
     }
 
     &--bag {
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        top: 0;
-        left: 5px;
-        background: @grey;
-      }
+      border-left: 1px solid @grey;
 
+      @media @screen-small {
+        padding-left: @pad;
+        padding-right: @pad;
+        border-right: 1px solid @grey;
+      }
+      @media @screen-tablets-only {
+        padding-left: @pad;
+        padding-right: @pad;
+        border-right: 1px solid @grey;
+      }
       &:hover .main-menu__checkout{
         display: block;
       }
@@ -86,6 +94,14 @@
     padding-left: @pad*2.35;
     display: flex;
     align-items: center;
+    
+    @media @screen-small {
+      padding-left: @pad;
+    }
+    @media @screen-tablets-only {
+      padding-left: @pad;
+    }
+
     &-count {
       padding-top: 10px;
       padding-left: @pad/2;
@@ -176,7 +192,7 @@
     right: -@pad*2;
     top: 99%;
     z-index: 6;
-    padding-top: 21px;
+    padding-top: 10px;
     display: none;
 
     &-info {
@@ -205,6 +221,48 @@
       & a {
         color: @inverse;
         .hover(@inverse);
+      }
+    }
+  }
+  &__right { 
+    @media @screen-small {
+      float: right;
+    }
+    @media @screen-tablets-only {
+      float: right;
+    }
+  }
+
+  &__mobile {
+    background: @inverse;
+    &-item {
+      padding: @pad @pad*2;
+      text-transform: uppercase;
+      position: relative; 
+    }
+    &-item + &-item {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -@pad*4;
+        top:-1px;
+        height: 1px;
+        width: 1000%;
+        background: @primary;
+      }
+    }
+    &-icon {
+      -moz-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      cursor: pointer;
+      &.active {
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
       }
     }
   }
