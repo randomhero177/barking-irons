@@ -6,7 +6,12 @@
   &__menu {
     display: flex;
     align-items: center;
-    height: 105px;
+    padding-top: @pad;
+    padding-bottom: @pad;
+
+    @media @screen-desktop {
+      padding: @pad*2 0;
+    }
 
     &--end {
       justify-content: flex-end;
@@ -39,31 +44,89 @@
       & img {
         max-width: 120px;
       }
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        left: @pad*1.5-@pad/2;
-        top: 0;
-        background: @grey;
+
+      @media @screen-desktop {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          left: @pad*1.5-@pad/2;
+          top: 0;
+          background: @grey;
+        }
       }
+      
     }
     &-logo {
       position: relative;
       padding-right: @pad*3;
+      @media @screen-desktop {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          right: @pad*1.5-@pad/2;
+          top: 0;
+          background: @grey;
+        }
+      }
+    }
+  }
 
+  &__mobile {
+    &-list {
+      display: none;
+    }
+    &-item {
+      text-transform: uppercase;
+      padding-top: @pad;
+      padding-bottom: @pad;
+      
+      &:nth-child(2n+1) {
+        border-right: 1px solid #4d4d4d;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: -@pad*200;
+          width: 10000%;
+          bottom: -1px;
+          height: 1px;
+          background: #4d4d4d;
+        }
+      }
+    }
+    
+
+    &-info-txt {
+      display: block;
+      padding: @pad 0;
+      position: relative;
+      cursor: pointer;
       &:before {
+        content: '+';
+        display: inline;
+      }
+      &.in {
+        &:before {
+          content: '-';
+        }
+      }
+      &:after {
         content: '';
         display: block;
         position: absolute;
-        height: 100%;
-        width: 1px;
-        right: @pad*1.5-@pad/2;
-        top: 0;
-        background: @grey;
+        left: -@pad*200;
+        width: 1000%;
+        bottom: -1px;
+        height: 1px;
+        background: #4d4d4d;
       }
+      
     }
   }
 }

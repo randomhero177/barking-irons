@@ -69,10 +69,11 @@
         color: #000;
       }
     }
-
     &--bag {
       border-left: 1px solid @grey;
-
+      @media @screen-large {
+        padding-left: @pad*2.25;
+      }
       @media @screen-small {
         padding-left: @pad;
         padding-right: @pad;
@@ -87,20 +88,18 @@
         display: block;
       }
     }
+    &--search {
+      @media @screen-large {
+        padding-right: @pad*2.25;
+      }
+    }
   }
-
   &__bag {
     position: relative;
-    padding-left: @pad*2.35;
     display: flex;
     align-items: center;
     
-    @media @screen-small {
-      padding-left: @pad;
-    }
-    @media @screen-tablets-only {
-      padding-left: @pad;
-    }
+    
 
     &-count {
       padding-top: 10px;
@@ -110,6 +109,14 @@
       text-decoration: none;
     }
   }
+  &__icon {
+    @media @screen-small-only {
+      width: 15px;
+    }
+  }
+  
+
+
 
   &__search {
     width: 35px;
@@ -135,15 +142,17 @@
 
     }
 
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 100%;
-      width: 1px;
-      top: 0;
-      right: @pad*2-@pad/2;
-      background: @grey;
+    @media @screen-desktop {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        top: 0;
+        right: @pad*2-@pad/2;
+        background: @grey;
+      }
     }
   }
 
@@ -245,7 +254,7 @@
         content: '';
         display: block;
         position: absolute;
-        left: -@pad*4;
+        left: -@pad*100;
         top:-1px;
         height: 1px;
         width: 1000%;
@@ -257,6 +266,7 @@
       -o-transition: all 0.5s ease-out;
       -webkit-transition: all 0.5s ease-out;
       cursor: pointer;
+      width: 25px;
       &.active {
         -moz-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);

@@ -3,6 +3,9 @@
     background: @primary;
     &-item {
       text-align: center;
+      & > * {
+        max-width: 100%;
+      }
     }
     position: relative;
     & .owl-nav button.owl-prev, & .owl-nav button.owl-next {
