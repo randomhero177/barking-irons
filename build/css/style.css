@@ -1985,16 +1985,33 @@ section {
 }
 .about__contacts-row {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+}
+@media (max-width: 767px) {
+  .about__contacts-row {
+    display: block;
+  }
 }
 .about__contacts-item {
   width: 50%;
+}
+@media (max-width: 767px) {
+  .about__contacts-item {
+    width: 100%;
+  }
 }
 .about__contacts-map {
   position: absolute;
   width: 50%;
   height: 100%;
   top: 0;
+}
+@media (max-width: 767px) {
+  .about__contacts-map {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 .about__contacts-figure {
   margin-bottom: 30px;
