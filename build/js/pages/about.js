@@ -1,4 +1,29 @@
 $(document).ready(function() {
+	function setAnchors(elClass){
+		let blocks = $(elClass),
+		 linkElems = $('.main-menu__anchors-item a');
+
+		blocks.each(function(i, el){
+			var curId = $(el).attr('id');
+			$(linkElems[i]).attr('href', '#' + curId);
+			smoothScroll(linkElems[i]);
+		})
+
+	}
+	
+function smoothScroll(elem){
+  $(elem).click(function(event) {
+    event.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+}
+	
     var About = {
       config: {
         sliderBlock: $('.about__slider'),
@@ -17,7 +42,9 @@ $(document).ready(function() {
       },
       init: function(){
           About.slider();
-          setAnchors('.about');
+          
+		  
+		  setTimeout(function(){ setAnchors('.about'); }, 1000);
       }
     }
     About.init();

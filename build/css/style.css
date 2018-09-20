@@ -1944,6 +1944,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .about--est {
   background: url(../img/about/screen1.jpg) center top no-repeat;
