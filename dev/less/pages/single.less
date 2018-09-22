@@ -14,8 +14,12 @@
   &-page {
     position: relative;
     min-height: 100vh;
-    padding-top: @pad*4;
     background: @single-bg;
+
+    @media @screen-desktop {
+      padding-top: @pad*4;  
+    }
+
     &__container {
       position: relative;
     }
@@ -66,7 +70,10 @@
       }
 
       &-shop {
-        text-align: right;
+        @media @screen-desktop {
+          text-align: right;  
+        }
+        padding-bottom: @pad*2;
       }
 
       &-btn {
@@ -98,24 +105,29 @@
         & * {
           height: 100%;
           position: relative;
-
         }
-        & * img {
-          height: auto;
-          max-height: 100%;
+        @media @screen-small {
+          position: relative;
+        }
+        @media @screen-tablets-only {
+          position: relative;
         }
       }
-      &-item {
-        & img {
-          width: auto;
-        }
+      &-item {}
+
+      &-img {
+        opacity: 0
       }
 
       &-dots{
         align-items: baseline;
 
         &-wrap {
+          display: none;
           margin-top: @pad*15;
+          @media @screen-desktop {
+            display: flex;
+          }
         }
 
         & .owl-dot {
@@ -133,6 +145,25 @@
         }
       }
 
+    }
+
+    & .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+
+      @media @screen-desktop {
+        display: none;
+      }
+      & > * {
+        position: absolute;
+      }
+      & .owl-prev {
+        left: 10px;
+      }
+      & .owl-next {
+        right: 10px;
+      }
     }
 
     &__rel {
@@ -156,4 +187,6 @@
       }
     }
   }
+
+  
 }

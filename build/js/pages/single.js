@@ -1,19 +1,19 @@
 $(document).ready(function() {
-
   var SinglePage = {
     config: {
       sliderBlock: $('#single-slider'),
       toggleEl: $('.single-page__item-toggle'),
       sizeList: $('#size-available'),
       sizeSelect: $('#single-size-select'),
-      productSelect: $('#single-product-select')
+      productSelect: $('#single-product-select'),
+      singleBlock: $('#single-block'),
+      sliderBgElem: '.single-page__slider-item'
     },
     slider: function(){
-      var c = SinglePage.config;
       c.sliderBlock.owlCarousel({
         loop:true,
         items:1,
-        nav:false,
+        nav: true,
         video:true,
         lazyLoad:true,
         dots: 1,
@@ -21,8 +21,7 @@ $(document).ready(function() {
       })
     },
     toggle: function(){
-      var c = SinglePage.config,
-        el = c.toggleEl;
+      var el = c.toggleEl;
       el.each(function(i, el){
         $(this).click(function(e){
           var href = $(this).data('href');
@@ -32,9 +31,7 @@ $(document).ready(function() {
       })
     },
     sizeSelect: function(){
-      var c = SinglePage.config,
-        sizeEl = c.sizeList.find('span');
-
+      var sizeEl = c.sizeList.find('span');
 
       c.sizeList.find('span').click(function(e){
         e.preventDefault();
@@ -54,11 +51,27 @@ $(document).ready(function() {
       var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
       prodOption.attr('selected', true);
     },
+    setHeight: function(){
+      var screenHeight = $(window).height(),
+        headerHeight = $('.header').height()
+        blockHeight = screenHeight - headerHeight,
+        elemArr = c.singleBlock.find(c.sliderBgElem);
+      console.log(elemArr);
+      elemArr.each(function(i, el){
+        var curImg = $(el).find('.single-page__slider-img').attr('src');
+        $(el).css('background', 'url('+ curImg +') center top no-repeat');
+        console.log(curImg);
+      })
+    },
     init: function(){
       SinglePage.slider();
       SinglePage.toggle();
       SinglePage.sizeSelect();
+      SinglePage.setHeight();
+      setAnchors('.about');
     }
-  }
+  };
+  var c = SinglePage.config;
   SinglePage.init();
+
 });
