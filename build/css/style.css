@@ -1869,6 +1869,9 @@ section {
 .modal-block {
   display: none;
 }
+.modal-block--darken {
+  background: rgba(0, 0, 0, 0.4);
+}
 .modal-block.active {
   display: flex;
   flex-direction: column;
