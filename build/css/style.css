@@ -1954,6 +1954,9 @@ section {
   display: block;
   color: #000;
 }
+.main-screen__collection-img {
+  width: 100%;
+}
 .main-screen__collection-title {
   position: absolute;
   left: 0;
