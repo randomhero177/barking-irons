@@ -1989,15 +1989,15 @@ section {
   position: relative;
 }
 .about--est {
-  background: url(../img/about/screen1.jpg) center top no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about1.jpg) center top no-repeat;
   color: #fff;
 }
 .about--merch {
-  background: url(../img/about/screen2.jpg) center top no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about2.jpg) center top no-repeat;
   color: #000;
 }
 .about--distil {
-  background: url(../img/about/screen3.jpg) center center no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about3.jpg) center center no-repeat;
   color: #fff;
 }
 .about__slider {
