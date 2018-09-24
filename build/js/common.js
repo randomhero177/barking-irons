@@ -31,7 +31,6 @@ $(document).ready(function() {
 		},
 		buttonHide: function(){
 			var c = Modal.config;
-			console.log('123');
 			$(c.buttonClose).click(function(e){
 				e.preventDefault();
 				console.log('sdf');

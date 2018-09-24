@@ -1,5 +1,25 @@
 .instagram {
-  pointer-events: none;
   min-height: 300px;
   margin-bottom: -@pad/2;
+  position: relative;
+
+  &__text {
+  	width: 100%;
+  	display: block;
+  	.hover(@inverse);
+  	position: absolute;
+  	text-align: center;
+  	color: @inverse;
+  	top: 50%;
+  	margin-top: -72px;
+  	font-size: @fz*2;
+  	&-head {
+  		font-size: @fz*4;
+  		display: block;
+  	}
+  }
+}
+
+#instagram {
+  pointer-events: none;
 }
