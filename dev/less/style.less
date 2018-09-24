@@ -37,6 +37,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+.main {
+  &-list {
+    & li {
+      position: relative;
+      padding-left: @pad  ;
+      margin-bottom: @pad;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        left: -10px;
+        top: -3px;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: @primary;
+      }
+    }
+    &--num {
+      counter-reset: section;
+      & li {
+        counter-increment: section;
+        &:before {
+          content: counter(section);
+          top: 0;
+          background: none;
+        }
+      }
+
+    }
+  }
+}
 
 /* Components */
 @import 'components/buttons.less';

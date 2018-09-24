@@ -1227,6 +1227,33 @@ section {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+.main-list li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.main-list li:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: -10px;
+  top: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #000;
+}
+.main-list--num {
+  counter-reset: section;
+}
+.main-list--num li {
+  counter-increment: section;
+}
+.main-list--num li:before {
+  content: counter(section);
+  top: 0;
+  background: none;
+}
 /* Components */
 .btn {
   border-radius: 0;
@@ -1921,6 +1948,8 @@ section {
 }
 .main-screen__collection-item {
   position: relative;
+  display: block;
+  color: #000;
 }
 .main-screen__collection-title {
   position: absolute;
