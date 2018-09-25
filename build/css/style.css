@@ -2098,9 +2098,6 @@ section {
 .single-body {
   background: #eeeeee;
 }
-.single-body .main-menu__item-dropdown {
-  background: #eeeeee;
-}
 .single-body .header__search-wrap {
   border-bottom: 1px solid #000;
 }
