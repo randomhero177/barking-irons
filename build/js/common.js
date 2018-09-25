@@ -86,6 +86,19 @@ $(elem).click(function(event) {
 });
 }
 
+function equalHeights(elements) {
+  if (elements.length > 0) {
+    var height = 0;
+    elements.each(function () {
+      $(this).css('height', '');
+      if ($(this).outerHeight() > height) {
+        height = $(this).outerHeight();
+      }
+    });
+    elements.css('height', height);
+  }
+}
+
 (function () {
   /**** search function ****/
   var block = $('.header__search-wrap'),
