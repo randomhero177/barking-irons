@@ -135,6 +135,7 @@
           display: none;
           position: absolute;
           right: 0;
+          max-width: 100%;
           bottom: @pad*6;
           @media @screen-desktop {
             display: flex;
@@ -152,6 +153,12 @@
             content: '0' counter(section);
             display: inline-block;
 
+          }
+        }
+
+        & .owl-dot.active {
+          &:before {
+            font-weight: bold;
           }
         }
       }

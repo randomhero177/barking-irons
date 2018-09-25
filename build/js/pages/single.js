@@ -56,18 +56,19 @@ $(document).ready(function() {
         headerHeight = $('.header').height()
         blockHeight = screenHeight - headerHeight,
         elemArr = c.singleBlock.find(c.sliderBgElem);
-      console.log(elemArr);
+
+      $('.single-page__content').height(blockHeight);
+
       elemArr.each(function(i, el){
         var curImg = $(el).find('.single-page__slider-img').attr('src');
         $(el).css('background-image', 'url('+ curImg +')');
-        console.log(curImg);
       })
     },
     init: function(){
+      SinglePage.setHeight();
       SinglePage.slider();
       SinglePage.toggle();
       SinglePage.sizeSelect();
-      SinglePage.setHeight();
       setAnchors('.about');
     }
   };

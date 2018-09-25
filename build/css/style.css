@@ -2229,6 +2229,7 @@ section {
   display: none;
   position: absolute;
   right: 0;
+  max-width: 100%;
   bottom: 90px;
 }
 @media (min-width: 992px) {
@@ -2246,6 +2247,9 @@ section {
 .single-page__slider-dots .owl-dot:before {
   content: '0' counter(section);
   display: inline-block;
+}
+.single-page__slider-dots .owl-dot.active:before {
+  font-weight: bold;
 }
 .single-page .owl-nav {
   position: absolute;
