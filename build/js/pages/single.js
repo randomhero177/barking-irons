@@ -59,7 +59,7 @@ $(document).ready(function() {
       console.log(elemArr);
       elemArr.each(function(i, el){
         var curImg = $(el).find('.single-page__slider-img').attr('src');
-        $(el).css('background', 'url('+ curImg +') center top no-repeat');
+        $(el).css('background-image', 'url('+ curImg +')');
         console.log(curImg);
       })
     },
