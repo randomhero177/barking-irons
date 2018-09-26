@@ -5,11 +5,22 @@
       display: inline-block;
       position: relative;
       width: 33.333333333%;
-      float: left;
+
+      &--cur {
+        background: @primary;
+      }
 
       &--big {
         width: 66.6666%;
         float: right;
+      }
+
+      &-head {
+        color: @inverse;
+        padding-top: @pad*3;
+        text-align: center;
+        font-size: @fz*1.5;
+        text-transform: uppercase;
       }
 
       &-title {
@@ -22,6 +33,17 @@
         & a {
           color: @primary;
           .hover(@primary);
+        }
+        &--alt {
+          text-transform: uppercase;
+          font-size: @fz*2;
+          bottom: 50%;
+          margin-bottom: -39px;
+          text-align: center;
+         & a {
+          color: @inverse;
+          .hover(@inverse);
+        } 
         }
       }
     }

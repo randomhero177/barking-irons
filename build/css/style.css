@@ -1860,9 +1860,6 @@ section {
 .flex-list--50 .flex-list__item:nth-child(2n+1) {
   text-align: right;
 }
-.collection {
-  padding-bottom: 30px;
-}
 .collection__same-category-item {
   position: relative;
 }
@@ -1897,6 +1894,44 @@ section {
 .collection__same-category-desc a:focus {
   color: #000;
   text-decoration: none;
+}
+.collection-alt {
+  min-height: 100vh;
+  background: url(../img/collection/collection-bg.jpg) center top no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+}
+.collection-alt__container {
+  display: flex;
+  align-items: center;
+}
+.collection-alt__container-wrap {
+  margin-top: -35px;
+  width: 100%;
+}
+.collection-alt__slider {
+  font-size: 25.5px;
+}
+.collection-alt__slider-title {
+  font-weight: bold;
+  font-size: 51px;
+  margin-bottom: 15px;
+}
+.collection-alt__slider .owl-nav {
+  text-align: initial;
+}
+.collection-alt__slider .owl-prev,
+.collection-alt__slider .owl-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -68px;
+}
+.collection-alt__slider .owl-prev {
+  left: -120px;
+}
+.collection-alt__slider .owl-next {
+  right: -120px;
 }
 .modal-block {
   display: none;
@@ -2293,11 +2328,20 @@ section {
   display: inline-block;
   position: relative;
   width: 33.33333333%;
-  float: left;
+}
+.category-box__item--cur {
+  background: #000;
 }
 .category-box__item--big {
   width: 66.6666%;
   float: right;
+}
+.category-box__item-head {
+  color: #fff;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 25.5px;
+  text-transform: uppercase;
 }
 .category-box__item-title {
   position: absolute;
@@ -2314,6 +2358,22 @@ section {
 .category-box__item-title a:active,
 .category-box__item-title a:focus {
   color: #000;
+  text-decoration: none;
+}
+.category-box__item-title--alt {
+  text-transform: uppercase;
+  font-size: 34px;
+  bottom: 50%;
+  margin-bottom: -39px;
+  text-align: center;
+}
+.category-box__item-title--alt a {
+  color: #fff;
+}
+.category-box__item-title--alt a:hover,
+.category-box__item-title--alt a:active,
+.category-box__item-title--alt a:focus {
+  color: #fff;
   text-decoration: none;
 }
 .checkout__table {

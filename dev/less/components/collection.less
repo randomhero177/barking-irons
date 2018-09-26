@@ -1,5 +1,4 @@
-.collection {
-  padding-bottom: @pad*2;
+.collection{
   &__same-category {
 
     &-item{
@@ -27,6 +26,46 @@
         display: block;
         color: @primary;
         .hover(@primary);
+      }
+    }
+  }
+
+  &-alt {
+    min-height: 100vh;
+    background: url(../img/collection/collection-bg.jpg) center top no-repeat;
+    background-size: cover;
+    color: @inverse;
+    display: flex;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      &-wrap {
+        margin-top: -@header-height/2;
+        width: 100%;
+      }
+    }
+
+    &__slider {
+      font-size: @fz*1.5;
+      &-title {
+        font-weight: bold;
+        font-size: @fz*3;
+        margin-bottom: @pad;
+      }
+      & .owl-nav {
+        text-align: initial;
+      }
+      & .owl-prev, & .owl-next {
+        position: absolute;
+        top: 50%;
+        margin-top: -68px;
+      }
+      & .owl-prev {
+        left: -@pad*8;
+      }
+      & .owl-next  {
+        right: -@pad*8;
       }
     }
   }
