@@ -1994,6 +1994,10 @@ section {
 .amount__button {
   padding: 0 3px;
 }
+.amount__separator {
+  display: inline-block;
+  margin: 0 -3px;
+}
 /* PAGES */
 .main-screen__slider {
   background: #000;
