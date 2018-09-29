@@ -169,23 +169,6 @@ input.btn {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  cursor: pointer;
-}
-.btn:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
 .text-big {
   font-size: 34px;
 }
@@ -1989,6 +1972,27 @@ section {
   -o-transform: rotate(25deg);
   -ms-transform: rotate(25deg);
   transform: rotate(25deg);
+}
+.amount--inline {
+  display: inline-block;
+}
+.amount input[type=number]::-webkit-inner-spin-button,
+.amount input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.amount input,
+.amount button {
+  border: 0;
+  box-shadow: none;
+}
+.amount__input {
+  display: inline-block;
+  width: 20px;
+  height: auto;
+}
+.amount__button {
+  padding: 0 3px;
 }
 /* PAGES */
 .main-screen__slider {

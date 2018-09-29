@@ -1,0 +1,23 @@
+.amount {
+&--inline {
+  display: inline-block;
+}
+
+  & input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  & input, & button {
+    border: 0;
+    box-shadow: none;
+  }
+  &__input {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+  }
+  &__button {
+    padding: 0 @pad/5;
+  }
+}

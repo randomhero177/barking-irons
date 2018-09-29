@@ -200,7 +200,7 @@
     <section class="checkout">
       <div class="container">
         <div class="checkout__table flex-list">
-          <div class="checkout__table-item checkout__list">
+          <div class="checkout__list">
 
             <div class="checkout__item flex-list">
               <div class="checkout__item-img flex-list__item">
@@ -221,7 +221,13 @@
                       SIZE:  M
                     </div>
                     <div class="text-xsmall">
-                      QTY:   2 +/-
+                      QTY:
+                      <div class="amount amount--inline">
+                        <input class="text-center amount__input" name="UserCount" type="number" min="1" max="@calc.UserMaxCount" step="1" value="1">
+                        <button type="button" class="btn btn-default amount__button amount__decrease"><span class="glyphicon glyphicon-minus"></span></button>
+                        /
+                        <button type="button" class="btn btn-default amount__button amount__increase"><span class="glyphicon glyphicon-plus"></span></button>
+                      </div>
                     </div>
                   </div>
 
@@ -477,6 +483,6 @@
   <script src="js/global/owl.carousel.min.js"></script>
   <script src="js/global/bootstrap.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/pages/about.js"></script>
+  <script src="js/pages/checkout.js"></script>
   </body>
 </html>
