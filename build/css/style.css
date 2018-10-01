@@ -1444,8 +1444,11 @@ section {
   padding: 15px 30px 30px;
   border-left: 1px solid #b5b5b5;
 }
+.main-menu__checkout-info + .main-menu__checkout-info {
+  border-top: 2px solid #b5b5b5;
+}
 .main-menu__checkout-img {
-  max-width: 200px;
+  width: 200px;
 }
 .main-menu__checkout-view {
   border-top: 2px solid #b5b5b5;
@@ -1993,6 +1996,8 @@ section {
 }
 .amount__button {
   padding: 0 3px;
+  bottom: 2px;
+  position: relative;
 }
 .amount__separator {
   display: inline-block;
@@ -2395,7 +2400,7 @@ section {
   content: '';
   display: block;
   position: absolute;
-  background: url(/img/icons/dashed.png) center center;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/dashed.png?11624143845082805645) center center;
   left: 0;
   top: 0;
   width: 100%;

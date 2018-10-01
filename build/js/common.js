@@ -319,4 +319,32 @@ this.removeErr = function () {
 };
 
 this.init();
-}
+};
+
+
+function sendAjaxRequest(blockId, url, obj, successFunction, errFunction, type) {
+  // submitting trigger must have [type="submit"] attribute or class 'btn-send'
+  $.ajax({
+    type: (typeof type !== 'undefined') ? type : 'POST',
+    context: document.body,
+    url: url,
+    data: obj,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    dataType: "json",
+    success: function (data) {
+      if (typeof data !== 'undefined' && data.redirectTo) {
+        window.location.href = data.redirectTo;
+      } else {
+        if (typeof successFunction === 'function') {
+          successFunction(data);
+        }
+      }
+    },
+    error: function (data, status) {
+      console.log(data, status);
+			if (typeof errorFunction === 'function') {
+        errorFunction(errMsg);
+      };
+    }
+  });
+};

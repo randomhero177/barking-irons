@@ -100,8 +100,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    
-    
+
+
 
     &-count {
       padding-top: 10px;
@@ -116,7 +116,7 @@
       width: 15px;
     }
   }
-  
+
 
 
 
@@ -212,8 +212,12 @@
       border-left: 1px solid @btn-grey;
     }
 
+    &-info + &-info {
+      border-top: 2px solid @btn-grey;
+    }
+
     &-img {
-      max-width: 200px;
+      width: 200px;
     }
 
     &-view {
@@ -235,7 +239,7 @@
       }
     }
   }
-  &__right { 
+  &__right {
     @media @screen-small {
       float: right;
     }
@@ -249,7 +253,7 @@
     &-item {
       padding: @pad @pad*2;
       text-transform: uppercase;
-      position: relative; 
+      position: relative;
     }
     &-item + &-item {
       &:before {
