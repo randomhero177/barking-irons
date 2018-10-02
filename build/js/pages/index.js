@@ -15,7 +15,7 @@ $(document).ready(function() {
           nav:true,
           video:true,
           lazyLoad:true,
-          dots: 0
+          dots: true
         })
       })
     },
@@ -35,14 +35,15 @@ $(document).ready(function() {
     mainLoad: function() {
       var block = $('#main'),
         instagram = $('.instagram');
-
+      /*
       setTimeout(function(){
         block.removeClass('loading loading--full loading--fixed');
         instagram.addClass('loading loading--full');
       }, 5000);
+      */
       setTimeout(function(){
         instagram.removeClass('loading loading--full');
-      }, 12000);
+      }, 300);
 
 
     },

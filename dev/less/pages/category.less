@@ -5,7 +5,8 @@
       display: inline-block;
       position: relative;
       width: 33.333333333%;
-
+      color: @primary;
+      .hover(@primary);
       &--cur {
         background: @primary;
       }
@@ -30,10 +31,6 @@
         width: 100%;
         padding: 15px 30px;
         font-size: @fz;
-        & a {
-          color: @primary;
-          .hover(@primary);
-        }
         &--alt {
           text-transform: uppercase;
           font-size: @fz*2;
@@ -43,7 +40,7 @@
          & a {
           color: @inverse;
           .hover(@inverse);
-        } 
+        }
         }
       }
     }

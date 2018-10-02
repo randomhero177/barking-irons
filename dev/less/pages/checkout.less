@@ -1,4 +1,5 @@
 .checkout {
+  min-height: 80vh;
  &__table {
   border-top: 1px solid @primary;
  }
@@ -6,17 +7,21 @@
  &__item {
   padding: @pad @pad*2;
   position: relative;
-  & + .checkout__item {
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/dashed.png?11624143845082805645) center center;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 2px;
-    }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/dashed.png?11624143845082805645) center center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  &-link {
+    color: @primary;
+    .hover(@primary);
   }
   &-img {
     max-width: 225px;
@@ -30,6 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: @pad;
+    width: 220px;
   }
 
   &-info {
