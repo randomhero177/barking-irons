@@ -105,7 +105,7 @@ Large devices Desktops (≥1200px) (Class names : .visible-lg-block, hidden-lg)
 
 .fulljustify {
   text-align: justify;
-}
+} 
 .fulljustify:after {
   content: "";
   display: inline-block;
@@ -241,6 +241,35 @@ overflow: hidden;
 input.btn {
 	display: block;
 	.border-box;
+}
+.btn {
+	.flex;
+	align-items: center;
+	justify-content: center;
+	-moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+	cursor: pointer;
+}
+.btn:hover {
+	-webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.text-big {
+	font-size: 34px;
+}
+.text-medium {
+	font-size: 27px;
+}
+.text-22 {
+	font-size: 22px;
+}
+.text-small {
+	font-size: 14px;
+}
+.text-tiny {
+	font-size: 12px;
 }
 
 
