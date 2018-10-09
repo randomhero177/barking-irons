@@ -1123,8 +1123,6 @@ th,
 td {
   border: 0;
   font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
   margin: 0;
   outline: 0;
   padding: 0;
@@ -1644,8 +1642,15 @@ section {
   margin: 0;
   font-size: 38.25px;
 }
+.text-black {
+  background: #000;
+  color: #fff;
+}
 .text-big {
   font-size: 34px;
+}
+.text-xlarge {
+  font-size: 42.5px;
 }
 .text-medium {
   font-size: 22.95px;
@@ -1885,10 +1890,16 @@ section {
 }
 .collection-alt {
   min-height: 100vh;
-  background: url(../img/collection/collection-bg.jpg) center top no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/collection-bg.jpg) center top no-repeat;
   background-size: cover;
   color: #fff;
   display: flex;
+}
+.collection-alt__quote {
+  font-size: 42.5px;
+  padding: 75px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 .collection-alt__container {
   display: flex;
@@ -2376,9 +2387,11 @@ section {
 }
 .category-box__item--cur {
   background: #000;
+  float: left;
 }
 .category-box__item--big {
-  width: 66.6666%;
+  max-width: 66.6666%;
+  width: auto;
   float: right;
 }
 .category-box__item-head {
@@ -2403,12 +2416,16 @@ section {
   margin-bottom: -39px;
   text-align: center;
 }
-.category-box__item-title--alt a {
+.category-box__item-title--alt a,
+.category-box__item-title--alt.category-box__item-head {
   color: #fff;
 }
 .category-box__item-title--alt a:hover,
+.category-box__item-title--alt.category-box__item-head:hover,
 .category-box__item-title--alt a:active,
-.category-box__item-title--alt a:focus {
+.category-box__item-title--alt.category-box__item-head:active,
+.category-box__item-title--alt a:focus,
+.category-box__item-title--alt.category-box__item-head:focus {
   color: #fff;
   text-decoration: none;
 }

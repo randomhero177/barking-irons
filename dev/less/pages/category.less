@@ -9,10 +9,12 @@
       .hover(@primary);
       &--cur {
         background: @primary;
+        float: left;
       }
 
       &--big {
-        width: 66.6666%;
+        max-width: 66.6666%;
+        width: auto;
         float: right;
       }
 
@@ -37,7 +39,7 @@
           bottom: 50%;
           margin-bottom: -39px;
           text-align: center;
-         & a {
+         & a, &.category-box__item-head {
           color: @inverse;
           .hover(@inverse);
         }
