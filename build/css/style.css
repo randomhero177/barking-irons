@@ -2353,7 +2353,7 @@ section {
 .single-page__content {
   position: relative;
   z-index: 3;
-  min-height: 100vh;
+  min-height: 700px;
 }
 @media (min-width: 992px) {
   .single-page__content {
@@ -2369,6 +2369,28 @@ section {
   font-weight: bold;
   font-size: 17px;
   color: #a81e2b;
+}
+.single-page__link {
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/slider-arrow-black.png?5119937826260488572) center center no-repeat;
+  width: 35px;
+  height: 105px;
+  color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -53px;
+  display: block;
+  z-index: 5;
+}
+.single-page__link--prev {
+  left: 15px;
+}
+.single-page__link--next {
+  right: 15px;
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .category-box {
   font-size: 0;
