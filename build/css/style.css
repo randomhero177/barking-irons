@@ -1989,6 +1989,18 @@ section {
   -ms-transform: rotate(25deg);
   transform: rotate(25deg);
 }
+.modal-block table {
+  width: 100%;
+}
+.modal-block table tr:first-child {
+  background: #e5edf9;
+}
+.modal-block table tr:first-child td {
+  font-weight: bold;
+}
+.modal-block table td {
+  padding: 7.5px;
+}
 .amount--inline {
   display: inline-block;
 }
