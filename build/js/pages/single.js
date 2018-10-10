@@ -24,6 +24,7 @@ $(document).ready(function() {
       var el = c.toggleEl;
       el.each(function(i, el){
         $(this).click(function(e){
+		      e.preventDefault();
           var href = $(this).data('href');
           $('#' + href).toggle(400);
           $(this).toggleClass('in');
@@ -53,11 +54,14 @@ $(document).ready(function() {
     },
     setHeight: function(){
       var screenHeight = $(window).height(),
-        headerHeight = $('.header').height()
+        headerHeight = $('.header').height(),
         blockHeight = screenHeight - headerHeight,
         elemArr = c.singleBlock.find(c.sliderBgElem);
 
-      $('.single-page__content').height(blockHeight);
+      if($(window).width() >= 992 ) {
+        $('.single-page__content').height(blockHeight);  
+      }
+      
 
       elemArr.each(function(i, el){
         var curImg = $(el).find('.single-page__slider-img').attr('src');

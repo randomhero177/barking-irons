@@ -19,7 +19,10 @@
     }
     &__item {
       position: relative;
-      width: 50%;
+      width: 100%;
+      @media @screen-desktop {
+        width: 50%;
+      }
       &-toggle {
         position: relative;
         padding-left: @pad;
@@ -66,11 +69,12 @@
       }
 
       &-shop {
+        padding-top: 38px;
+
         @media @screen-desktop {
+          padding-bottom: @pad*2;
           text-align: right;
         }
-        padding-bottom: @pad*2;
-        padding-top: 38px;
       }
 
       &-btn {
@@ -90,7 +94,12 @@
       }
 
       &--info {
-        padding-right: @pad*8;
+        padding-top: @pad*2;
+
+        @media @screen-desktop {
+          padding-right: @pad*8;
+          padding-top: 0;
+        }
       }
 
       &-social {
@@ -121,10 +130,12 @@
       }
       &-item {
         background-size: cover;
+        background-position: center;
       }
 
       &-img {
-        opacity: 0
+        opacity: 0;
+        height: 100vh;
       }
 
       &-dots{
@@ -188,8 +199,11 @@
       position: relative;
       z-index: 3;
       min-height: 700px;
+      flex-wrap: wrap;
+
       @media @screen-desktop {
         padding-top: @pad*4;
+        flex-direction: row-reverse;
       }
     }
 
@@ -218,8 +232,12 @@
     position: absolute;
     top: 50%;
     margin-top: -53px;
-    display: block;
     z-index: 5;
+    display: none;
+
+    @media @screen-desktop {
+      display: block;
+    }
 
     &--prev {
       left: @pad;

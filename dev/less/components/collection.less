@@ -1,8 +1,17 @@
 .collection{
   &__same-category {
 
+    flex-wrap: wrap;
+
+
     &-item{
       position: relative;
+      width: 50%;
+
+      @media @screen-desktop {
+        width: 25%;
+      }
+
       &--more {
         background: @primary;
       }
@@ -11,9 +20,14 @@
     &-link {
       color: @inverse;
       display: block;
-      padding: @pad*3;
-      font-size: @fz*1.25;
+      padding: @pad;
+      
       .hover(@inverse);
+
+      @media @screen-desktop {
+        padding: @pad*3;
+        font-size: @fz*1.25;
+      }
     }
 
     &-desc {

@@ -82,6 +82,7 @@ $(document).ready(function() {
     var el = $('[data-toggle]');
     el.each(function(i, el){
       $(this).click(function(e){
+        e.preventDefault();
         var href = $(this).data('href');
         $('#' + href).toggle(400);
         $(this).toggleClass('in');
