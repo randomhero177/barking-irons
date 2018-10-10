@@ -4,18 +4,29 @@
     &__item {
       display: inline-block;
       position: relative;
-      width: 33.333333333%;
+      width: 50%;
       color: @primary;
       .hover(@primary);
+
+      @media @screen-xs-only {
+        width: 100%
+      }
+
+      @media @screen-desktop {
+        width: 33.333333333%;
+      }
       &--cur {
         background: @primary;
         float: left;
       }
 
       &--big {
-        max-width: 66.6666%;
+        max-width: 100%;
         width: auto;
         float: right;
+        @media @screen-desktop {
+          max-width: 66.6666%;
+        }
       }
 
       &-head {
