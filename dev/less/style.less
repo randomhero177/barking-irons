@@ -38,49 +38,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 
-.main {
-  &-list {
-    & li {
-      position: relative;
-      padding-left: @pad  ;
-      margin-bottom: @pad;
-      &:before {
-        content: '';
-        display: inline-block;
-        position: relative;
-        left: -10px;
-        top: -3px;
-        width: 5px;
-        height: 5px;
-        border-radius: 100%;
-        background: @primary;
-      }
-    }
-    &--num {
-      counter-reset: section;
-      & li {
-        counter-increment: section;
-        &:before {
-          content: counter(section);
-          top: 0;
-          background: none;
-        }
-      }
-
-    }
-  }
-  &-map {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-}
 
 /* Components */
 @import 'components/buttons.less';
 @import 'components/main-menu.less';
+@import 'components/main.less';
 @import 'components/footer.less';
 @import 'components/text.less';
 @import 'components/header.less';
