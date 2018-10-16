@@ -53,7 +53,7 @@ $(document).ready(function() {
   }
   Modal.init();
 
-  
+
   (function () {
     /**** search function ****/
     var block = $('.header__search-wrap'),
@@ -90,7 +90,7 @@ $(document).ready(function() {
     });
 
   })();
-  
+  smoothScroll($('.goTo'));
 });
 var resources = {
       ErrorMsg_NoDescription: 'Ошибка без описания',
@@ -161,7 +161,7 @@ function smoothScroll(elem){
   });
 };
 
-smoothScroll($('.goTo'));
+
 
 function equalHeights(elements) {
   if (elements.length > 0) {
