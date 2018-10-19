@@ -2,6 +2,9 @@
   min-height: 80vh;
  &__table {
   border-top: 1px solid @primary;
+  @media @screen-desktop {
+    display: flex;
+  }
  }
 
  &__item {
@@ -30,16 +33,28 @@
     }
   }
 
+  &-total {
+    text-align: right;
+    @media @screen-desktop {
+      text-align: left;
+    }
+  }
+
   &-desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: @pad;
-    width: 220px;
+    @media @screen-desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 220px;
+    }
   }
 
   &-info {
     flex-grow: 2;
+    @media @screen-desktop {
+      display: flex;
+    }
   }
 
   &-shipping {
@@ -59,7 +74,9 @@
  }
 
  &__totals {
+  @media @screen-desktop {
    width: 350px;
+  }
    &-item {
      padding: @pad @pad*2;
      & + .checkout__totals-item {

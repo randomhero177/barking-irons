@@ -5,7 +5,7 @@
 
   &__menu {
     display: flex;
-    align-items: center;
+    
     padding-top: @pad;
     padding-bottom: @pad;
 
@@ -40,7 +40,18 @@
     &-social {
       text-align: right;
       position: relative;
-      padding-left: @pad*3;
+      padding-left: @pad*2;
+      display: flex;
+
+      &-i {
+        height: @pad;
+      }
+
+      &-a {
+        display: flex;
+        align-items: center;
+        padding-right: @pad;
+      }
 
       & img {
         max-width: 120px;
@@ -51,18 +62,19 @@
           content: '';
           display: block;
           position: absolute;
-          height: 100%;
+          height: 20px;
           width: 1px;
-          left: @pad*1.5-@pad/2;
-          top: 0;
+          left: 10px;
+          top: -2px;
           background: @grey;
         }
       }
       
     }
     &-logo {
-      position: relative;
       padding-right: @pad*3;
+      position: relative;
+      top: -2px;
       @media @screen-desktop {
         &:before {
           content: '';

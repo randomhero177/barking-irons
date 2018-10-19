@@ -1564,7 +1564,6 @@ section {
 }
 .footer__menu {
   display: flex;
-  align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -1597,7 +1596,16 @@ section {
 .footer__menu-social {
   text-align: right;
   position: relative;
-  padding-left: 45px;
+  padding-left: 30px;
+  display: flex;
+}
+.footer__menu-social-i {
+  height: 15px;
+}
+.footer__menu-social-a {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
 }
 .footer__menu-social img {
   max-width: 120px;
@@ -1607,16 +1615,17 @@ section {
     content: '';
     display: block;
     position: absolute;
-    height: 100%;
+    height: 20px;
     width: 1px;
-    left: 15px;
-    top: 0;
+    left: 10px;
+    top: -2px;
     background: #aeaeae;
   }
 }
 .footer__menu-logo {
-  position: relative;
   padding-right: 45px;
+  position: relative;
+  top: -2px;
 }
 @media (min-width: 992px) {
   .footer__menu-logo:before {
@@ -2573,6 +2582,11 @@ section {
 .checkout__table {
   border-top: 1px solid #000;
 }
+@media (min-width: 992px) {
+  .checkout__table {
+    display: flex;
+  }
+}
 .checkout__item {
   padding: 15px 30px;
   position: relative;
@@ -2602,15 +2616,32 @@ section {
 .checkout__item-img img {
   max-width: 225px;
 }
+.checkout__item-total {
+  text-align: right;
+}
+@media (min-width: 992px) {
+  .checkout__item-total {
+    text-align: left;
+  }
+}
 .checkout__item-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 15px;
-  width: 220px;
+}
+@media (min-width: 992px) {
+  .checkout__item-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px;
+  }
 }
 .checkout__item-info {
   flex-grow: 2;
+}
+@media (min-width: 992px) {
+  .checkout__item-info {
+    display: flex;
+  }
 }
 .checkout__item-shipping {
   display: flex;
@@ -2625,8 +2656,10 @@ section {
   border-right: 1px solid #000;
   flex-grow: 2;
 }
-.checkout__totals {
-  width: 350px;
+@media (min-width: 992px) {
+  .checkout__totals {
+    width: 350px;
+  }
 }
 .checkout__totals-item {
   padding: 15px 30px;
