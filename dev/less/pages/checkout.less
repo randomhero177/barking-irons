@@ -32,9 +32,16 @@
     .hover(@primary);
   }
   &-img {
+
     max-width: 225px;
     & img {
       max-width: 225px;
+    }
+    @media @screen-xs-only {
+      max-width: 100%;
+      & img {
+        max-width: 100%;
+      }
     }
   }
 

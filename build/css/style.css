@@ -2673,6 +2673,14 @@ section {
 .checkout__item-img img {
   max-width: 225px;
 }
+@media (max-width:479px) {
+  .checkout__item-img {
+    max-width: 100%;
+  }
+  .checkout__item-img img {
+    max-width: 100%;
+  }
+}
 .checkout__item-total {
   text-align: right;
 }
