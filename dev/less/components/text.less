@@ -2,7 +2,10 @@
   padding-bottom: @pad*2;
   &__text {
     margin: 0;
-    font-size: @fz*2.25;
+    font-size: @fz*1.35;
+    @media @screen-tablet {
+      font-size: @fz*2.25;
+    }
   }
 }
 
@@ -21,7 +24,11 @@
   }
 
   &-medium {
-    font-size: @fz*1.35;
+    font-size: @fz;
+    @media @screen-tablet {
+      font-size: @fz*1.35;
+    }
+
   }
 
   &-regular {

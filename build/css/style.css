@@ -177,9 +177,6 @@ input.btn {
 .text-big {
   font-size: 34px;
 }
-.text-medium {
-  font-size: 27px;
-}
 .text-22 {
   font-size: 22px;
 }
@@ -1202,9 +1199,19 @@ section {
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav [class*='owl-']:hover {
   background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/slider-arrow_29c3dfd1-d3df-4954-a387-8c7944b4484b.png?2908612344843250255) center center no-repeat;
-  width: 35px;
-  height: 105px;
+  width: 15px;
+  height: 45px;
+  background-size: cover;
   color: rgba(255, 255, 255, 0);
+}
+@media (min-width: 768px) {
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel .owl-nav [class*='owl-']:hover {
+    width: 35px;
+    height: 105px;
+    background-size: initial;
+  }
 }
 .owl-carousel .owl-nav button.owl-next {
   -moz-transform: rotate(180deg);
@@ -1714,7 +1721,12 @@ section {
 }
 .heading__text {
   margin: 0;
-  font-size: 38.25px;
+  font-size: 22.95px;
+}
+@media (min-width: 768px) {
+  .heading__text {
+    font-size: 38.25px;
+  }
 }
 .text-black {
   background: #000;
@@ -1727,7 +1739,12 @@ section {
   font-size: 42.5px;
 }
 .text-medium {
-  font-size: 22.95px;
+  font-size: 17px;
+}
+@media (min-width: 768px) {
+  .text-medium {
+    font-size: 22.95px;
+  }
 }
 .text-regular {
   font-size: 21.25px;
@@ -2230,11 +2247,20 @@ section {
 }
 .about__slider {
   position: relative;
-  width: 1000px;
+}
+@media (min-width: 1200px) {
+  .about__slider {
+    width: 1000px;
+  }
 }
 .about__slider-item {
-  padding: 0 120px;
+  padding: 0 30px;
   font-size: 29.75px;
+}
+@media (min-width: 1200px) {
+  .about__slider-item {
+    padding: 0 120px;
+  }
 }
 .about__slider-title {
   font-size: 46.75px;
