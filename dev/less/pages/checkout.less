@@ -10,6 +10,11 @@
  &__item {
   padding: @pad @pad*2;
   position: relative;
+  display: flex;
+
+  @media @screen-xs-only {
+    display: block;
+  }
 
   &:before {
     content: '';

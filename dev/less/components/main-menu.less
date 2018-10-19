@@ -83,18 +83,38 @@
         background: #aeaeae;
       }
 
+
+
       @media @screen-large {
         padding-left: @pad*2.25;
       }
       @media @screen-small {
         padding-left: @pad;
         padding-right: @pad;
-        border-right: 1px solid @grey;
+        &:after {
+          content: '';
+          display: block;
+          height: 21px;
+          width: 1px;
+          right: 0;
+          bottom: 13px;
+          position: absolute;
+          background: #aeaeae;
+        }
       }
       @media @screen-tablets-only {
         padding-left: @pad;
         padding-right: @pad;
-        border-right: 1px solid @grey;
+        &:after {
+          content: '';
+          display: block;
+          height: 21px;
+          width: 1px;
+          right: 0;
+          bottom: 13px;
+          position: absolute;
+          background: #aeaeae;
+        }
       }
       &:hover .main-menu__checkout{
         display: block;
@@ -289,6 +309,7 @@
       -webkit-transition: all 0.5s ease-out;
       cursor: pointer;
       width: 25px;
+      max-width: 25px;
       &.active {
         -moz-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);

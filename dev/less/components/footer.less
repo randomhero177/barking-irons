@@ -5,7 +5,7 @@
 
   &__menu {
     display: flex;
-    
+
     padding-top: @pad;
     padding-bottom: @pad;
 
@@ -45,12 +45,17 @@
 
       &-i {
         height: @pad;
+        position: relative;
+        top: -2px;
       }
 
       &-a {
         display: flex;
         align-items: center;
         padding-right: @pad;
+        &:hover,&:focus, &:active {
+          text-decoration: none;
+        }
       }
 
       & img {
@@ -69,7 +74,7 @@
           background: @grey;
         }
       }
-      
+
     }
     &-logo {
       padding-right: @pad*3;
@@ -98,7 +103,7 @@
       text-transform: uppercase;
       padding-top: @pad;
       padding-bottom: @pad;
-      
+
       &:nth-child(2n+1) {
         border-right: 1px solid #4d4d4d;
         &:before {
@@ -113,7 +118,7 @@
         }
       }
     }
-    
+
 
     &-info-txt {
       display: block;
@@ -139,7 +144,7 @@
         height: 1px;
         background: #4d4d4d;
       }
-      
+
     }
   }
 }
