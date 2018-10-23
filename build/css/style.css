@@ -1933,6 +1933,13 @@ section {
 .collection__same-category-item {
   position: relative;
   width: 50%;
+  color: #000;
+}
+.collection__same-category-item:hover,
+.collection__same-category-item:active,
+.collection__same-category-item:focus {
+  color: #000;
+  text-decoration: none;
 }
 @media (min-width: 992px) {
   .collection__same-category-item {
