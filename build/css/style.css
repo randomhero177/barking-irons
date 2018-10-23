@@ -1886,8 +1886,13 @@ section {
   text-decoration: none;
 }
 .instagram__text-head {
-  font-size: 68px;
+  font-size: 34px;
   display: block;
+}
+@media (min-width: 992px) {
+  .instagram__text-head {
+    font-size: 68px;
+  }
 }
 #instagram {
   pointer-events: none;

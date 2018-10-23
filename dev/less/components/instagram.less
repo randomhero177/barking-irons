@@ -13,8 +13,11 @@
   	margin-top: -72px;
   	font-size: @fz*2;
   	&-head {
-  		font-size: @fz*4;
+		font-size: @fz*2;
   		display: block;
+  		@media @screen-desktop {
+  			font-size: @fz*4;
+  		}
   	}
   }
 }
