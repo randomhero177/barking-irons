@@ -56,17 +56,24 @@ $(document).ready(function() {
       var screenHeight = $(window).height(),
         headerHeight = $('.header').height(),
         blockHeight = screenHeight - headerHeight,
-        elemArr = c.singleBlock.find(c.sliderBgElem);
+        elemArr = c.singleBlock.find(c.sliderBgElem),
+        pageContent = $('.single-page__content');
 
-      if($(window).width() >= 992 ) {
-        $('.single-page__content').height(blockHeight);  
-      }
+      function pageContentHeight(){
+        pageContent.css('min-height', ($(window).width() >= 992 ) ? blockHeight: 'auto');
+      };
       
+      $(window).resize(function(){
+        pageContentHeight();
+      });
+
+      pageContentHeight();
 
       elemArr.each(function(i, el){
         var curImg = $(el).find('.single-page__slider-img').attr('src');
         $(el).css('background-image', 'url('+ curImg +')');
-      })
+      });
+
     },
     init: function(){
       SinglePage.setHeight();
