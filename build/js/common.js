@@ -5,6 +5,7 @@ $(document).ready(function() {
       modalInner: '.modal-block__innner',
       buttonShow: '[data-modal="show"]',
       buttonClose: '[data-modal="close"]',
+      activeBody: 'modal-block__body'
     },
     show: function(id){
       var c = Modal.config,
@@ -12,14 +13,16 @@ $(document).ready(function() {
       inner = curBlock.find(c.modalInner);
 
       $(curBlock).addClass('active');
+      $('body').addClass(c.activeBody);
       inner.toggle(300);
     },
     hide: function(id){
       var c = Modal.config,
       curBlock = $('#' + id),
       inner = curBlock.find(c.modalInner);
-
+      
       $(curBlock).removeClass('active');
+      $('body').removeClass(c.activeBody);
       inner.toggle(300);
     },
     buttonShow: function(){
@@ -53,7 +56,7 @@ $(document).ready(function() {
   }
   Modal.init();
 
-  
+
   (function () {
     /**** search function ****/
     var block = $('.header__search-wrap'),
@@ -91,45 +94,48 @@ $(document).ready(function() {
 
   })();
   smoothScroll($('.goTo'));
+
+  $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
+  $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
 });
 var resources = {
-      ErrorMsg_NoDescription: 'Ошибка без описания',
-      ServerError: 'К сожалению,на сервере произошла ошибка. Попробуйте повторить операцию позднее и, если проблема повторится, <a href="/support?pid=20895" title="Создать обращение  в службу поддержки">сообщите нам</a>',
-      Shared_MaxValue: 'Максимальное значение',
-      Shared_MinValue: 'Миниимальное значение',
-      Shared_ClosestValue: 'Ближайшее значение',
-      Shared_Next: 'Вперед',
-      Shared_Prev: 'Назад',
-            Shared_Required: 'Поле обязательно для заполнения',
-            Shared_Incorrect_Data: 'Отправленные данные содержать ошибку. Исправьте ошибки и повторите попытку',
-      ConfirmRequired: 'Необходимо подтвердить свое согласие',
-      Shared_Action_Undone: 'Это действие нельзя отменить',
-      Common_copy: 'Копировать',
-      Common_delete: 'Удалить',
-      Shared_BtnDownload: 'Скачать',
-      Shared_Rename: 'Переименовать',
-      Shared_Move: 'Переместить',
-      Shared_Edit: 'Редактировать',
-      Shared_Confirm_Title: 'Подтверждение действия',
-      Shared_Confirm: 'Подтвердить',
-            Shared_Cancel: 'Отменить',
-      Sending: 'Отправляем...',
-            Sent: 'Успешно отправлено',
-      Completed_Successful_Text: 'Успешно выполнено',
-      Shared_Changes_Saved: 'Изменения сохранены успешно',
-            TurnOn: 'Включено',
-            TurnOff: 'Выключено',
-      Required: 'Поле обязательно для заполнения',
-            ServerErrorTitle: 'Ошибка сервера',
-      HtmlTagNotAvaliable: 'HTML-теги не допускаются',
-      Upload: {
-        MaxUploadFileSize: 10485760,
-        MaxUploadFileSizeErrorText: 'Разрешаются только файлы со следующими расширениями: PNG, DOC, JPEG, GIF, DOC, DOCX, TXT, RTF, PDF и размером не более 10 MB',
-        MaxUploadFiles: 10,
-        MaxUploadFilesErrorText: 'Максимальное количество загружаемых файлов за один раз: 10',
-        AllowedFileExtensionsForUpload: 'png,jpeg,jpg,gif,doc,docx,txt,rtf,pdf,zip,rar,7z,tar.bz2,tar.gz,tar,xls,xlsx,csv'
-      }
-    };
+  ErrorMsg_NoDescription: 'Ошибка без описания',
+  ServerError: 'К сожалению,на сервере произошла ошибка. Попробуйте повторить операцию позднее и, если проблема повторится, <a href="/support?pid=20895" title="Создать обращение  в службу поддержки">сообщите нам</a>',
+  Shared_MaxValue: 'Максимальное значение',
+  Shared_MinValue: 'Миниимальное значение',
+  Shared_ClosestValue: 'Ближайшее значение',
+  Shared_Next: 'Вперед',
+  Shared_Prev: 'Назад',
+  Shared_Required: 'Поле обязательно для заполнения',
+  Shared_Incorrect_Data: 'Отправленные данные содержать ошибку. Исправьте ошибки и повторите попытку',
+  ConfirmRequired: 'Необходимо подтвердить свое согласие',
+  Shared_Action_Undone: 'Это действие нельзя отменить',
+  Common_copy: 'Копировать',
+  Common_delete: 'Удалить',
+  Shared_BtnDownload: 'Скачать',
+  Shared_Rename: 'Переименовать',
+  Shared_Move: 'Переместить',
+  Shared_Edit: 'Редактировать',
+  Shared_Confirm_Title: 'Подтверждение действия',
+  Shared_Confirm: 'Подтвердить',
+  Shared_Cancel: 'Отменить',
+  Sending: 'Отправляем...',
+  Sent: 'Успешно отправлено',
+  Completed_Successful_Text: 'Успешно выполнено',
+  Shared_Changes_Saved: 'Изменения сохранены успешно',
+  TurnOn: 'Включено',
+  TurnOff: 'Выключено',
+  Required: 'Поле обязательно для заполнения',
+  ServerErrorTitle: 'Ошибка сервера',
+  HtmlTagNotAvaliable: 'HTML-теги не допускаются',
+  Upload: {
+    MaxUploadFileSize: 10485760,
+    MaxUploadFileSizeErrorText: 'Разрешаются только файлы со следующими расширениями: PNG, DOC, JPEG, GIF, DOC, DOCX, TXT, RTF, PDF и размером не более 10 MB',
+    MaxUploadFiles: 10,
+    MaxUploadFilesErrorText: 'Максимальное количество загружаемых файлов за один раз: 10',
+    AllowedFileExtensionsForUpload: 'png,jpeg,jpg,gif,doc,docx,txt,rtf,pdf,zip,rar,7z,tar.bz2,tar.gz,tar,xls,xlsx,csv'
+  }
+};
 
 /*
 *
@@ -149,7 +155,6 @@ function setAnchors(elClass){
 
 // Select all links with hashes
 function smoothScroll(elem){
-  console.log(elem);
   $(elem).click(function(event) {
     event.preventDefault();
     var target = $(this.hash);
