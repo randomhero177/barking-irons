@@ -1280,9 +1280,14 @@ section {
   height: 21px;
   width: 1px;
   left: 0;
-  bottom: 13px;
+  bottom: 7px;
   position: absolute;
   background: #aeaeae;
+}
+@media (min-width: 768px) {
+  .main-menu__item--bag:before {
+    bottom: 13px;
+  }
 }
 @media (min-width: 1200px) {
   .main-menu__item--bag {
@@ -1316,7 +1321,7 @@ section {
     height: 21px;
     width: 1px;
     right: 0;
-    bottom: 13px;
+    bottom: 7px;
     position: absolute;
     background: #aeaeae;
   }
