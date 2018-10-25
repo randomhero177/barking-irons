@@ -120,10 +120,13 @@
           background: #aeaeae;
         }
       }
-      &:hover .main-menu__checkout{
-        display: block;
+      @media @screen-tablet {
+        &:hover .main-menu__checkout{
+          display: block;
+        }
       }
     }
+
     &--search {
       @media @screen-large {
         padding-right: @pad*2.25;
@@ -290,6 +293,18 @@
 
   &__mobile {
     background: @inverse;
+    @media @screen-desktop {
+      display: none;
+    }
+    
+    &-dropdown {
+      display: none;
+      padding-left: @pad;
+      &.active {
+        display: block;
+      }
+    }
+
     &-item {
       padding: @pad @pad*2;
       text-transform: uppercase;

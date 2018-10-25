@@ -72,6 +72,23 @@ $(document).ready(function() {
       block.addClass('hidden');
     })
 
+    /***** Mobile dropdown ****/
+    var mobileMenuItem = $('.main-menu__mobile-item');
+    mobileMenuItem.each(function(i, el) {
+      console.log(this);
+      if($(el).has('.main-menu__mobile-dropdown').length){
+        var link = $(el).find('.main-menu__mobile-link');
+        link.click(function(e){
+          e.preventDefault();
+          $('.main-menu__mobile-dropdown').removeClass('active');
+          $(el).find('.main-menu__mobile-dropdown').addClass('active');
+        });
+        console.log(this);
+      } else {
+        console.log('хуй')
+      };
+    })
+
     /**** MOBILE ICON ****/
     var mIcon = $('#mobile-menu-icon'),
       mMenu = $('#mobile-menu');
