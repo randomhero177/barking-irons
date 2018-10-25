@@ -1331,6 +1331,11 @@ section {
     display: block;
   }
 }
+@media (max-width:479px) {
+  .main-menu__item--search {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .main-menu__item--search {
     padding-right: 33.75px;
@@ -1399,12 +1404,28 @@ section {
   color: #fff;
   padding: 30px 0;
 }
+@media (max-width:479px) {
+  .main-menu__anchors {
+    display: none;
+  }
+}
+@media (min-width:480px) and (max-width:767px) {
+  .main-menu__anchors {
+    padding: 15px 0;
+    font-size: 12.75px;
+  }
+}
 .main-menu__anchors-list {
   display: flex;
   align-items: center;
 }
 .main-menu__anchors-item {
-  padding-right: 60px;
+  padding-right: 30px;
+}
+@media (min-width: 768px) {
+  .main-menu__anchors-item {
+    padding-right: 60px;
+  }
 }
 .main-menu__anchors-item a {
   color: #fff;
@@ -1493,15 +1514,93 @@ section {
 }
 .main-menu__mobile-dropdown {
   display: none;
+}
+.main-menu__mobile-dropdown li + li {
   padding-left: 15px;
+  margin-left: 15px;
+  position: relative;
+  text-align: center;
+}
+.main-menu__mobile-dropdown li + li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 43px;
+  width: 1px;
+  background: #c4c4c4;
+  left: 0;
+  top: -15px;
+}
+@media (max-width:479px) {
+  .main-menu__mobile-dropdown li + li:before {
+    display: none;
+  }
+}
+.main-menu__mobile-dropdown li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+@media (max-width:479px) {
+  .main-menu__mobile-dropdown li {
+    text-align: left!important;
+    padding-left: 0!important;
+    margin-left: 0!important;
+    margin-bottom: 7.5px;
+  }
 }
 .main-menu__mobile-dropdown.active {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+.main-menu__mobile-dropdown.active:before {
+  content: '';
   display: block;
+  left: -1000px;
+  top: -15px;
+  height: 1px;
+  width: 10000px;
+  position: absolute;
+  background: #c4c4c4;
+}
+@media (max-width:479px) {
+  .main-menu__mobile-dropdown.active {
+    display: block;
+  }
+  .main-menu__mobile-dropdown.active:before {
+    display: none;
+  }
+}
+.main-menu__mobile-dropdown.active ~ a {
+  font-weight: bold;
+}
+.main-menu__mobile-dropdown a {
+  color: #c4c4c4;
 }
 .main-menu__mobile-item {
   padding: 15px 30px;
   text-transform: uppercase;
   position: relative;
+}
+@media (min-width:480px) and (max-width:767px) {
+  .main-menu__mobile-item {
+    font-size: 9.35px;
+  }
+}
+.main-menu__mobile-link {
+  color: #000;
+  transition: all 0.2s;
+}
+.main-menu__mobile-link:hover,
+.main-menu__mobile-link:active,
+.main-menu__mobile-link:focus {
+  color: #000;
+  text-decoration: none;
+}
+.main-menu__mobile-link.active {
+  font-weight: bold;
+  font-size: 17px;
 }
 .main-menu__mobile-item + .main-menu__mobile-item:before {
   content: '';
@@ -1710,6 +1809,9 @@ section {
   content: '+';
   display: inline;
 }
+.footer__mobile-info-txt.in {
+  font-weight: bold;
+}
 .footer__mobile-info-txt.in:before {
   content: '-';
 }
@@ -1717,8 +1819,8 @@ section {
   content: '';
   display: block;
   position: absolute;
-  left: -3000px;
-  width: 1000%;
+  left: -1000px;
+  width: 4000px;
   bottom: -1px;
   height: 1px;
   background: #4d4d4d;

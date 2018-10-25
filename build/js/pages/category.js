@@ -15,7 +15,7 @@ $(window).load(function () {
           console.log(curHeight);
           console.log(el);
         });
-      extraElem.height(smallestHeight*2 -4);
+      extraElem.css('max-height', (smallestHeight*2 -4));
 
     },
     init: function(){

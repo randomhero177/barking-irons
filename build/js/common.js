@@ -80,6 +80,8 @@ $(document).ready(function() {
         var link = $(el).find('.main-menu__mobile-link');
         link.click(function(e){
           e.preventDefault();
+          $('.main-menu__mobile-link').removeClass('active');
+          $(this).addClass('active');
           $('.main-menu__mobile-dropdown').removeClass('active');
           $(el).find('.main-menu__mobile-dropdown').addClass('active');
         });

@@ -25,8 +25,6 @@
     padding: @pad/2 @pad;
     position: relative;
 
-
-
     &-dropdown{
       display: none;
       position: absolute;
@@ -128,6 +126,9 @@
     }
 
     &--search {
+      @media @screen-xs-only {
+        display: none;
+      }
       @media @screen-large {
         padding-right: @pad*2.25;
       }
@@ -205,12 +206,25 @@
     background: @primary;
     color: @inverse;
     padding: @pad*2 0;
+
+    @media @screen-xs-only {
+      display: none;
+    }
+
+    @media @screen-small-only {
+      padding: @pad 0;
+      font-size: @fz*0.75;
+    }
+
     &-list {
       display: flex;
       align-items: center;
     }
     &-item {
-      padding-right: @pad*4;
+      padding-right: @pad*2;
+      @media @screen-tablet {
+        padding-right: @pad*4;
+      }
       & a {
         color: @inverse;
         text-transform: uppercase;
@@ -299,9 +313,68 @@
     
     &-dropdown {
       display: none;
-      padding-left: @pad;
+      
+      & li + li {
+        padding-left: @pad;
+        margin-left: @pad;
+        position: relative;
+        text-align: center;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 43px;
+          width: 1px;
+          background: #c4c4c4;
+          left: 0;
+          top: -15px;
+          @media @screen-xs-only {
+            display: none;
+          }
+        }
+      }
+
+      & li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        @media @screen-xs-only {
+          text-align: left!important;
+          padding-left: 0!important;
+          margin-left: 0!important;
+          margin-bottom: @pad/2;
+        }
+      }
+
       &.active {
-        display: block;
+        display: flex;
+        position: relative;
+        margin-top: @pad*2;
+        &:before {
+          content: '';
+          display: block;
+          left: -1000px;
+          top: -@pad;
+          height: 1px;
+          width: 10000px;
+          position: absolute;
+          background: #c4c4c4;
+        }
+        @media @screen-xs-only {
+          display: block;
+          &:before {
+            display: none;
+          }
+        }
+        
+
+        & ~ a {
+          font-weight: bold;
+        }
+      }
+
+      & a {
+        color: #c4c4c4;
       }
     }
 
@@ -309,6 +382,19 @@
       padding: @pad @pad*2;
       text-transform: uppercase;
       position: relative;
+      @media @screen-small-only {
+        font-size: @fz*0.55;
+      }
+
+    }
+    &-link {
+      color: @primary;
+      .hover(@primary);
+      transition: all 0.2s;
+      &.active {
+        font-weight: bold;
+        font-size: @fz;
+      }
     }
     &-item + &-item {
       &:before {
