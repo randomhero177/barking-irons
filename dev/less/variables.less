@@ -86,11 +86,14 @@
 @screen-tablet: (min-width: 768px);
 @screen-desktop: (min-width: 992px);
 @screen-large: (min-width: 1200px);
+@screen-xlarge: (min-width: 1900px);
 
 @screen-xs-only: (max-width:479px);
 @screen-small-only: (min-width:480px) and (max-width:767px);
 @screen-tablets-only: (min-width: 768px) and (max-width: 991px);
 @screen-desktop-only: (min-width: 992px) and (max-width: 1199px);
+
+
 
 /*
 Extra small devices Phones (<768px) (Class names : .visible-xs-block, hidden-xs)
@@ -112,39 +115,8 @@ Large devices Desktops (≥1200px) (Class names : .visible-lg-block, hidden-lg)
   width: 100%;
 }
 
-.right_a {
-	text-align: right;
-}
-.for_btn {
-	display: block;
-	position: relative;
-	cursor: pointer;
-	-moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    -webkit-transition: all .5s ease-out;
-}
-.for_btn:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
 
-strong { font-weight: bold; }
-em { font-style: italic; }
-img {max-width: 100%;}
 
-.wrapper {
-
-	margin: 0 auto;
-	.border-box;
-	position: relative;
-	z-index: 5;
-
-}
-.border-box {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 
 
@@ -184,191 +156,10 @@ transform: @transform;
 	}
 }
 
-.table {
-display: table;
-width: 100%;
-}
-.flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-.cell {
-vertical-align: top;
-display: table-cell;
-}
-.inline {
-display: inline-block;
-vertical-align: top;
-}
-.relative{
-	position: relative;
-}
-.img {
-display: block;
-margin: 0 auto;
-}
-.inp {
-	display: block;
-	.border-box;
-}
-.italic {
-	font-style: italic;
-}
 .overflow {
 overflow: hidden;
 }
-.normal {
-	font-weight: 400;
-}
-.bold, .link {
-	font-weight:bold;
-}
-.line-through {
-	text-decoration: line-through;
-}
-.up {
-	text-transform: uppercase;
-}
-.center {
-	text-align: center;
-}
-.text-left {
-	text-align: left;
-}
-.placeholder(#000);
-input.btn {
-	display: block;
-	.border-box;
-}
 
-.btn:hover {
-	-webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
-.text-big {
-	font-size: 34px;
-}
-
-.text-22 {
-	font-size: 22px;
-}
-.text-small {
-	font-size: 14px;
-}
-.text-tiny {
-	font-size: 12px;
-}
-
-
-
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-
-
-.show {
-  display: block !important; }
-
-.invisible {
-  visibility: hidden; }
-
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0; }
-
-
-// TEXT
-.uppercase {
-  text-transform: uppercase; }
-
-.center {
-  text-align: center; }
-
-.align_right {
-  text-align: right; }
-
-.align_left {
-  text-align: left; }
-
-.underline {
-  text-decoration: underline; }
-
-.old {
-  text-decoration: line-through; }
-
-.italic {
-  font-style: italic; }
-
-.block {
-  display: block; }
-
-.bold {
-  font-weight: 700; }
-
-.light {
-  font-weight: 300; }
-
-.hidden {
-  display: none; }
-
-
-.__9 {
-  font-size: 9px; }
-
-.__14 {
-  font-size: 14px; }
-
-.__16 {
-  font-size: 16px; }
-
-.__18 {
-  font-size: 18px; }
-.__20 {
-  font-size: 20px; }
-.__22 {
-  font-size: 22px; }
-.__24 {
-  font-size: 24px; }
-.__26 {
-  font-size: 26px; }
-
-.__30 {
-  font-size: 30px; }
-
-.__36 {
-  font-size: 36px; }
-
-.__42 {
-  font-size: 42px; }
-
-.__48 {
-  font-size: 48px; }
-
-.__55 {
-  font-size: 55px; }
-.__60 {
-  font-size: 60px; }
-.__63 {
-  font-size: 63px; }
-.__72 {
-  font-size: 72px; }
-
-.__90 {
-  font-size: 90px; }
-.circle-center {
-	.flex;
-	align-items: center;
-    justify-content: center;
-	.border-radius(100%);
-}
 
 /*===============================================
   D. Padding Helpers

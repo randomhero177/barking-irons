@@ -35,6 +35,9 @@
     &-item {
       padding: 0 @pad/2;
       font-size: @fz*0.75;
+      @media @screen-xlarge {
+        font-size: @fz*1.25;
+      }
     }
 
     &-social {
@@ -47,6 +50,9 @@
         height: @pad;
         position: relative;
         top: -2px;
+        @media @screen-xlarge {
+          height: @fz*1.25;
+        }
       }
 
       &-a {
@@ -75,6 +81,13 @@
         }
       }
 
+      @media @screen-xlarge {
+        &:before {
+          height: 29px;
+          top: 2px;
+        }
+      }
+
     }
     &-logo {
       padding-right: @pad*3;
@@ -90,6 +103,14 @@
           right: @pad*1.5-@pad/2;
           top: 0;
           background: @grey;
+        }
+      }
+
+      @media @screen-xlarge {
+        font-size: @fz*1.25;
+        top: 0;
+        &:before {
+          top: 2px;
         }
       }
     }

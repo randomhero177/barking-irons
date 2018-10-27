@@ -2,6 +2,19 @@
   &__slider {
     background: @primary;
     position: relative;
+    display: none!important;
+    @media @screen-tablet {
+      display: block!important;
+      &--mobile {
+        display: none!important;
+      }
+    }
+
+    @media @screen-small {
+      &--mobile {
+        display: block!important;
+      }
+    }
 
     &-item {
       text-align: center;

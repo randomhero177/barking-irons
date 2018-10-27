@@ -6,6 +6,9 @@
     @media @screen-tablet {
       font-size: @fz*2.25;
     }
+    @media @screen-xlarge {
+      font-size: @fz*2.5;
+    }
   }
 }
 
@@ -17,10 +20,16 @@
 
   &-big {
     font-size: @fz*2;
+    @media @screen-xlarge {
+      font-size: @fz*2.5;
+    }
   }
 
   &-xlarge {
     font-size: @fz*2.5;
+    @media @screen-xlarge {
+      font-size: @fz*2.75;
+    }
   }
 
   &-medium {
@@ -28,23 +37,37 @@
     @media @screen-tablet {
       font-size: @fz*1.35;
     }
-
+    @media @screen-xlarge {
+      font-size: @fz*1.5;
+    }
   }
 
   &-regular {
     font-size: @fz*1.25;
+    @media @screen-xlarge {
+      font-size: @fz*1.5;
+    }
   }
 
   &-init {
     font-size: @fz;
+    @media @screen-xlarge {
+      font-size: @fz*1.25;
+    }
   }
 
   &-small {
     font-size: @fz*0.9;
+    @media @screen-xlarge {
+      font-size: @fz*1.25;
+    }
   }
 
   &-xsmall {
     font-size: @fz*0.75;
+    @media @screen-xlarge {
+      font-size: @fz;
+    }
   }
 
   &-mb, &-container p {

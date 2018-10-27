@@ -70,7 +70,10 @@
     }
 
     &__slider {
-      font-size: @fz*1.5;
+      font-size: @fz*1.25;
+      @media @screen-xlarge {
+        font-size: @fz*1.5;
+      }
       &-title {
         font-weight: bold;
         font-size: @fz*3;

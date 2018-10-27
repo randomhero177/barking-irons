@@ -5,7 +5,7 @@ $(document).ready(function() {
       mainSliderBlock: $('.main-screen__slider'),
       collectionSliderBlock: $('#collection-slider')
     },
-    mainSlider: function(){
+    mainSliders: function(){
       var c = HomePage.config;
       c.mainSliderBlock.each(function(i, el){
         let curId = $(this).attr('id');
@@ -54,7 +54,7 @@ $(document).ready(function() {
       }, 7000)
     },
     init: function(){
-      HomePage.mainSlider();
+      HomePage.mainSliders();
       HomePage.collectionSlider();
       HomePage.mainLoad();
       //HomePage.instagram();

@@ -1,12 +1,6 @@
 .about {
-  height: 100vh;
-  min-height: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+
   &--est {
-    background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about1.jpg) center top no-repeat;
     color: @inverse;
   }
 
@@ -22,17 +16,29 @@
 
   &__slider {
     position: relative;
-    @media @screen-large {
-      width: 1000px;
-    }
+    
     &-item {
-      padding: 0 @pad*2;
-      @media @screen-large {
-        padding: 0 120px;
+      height: 100vh;
+      min-height: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center top;
+      &-wrap {
+        padding: 0 @pad*2;
+        @media @screen-large {
+          padding: 0 120px;
+          width: 1000px;
+        }
+
+        @media @screen-xlarge {
+          width: 1400px;
+        }
+        font-size: @fz*1.75;  
       }
-
-
-      font-size: @fz*1.75;
+      
     }
     &-title {
       font-size: @fz*2.75;

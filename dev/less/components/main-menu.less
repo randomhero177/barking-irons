@@ -7,6 +7,9 @@
     padding: @pad*1.5 0;
     align-items: center;
     font-size: @fz*0.9;
+    @media @screen-xlarge {
+      font-size: @fz*1.25;
+    }
 
     &--about {
       justify-content: flex-end;
@@ -34,6 +37,9 @@
       background: @inverse;
       z-index: 5;
       font-size: @fz*0.75;
+      @media @screen-xlarge {
+        font-size: @fz*1.25;
+      }
 
       &::before {
         content: '';
