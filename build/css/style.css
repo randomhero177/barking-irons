@@ -2225,6 +2225,11 @@ section {
   background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about2.jpg) center top no-repeat;
   color: #000;
 }
+.about--merch .owl-carousel .owl-nav button.owl-prev,
+.about--merch .owl-carousel .owl-nav button.owl-next,
+.about--merch .owl-carousel .owl-nav [class*='owl-']:hover {
+  background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/slider-arrow-black.png?79825151098041442);
+}
 .about--distil {
   background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about3.jpg) center center no-repeat;
   color: #fff;
@@ -2269,10 +2274,10 @@ section {
   margin-top: -68px;
 }
 .about__slider .owl-nav button.owl-prev {
-  left: 0;
+  left: 30px;
 }
 .about__slider .owl-nav button.owl-next {
-  right: 0;
+  right: 30px;
 }
 .about__contacts-row {
   display: flex;

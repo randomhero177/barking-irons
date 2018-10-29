@@ -7,6 +7,13 @@
   &--merch {
     background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/about2.jpg) center top no-repeat;
     color: @primary;
+    & .owl-carousel {
+      & .owl-nav {
+        & button.owl-prev, button.owl-next, [class*='owl-']:hover {
+          background: url(https://cdn.shopify.com/s/files/1/0021/7448/4547/files/slider-arrow-black.png?79825151098041442)
+        }
+      }  
+    }
   }
 
   &--distil {
@@ -53,10 +60,10 @@
         margin-top: -68px;
       }
       & button.owl-prev {
-        left: 0;
+        left: @pad*2;
       }
       & button.owl-next {
-        right: 0;
+        right: @pad*2;
       }
     }
   }
