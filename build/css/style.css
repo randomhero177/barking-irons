@@ -2003,10 +2003,10 @@ section {
   margin-top: -68px;
 }
 .collection-alt__slider .owl-prev {
-  left: -120px;
+  left: 30px;
 }
 .collection-alt__slider .owl-next {
-  right: -120px;
+  right: 30px;
 }
 .modal-block {
   display: none;

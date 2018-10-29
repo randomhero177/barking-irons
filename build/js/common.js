@@ -75,7 +75,6 @@ $(document).ready(function() {
     /***** Mobile dropdown ****/
     var mobileMenuItem = $('.main-menu__mobile-item');
     mobileMenuItem.each(function(i, el) {
-      console.log(this);
       if($(el).has('.main-menu__mobile-dropdown').length){
         var link = $(el).find('.main-menu__mobile-link');
         link.click(function(e){
@@ -85,9 +84,6 @@ $(document).ready(function() {
           $('.main-menu__mobile-dropdown').removeClass('active');
           $(el).find('.main-menu__mobile-dropdown').addClass('active');
         });
-        console.log(this);
-      } else {
-        console.log('хуй')
       };
     })
 
