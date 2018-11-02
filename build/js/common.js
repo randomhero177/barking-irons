@@ -20,7 +20,7 @@ $(document).ready(function() {
       var c = Modal.config,
       curBlock = $('#' + id),
       inner = curBlock.find(c.modalInner);
-      
+
       $(curBlock).removeClass('active');
       $('body').removeClass(c.activeBody);
       inner.toggle(300);
@@ -112,6 +112,12 @@ $(document).ready(function() {
 
   $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
   $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
+
+  console.log();
+  if(geoplugin_countryCode() !== 'US'){
+    $('#footer-geo').modal('show');
+  };
+
 });
 var resources = {
   ErrorMsg_NoDescription: 'Ошибка без описания',

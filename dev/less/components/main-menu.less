@@ -52,6 +52,9 @@
         height: 100%;
         border-bottom: 1px solid rgba(0,0,0,0.5);
         border-top: 1px solid rgba(0,0,0,0.5);
+        @media @screen-xlarge {
+          top: 12px;
+        }
       }
       & li {
         position: relative;
@@ -316,10 +319,10 @@
     @media @screen-desktop {
       display: none;
     }
-    
+
     &-dropdown {
       display: none;
-      
+
       & li + li {
         padding-left: @pad;
         margin-left: @pad;
@@ -334,6 +337,7 @@
           background: #c4c4c4;
           left: 0;
           top: -15px;
+
           @media @screen-xs-only {
             display: none;
           }
@@ -372,7 +376,7 @@
             display: none;
           }
         }
-        
+
 
         & ~ a {
           font-weight: bold;
