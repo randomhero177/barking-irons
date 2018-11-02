@@ -15,6 +15,8 @@ $(document).ready(function() {
           nav:true,
           video:true,
           lazyLoad:true,
+          autoplay: $(el).data('autoplay'),
+          autoplayTimeout:  Number($(el).data('speed')),
           dots: true
         })
       })
