@@ -9,6 +9,7 @@ $(document).ready(function() {
       var c = HomePage.config;
       c.mainSliderBlock.each(function(i, el){
         let curId = $(this).attr('id');
+
         $('#' + curId).owlCarousel({
           loop:true,
           items:1,

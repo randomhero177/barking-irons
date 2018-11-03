@@ -1,9 +1,9 @@
 .checkout {
   min-height: 80vh;
  &__table {
-  border-top: 1px solid @primary;
   @media @screen-desktop {
     display: flex;
+    border-top: 1px solid @primary;
   }
  }
 
@@ -12,8 +12,13 @@
   position: relative;
   display: flex;
 
+  @media @screen-small{
+    padding: 0 0 @pad;  
+  }
+  
   @media @screen-xs-only {
     display: block;
+
   }
 
   &:before {
@@ -81,7 +86,10 @@
  }
 
  &__list {
-  border-right: 1px solid @primary;
+  @media @screen-desktop {
+    border-right: 1px solid @primary;  
+  }
+  
   flex-grow: 2;
  }
 
