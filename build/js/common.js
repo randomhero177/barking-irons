@@ -112,10 +112,12 @@ $(document).ready(function() {
 
   $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
   $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
-
-  if(typeof geoplugin_countryCode === 'function' && geoplugin_countryCode() !== 'US'){
-    $('#footer-geo').modal('show');
-  };
+  
+  /*
+    if(typeof geoplugin_countryCode === 'function' && geoplugin_countryCode() !== 'US'){
+      $('#footer-geo').modal('show');
+    };
+  */
 
 });
 var resources = {
