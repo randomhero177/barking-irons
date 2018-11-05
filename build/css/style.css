@@ -2039,6 +2039,7 @@ section {
   height: 80%;
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 .modal-block--darken {
   background: rgba(0, 0, 0, 0.4);
@@ -2842,4 +2843,14 @@ section {
 }
 .search-result__count {
   padding: 15px 0 15px 15px;
+}
+.mixtape__item {
+  background-size: contain;
+  margin-bottom: 30px;
+}
+.mixtape__item img {
+  transition: all 0.2s ease-in-out;
+}
+.mixtape__item img:hover {
+  opacity: 0;
 }
