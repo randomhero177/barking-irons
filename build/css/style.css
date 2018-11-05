@@ -2845,7 +2845,7 @@ section {
   padding: 15px 0 15px 15px;
 }
 .mixtape__item {
-  background-size: contain;
+  background-size: cover;
   margin-bottom: 30px;
 }
 .mixtape__item img {
