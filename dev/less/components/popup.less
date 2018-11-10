@@ -1,0 +1,27 @@
+.popup {
+  @local-red: #91282f;
+  border: 5px solid @local-red;
+  padding: @pad*4 @pad*2;
+  &__header{
+    padding-bottom: @pad*2;
+    &-title {
+      text-align: center;
+      color: @local-red;
+      font-weight: bold;
+      margin-bottom: @pad;
+    }
+    &-txt {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &__btn {
+    border: 0;
+    background: @local-red;
+    color: @inverse;
+    padding: @pad @pad*2;
+    &-wrap {
+      text-align: center;
+    }
+  }
+}

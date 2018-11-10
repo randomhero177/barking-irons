@@ -9,6 +9,7 @@
     height: 80%;
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 100%;
   }
 
@@ -36,11 +37,19 @@
     display: none;
     max-height: 100%;
     overflow: auto;
-    width: 100%;
+    max-width: 100%;
 
     @media @screen-desktop {
       padding: @pad*4;
-    } 
+    }
+
+    &--full {
+      width: 100%;
+    }
+
+    &--smpd {
+      padding: @pad;
+    }
   }
 
   &__button {
