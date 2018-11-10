@@ -2,6 +2,9 @@
   @local-red: #91282f;
   border: 5px solid @local-red;
   padding: @pad*4 @pad*2;
+  @media @screen-small {
+    padding: @pad;
+  }
   &__header{
     padding-bottom: @pad*2;
     &-title {
@@ -20,8 +23,19 @@
     background: @local-red;
     color: @inverse;
     padding: @pad @pad*2;
+    .hover(@inverse);
     &-wrap {
       text-align: center;
+      margin-top: @pad*2;
+    }
+  }
+
+  &__form {
+    &-inp {
+      display: block;
+      border: 0;
+      width: 100%;
+      border-bottom: 2px solid @primary;
     }
   }
 }

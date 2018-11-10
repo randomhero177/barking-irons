@@ -59,7 +59,10 @@
       right: @pad*2;
       top: @pad*2;
       padding: @pad;
-
+      @media @screen-small {
+        right: @pad;
+        top: @pad/3;
+      }
       &:before, &:after {
         content: '';
         display: inline-block;
