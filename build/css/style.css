@@ -1818,6 +1818,22 @@ section {
   color: #000;
   text-decoration: none;
 }
+.header__change-country {
+  position: absolute;
+  display: none;
+  left: 8px;
+  bottom: 18px;
+  z-index: 4;
+  cursor: pointer;
+}
+@media (min-width: 1250px) {
+  .header__change-country {
+    display: block;
+  }
+}
+.header__change-country img {
+  width: 34px;
+}
 .loading {
   position: relative;
 }

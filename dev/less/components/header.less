@@ -36,7 +36,7 @@
       font-size: @fz*3;
       font-weight: bold;
       width: 80%;
-      
+
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: @primary;
         font-size: @fz*3;
@@ -77,6 +77,22 @@
     &-link {
       color: @primary;
       .hover(@primary);
+    }
+  }
+
+  &__change-country {
+    position: absolute;
+    display: none;
+    left: 8px;
+    bottom: 18px;
+    z-index: 4;
+    cursor: pointer;
+    @media (min-width: 1250px) {
+      display: block;
+    }
+
+    & img {
+      width: 34px;
     }
   }
 }
