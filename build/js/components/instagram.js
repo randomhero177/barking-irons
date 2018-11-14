@@ -7,19 +7,13 @@ $(window).load(function(){
 	*/
 	(function() {
 		var screenDesktop = 991,
-
 		screenCur = $(window).width(),
 		isScreenDesktop = screenCur > screenDesktop,
 		iframeId;
 
-
 		function instawidget_render_iframe() {
 			iframeId = ($(window).width() >= screenDesktop) ? 'a14b51a694c03b839bbfe19af381b20e042e8116218acd1cf8bfbb8501bc2af2' : '82a3ce345229c001d607563777b6219d657d540fcd63dcca01583b2a1d35ebb8';
 			
-
-			console.log($(window).width());
-			console.log(screenDesktop);
-			console.log(iframeId);
 			var block = document.getElementById('instagram');
 			block.innerHTML = '<iframe id=\"' + iframeId + '\" style=\"border:0;width:100%; margin:0;padding:0;\" scrolling=\"no\" frameborder=\"no\" src=\"https://instawidget.net/embed?u=' + iframeId + '\"></iframe>';
 			
@@ -32,7 +26,6 @@ $(window).load(function(){
 					instawidget_render_iframe();
 					isScreenDesktop = false;
 				};
-
 			} else {
 				if($(window).width() > screenDesktop) {
 					instawidget_render_iframe();

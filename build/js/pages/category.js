@@ -12,8 +12,6 @@ $(window).load(function () {
         elem.each(function(i, el){
           var curHeight = $(el).height();
           smallestHeight = (curHeight > smallestHeight) ? curHeight : smallestHeight;
-          console.log(curHeight);
-          console.log(el);
         });
       extraElem.css('max-height', (smallestHeight*2 -4));
 
