@@ -113,10 +113,20 @@ $(document).ready(function() {
   $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
   $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
 
-
-    if(typeof geoplugin_countryCode === 'function' && geoplugin_countryCode() !== 'US'){
+  jQuery.ajax({
+    url: 'https://api.ipstack.com/check?access_key=e4333400255fb25a78a251ddd164e2ed&output=json&legacy=1',
+    type: 'POST',
+    dataType: 'jsonp',
+    success: function(location) {
+      // If the visitor is browsing not from US.
+      if (location.country_code !== 'US') {
       $('[data-modal-id="change-geo-block"]').trigger('click');
-    };
+      }
+    },
+    error: function(msg) {
+      console.log(msg);
+    }
+  });
 
 
 });
