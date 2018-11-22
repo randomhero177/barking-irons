@@ -113,6 +113,7 @@ $(document).ready(function() {
   $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
   $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
 
+/*
   jQuery.ajax({
     url: 'https://api.ipstack.com/check?access_key=e4333400255fb25a78a251ddd164e2ed&output=json&legacy=1',
     type: 'POST',
@@ -127,7 +128,7 @@ $(document).ready(function() {
       console.log(msg);
     }
   });
-
+*/
 
 });
 var resources = {

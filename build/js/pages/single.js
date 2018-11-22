@@ -4,7 +4,6 @@ $(document).ready(function() {
       sliderBlock: $('#single-slider'),
       toggleEl: $('.single-page__item-toggle'),
       sizeList: $('#size-available'),
-      sizeSelect: $('#single-size-select'),
       productSelect: $('#single-product-select'),
       singleBlock: $('#single-block'),
       sliderBgElem: '.single-page__slider-item'
@@ -39,16 +38,18 @@ $(document).ready(function() {
         var curValue = $(this).data('value');
         sizeEl.attr('data-selected', false)
         $(this).attr('data-selected', 'selected');
-        c.sizeSelect.val(curValue);
 
-        var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; }).val();
+        var prodOption = $('#single-product-select option').filter(function () { 
+          return $(this).html() == curValue; 
+        }).val();
+
         c.productSelect.val(prodOption);
       });
 
 
       var curValue = $('#size-available [data-selected="selected"]').data('value');
 
-      c.sizeSelect.val(curValue);
+      
       var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
       prodOption.attr('selected', true);
     },
