@@ -3,10 +3,12 @@ $(document).ready(function() {
     config: {
       sliderBlock: $('#single-slider'),
       toggleEl: $('.single-page__item-toggle'),
-      sizeList: $('#size-available'),
       productSelect: $('#single-product-select'),
       singleBlock: $('#single-block'),
-      sliderBgElem: '.single-page__slider-item'
+      sliderBgElem: '.single-page__slider-item',
+      varianRowSelector: '[data-goal="options"]',
+      varianListSelector: '[data-available-list]',
+      varianItemSelector: '[data-variant-value]'
     },
     slider: function(){
       c.sliderBlock.owlCarousel({
@@ -31,27 +33,33 @@ $(document).ready(function() {
       })
     },
     productVariant: function(){
-      var sizeEl = c.sizeList.find('span');
+      var rows = $(c.varianRowSelector);
+      var variantItems = rows.find('[data-variant-value]');
+      var curSelectValue = c.productSelect.find('option:selected').text();
+      console.log(variantItems);
 
-      c.sizeList.find('span').click(function(e){
-        e.preventDefault();
-        var curValue = $(this).data('value');
-        sizeEl.attr('data-selected', false)
-        $(this).attr('data-selected', 'selected');
+      function showSelectedValue(){
+        curSelectValue = curSelectValue.split(' / ');
+        curSelectValue.forEach(function(el, i){
+          var curActive = $(rows[i]).find('[data-value="' + el + '"]');
+          makeItemSelected($(rows[i]), curActive);
+        });
+      };
+      showSelectedValue();
 
-        var prodOption = $('#single-product-select option').filter(function () {
-          return $(this).html() == curValue; 
-        }).val();
+      function makeItemSelected(row, activeItem){
+        row.find('[data-variant-value]').attr('data-selected', false);
+        activeItem.attr('data-selected', 'selected');
+      };
+      
+      
+      
 
-        c.productSelect.val(prodOption);
-      });
+      
 
 
-      var curValue = $('#size-available [data-selected="selected"]').data('value');
-
-
-      var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
-      prodOption.attr('selected', true);
+      // var prodOption = $('#single-product-select option').filter(function () { return $(this).html() == curValue; });
+      // prodOption.attr('selected', true);
     },
     setHeight: function(){
       var screenHeight = $(window).height(),
