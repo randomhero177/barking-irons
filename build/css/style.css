@@ -1687,11 +1687,21 @@ section {
   }
 }
 .text-xlarge {
-  font-size: 42.5px;
+  font-size: 38.25px;
 }
 @media (min-width: 2200px) {
   .text-xlarge {
     font-size: 46.75px;
+  }
+}
+@media (min-width: 992px) {
+  .text-xlarge {
+    font-size: 42.5px;
+  }
+}
+@media (max-width:479px) {
+  .text-xlarge {
+    font-size: 25.5px;
   }
 }
 .text-medium {
@@ -2244,6 +2254,7 @@ section {
   background: #91282f;
   color: #fff;
   padding: 15px 30px;
+  display: inline-block;
 }
 .popup__btn:hover,
 .popup__btn:active,
