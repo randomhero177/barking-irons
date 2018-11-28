@@ -82,17 +82,19 @@
 
   &__change-country {
     position: absolute;
-    display: none;
-    left: 8px;
+    
+    right: -@pad*8;
     bottom: 18px;
     z-index: 4;
-    cursor: pointer;
-    @media (min-width: 1250px) {
-      display: block;
-    }
+    
+    
 
     & img {
       width: 34px;
+    }
+
+    & [data-modal="show"] {
+      cursor: pointer;
     }
   }
 }

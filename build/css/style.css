@@ -1842,19 +1842,15 @@ section {
 }
 .header__change-country {
   position: absolute;
-  display: none;
-  left: 8px;
+  right: -120px;
   bottom: 18px;
   z-index: 4;
-  cursor: pointer;
-}
-@media (min-width: 1250px) {
-  .header__change-country {
-    display: block;
-  }
 }
 .header__change-country img {
   width: 34px;
+}
+.header__change-country [data-modal="show"] {
+  cursor: pointer;
 }
 .loading {
   position: relative;
