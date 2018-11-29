@@ -2468,6 +2468,11 @@ section {
   min-height: 100vh;
   background: #eeeeee;
 }
+@media (min-width: 992px) {
+  .single-page {
+    height: 920px;
+  }
+}
 .single-page__container {
   position: relative;
 }

@@ -12,7 +12,11 @@
   &-page {
     position: relative;
     min-height: 100vh;
+
     background: @single-bg;
+    @media @screen-desktop {
+        height: 920px;
+    }
 
     &__container {
       position: relative;
