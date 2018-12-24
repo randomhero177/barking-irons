@@ -119,10 +119,12 @@ $(document).ready(function() {
     type: 'POST',
     dataType: 'jsonp',
     success: function(location) {
-      // If the visitor is browsing not from US.
-      if (location.country_code !== 'US') {
-      $('[data-modal-id="change-geo-block"]').trigger('click');
-      }
+      var countryArray = ['US', 'MX', 'CA'];
+      
+      console.log(location.country_code);
+      if(findInArr(countryArray, location.country_code) == -1){
+        $('[data-modal-id="change-geo-block"]').trigger('click');
+      };
     },
     error: function(msg) {
       console.log(msg);
@@ -167,6 +169,20 @@ var resources = {
     MaxUploadFiles: 10,
     MaxUploadFilesErrorText: 'Максимальное количество загружаемых файлов за один раз: 10',
     AllowedFileExtensionsForUpload: 'png,jpeg,jpg,gif,doc,docx,txt,rtf,pdf,zip,rar,7z,tar.bz2,tar.gz,tar,xls,xlsx,csv'
+  }
+};
+
+
+if ([].indexOf) {
+  var findInArr = function (array, value) {
+    return array.indexOf(value);
+  }
+} else {
+  var findInArr = function (array, value) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] === value) return i;
+    }
+    return -1;
   }
 };
 
