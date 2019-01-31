@@ -121,13 +121,17 @@ $(document).ready(function() {
     success: function(location) {
       var countryArray = ['US', 'MX', 'CA'];
       
-      console.log(location.country_code);
-      if(findInArr(countryArray, location.country_code) == -1){
-        $('[data-modal-id="change-geo-block"]').trigger('click');
+      console.log(location);
+      if(location.country_code && findInArr(countryArray, location.country_code) == -1){
+        if (!sessionStorage.popIsShown){
+          	$('[data-modal-id="change-geo-block"]').trigger('click');
+          	sessionStorage.setItem('popIsShown', true);
+        };
       };
+      
     },
     error: function(msg) {
-      console.log(msg);
+    	console.log(msg);
     }
   });
 */
