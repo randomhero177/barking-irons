@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-
+	<link href="//cdn.shopify.com/s/files/1/0021/7448/4547/t/3/assets/theme.scss.css?149" rel="stylesheet" type="text/css" media="all" />
 	<link type="text/css" rel="stylesheet" href="css/global/bootstrap.css">
 	<link rel="stylesheet" href="css/global/owl.carousel.css">
 	<link rel="stylesheet" href="css/global/owl.theme.default.css">
@@ -14,4 +14,191 @@
 	<!-- Load CSS End-->
 	<!-- Load CSS Compilled without JS-->
 	<script src="js/global/jquery.min.js"></script>
+
+
+
+	<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":2174484547,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/2174484547","merchantName":"Barking Irons ","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover"],"total":{"type":"pending","label":"Barking Irons ","amount":"1.00"}}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"1a472e38e4ab5985839145ce584918cd","betas":[],"domain":"barkingirons.com","predictiveSearch":true,"shopId":2174484547,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "barking-irons.myshopify.com";
+Shopify.currency = {"active":"USD","rate":"1.0"};
+Shopify.theme = {"name":"barking-irons","id":34747613251,"theme_store_id":796,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "pay.shopify.com";</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/chimpstatic.com\/mcjs-connected\/js\/users\/71b26b9004046acb7f5779352\/69f6b3c06f875ddc068ca486e.js?shop=barking-irons.myshopify.com","https:\/\/assets1.adroll.com\/shopify\/latest\/j\/shopify_rolling_bootstrap_v2.js?adroll_adv_id=M3MBU7DT4NAVBJGDABJ3IE\u0026adroll_pix_id=XQOEZXCXTRB7LNAR2SR3NX\u0026shop=barking-irons.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":2174484547,"offset":-14400,"reqid":"de136591-33dc-4fdf-9d93-be2963797893","pageurl":"barkingirons.com\/","u":"17001e1ac12c","p":"home"};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'USD';
+var meta = {"page":{"pageType":"home"}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+
+};
+</script>
+<script class="analytics">(window.gaDevIds=window.gaDevIds||[]).push('BwiEti');
+
+
+(function () {
+  var customDocumentWrite = function(content) {
+    var jquery = null;
+
+    if (window.jQuery) {
+      jquery = window.jQuery;
+    } else if (window.Checkout && window.Checkout.$) {
+      jquery = window.Checkout.$;
+    }
+
+    if (jquery) {
+      jquery('body').append(content);
+    }
+  };
+
+  var isDuplicatedThankYouPageView = function() {
+    return document.cookie.indexOf('loggedConversion=' + window.location.pathname) !== -1;
+  }
+
+  var setCookieIfThankYouPage = function() {
+    if (window.location.pathname.indexOf('/checkouts') !== -1 &&
+        window.location.pathname.indexOf('/thank_you') !== -1) {
+
+      var twoMonthsFromNow = new Date(Date.now());
+      twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+      document.cookie = 'loggedConversion=' + window.location.pathname + '; expires=' + twoMonthsFromNow;
+    }
+  }
+
+  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+  if (trekkie.integrations) {
+    return;
+  }
+  trekkie.methods = [
+    'identify',
+    'page',
+    'ready',
+    'track',
+    'trackForm',
+    'trackLink'
+  ];
+  trekkie.factory = function(method) {
+    return function() {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(method);
+      trekkie.push(args);
+      return trekkie;
+    };
+  };
+  for (var i = 0; i < trekkie.methods.length; i++) {
+    var key = trekkie.methods[i];
+    trekkie[key] = trekkie.factory(key);
+  }
+  trekkie.load = function(config) {
+    trekkie.config = config;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onerror = function(e) {
+      (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+    };
+    script.async = true;
+    script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1';
+    var first = document.getElementsByTagName('script')[0];
+    first.parentNode.insertBefore(script, first);
+  };
+  trekkie.load(
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2174484547,"isMerchantRequest":null,"themeId":34747613251,"themeCityHash":14490022623853272349,"contentLanguage":"en"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Google Analytics":{"trackingId":"UA-128435624-1","domain":"auto","siteSpeedSampleRate":"10","enhancedEcommerce":true,"doubleClick":true,"includeSearch":true},"Facebook Pixel":{"pixelIds":["181661095568646"],"agent":"plshopify1.2"},"Session Attribution":{}}
+  );
+
+  var loaded = false;
+  trekkie.ready(function() {
+    if (loaded) return;
+    loaded = true;
+
+    window.ShopifyAnalytics.lib = window.trekkie;
+
+      ga('require', 'linker');
+      function addListener(element, type, callback) {
+        if (element.addEventListener) {
+          element.addEventListener(type, callback);
+        }
+        else if (element.attachEvent) {
+          element.attachEvent('on' + type, callback);
+        }
+      }
+      function decorate(event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
+          ga(function (tracker) {
+            var linkerParam = tracker.get('linkerParam');
+            document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+          });
+        }
+      }
+      addListener(window, 'load', function(){
+        for (var i=0; i < document.forms.length; i++) {
+          var action = document.forms[i].getAttribute('action');
+          if(action && action.indexOf('/cart') >= 0) {
+            addListener(document.forms[i], 'submit', decorate);
+          }
+        }
+        for (var i=0; i < document.links.length; i++) {
+          var href = document.links[i].getAttribute('href');
+          if(href && href.indexOf('/checkout') >= 0) {
+            addListener(document.links[i], 'click', decorate);
+          }
+        }
+      });
+
+
+    var originalDocumentWrite = document.write;
+    document.write = customDocumentWrite;
+    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+    document.write = originalDocumentWrite;
+
+    if (!isDuplicatedThankYouPageView()) {
+      setCookieIfThankYouPage();
+
+        window.ShopifyAnalytics.lib.page(
+          null,
+          {"pageType":"home"}
+        );
+
+
+    }
+  });
+
+
+      var eventsListenerScript = document.createElement('script');
+      eventsListenerScript.async = true;
+      eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-acf771159f9849ef6e5265782c99efe8b99406214c96a4373224ecafe285d7bb.js";
+      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+})();</script>
+<script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/s/assets/shopify_pay/storefront-8ddbd55cc19e1ebbff92d676e1481c8e6b42e0c2714d3fdf6b810b1f193347b8.js?v=20190107"></script>
+<script integrity="sha256-qzPTa4Ven/Yc2yyXr9BKZWCTXSrPTCnbGdWsxA7YCw0=" defer="defer" src="//cdn.shopify.com/s/assets/storefront/features-ab33d36b855e9ff61cdb2c97afd04a6560935d2acf4c29db19d5acc40ed80b0d.js" crossorigin="anonymous"></script>
+<script defer="defer" src="//cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js"></script>
+
 </head>

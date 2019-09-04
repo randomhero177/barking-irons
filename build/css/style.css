@@ -2353,6 +2353,12 @@ section {
   width: 20px;
   height: 20px;
 }
+.main-page__grid .grid__item {
+  padding: 15px;
+}
+.main-page__grid .image-bar__link {
+  display: block;
+}
 .about--est {
   color: #fff;
 }

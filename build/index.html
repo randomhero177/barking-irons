@@ -7,7 +7,7 @@
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   
-  
+  	<link href="//cdn.shopify.com/s/files/1/0021/7448/4547/t/3/assets/theme.scss.css?149" rel="stylesheet" type="text/css" media="all" />
   	<link type="text/css" rel="stylesheet" href="css/global/bootstrap.css">
   	<link rel="stylesheet" href="css/global/owl.carousel.css">
   	<link rel="stylesheet" href="css/global/owl.theme.default.css">
@@ -16,640 +16,857 @@
   	<!-- Load CSS End-->
   	<!-- Load CSS Compilled without JS-->
   	<script src="js/global/jquery.min.js"></script>
+  
+  
+  
+  	<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":2174484547,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/2174484547","merchantName":"Barking Irons ","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover"],"total":{"type":"pending","label":"Barking Irons ","amount":"1.00"}}</script>
+  <script id="shopify-features" type="application/json">{"accessToken":"1a472e38e4ab5985839145ce584918cd","betas":[],"domain":"barkingirons.com","predictiveSearch":true,"shopId":2174484547,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
+  <script>var Shopify = Shopify || {};
+  Shopify.shop = "barking-irons.myshopify.com";
+  Shopify.currency = {"active":"USD","rate":"1.0"};
+  Shopify.theme = {"name":"barking-irons","id":34747613251,"theme_store_id":796,"role":"main"};
+  Shopify.theme.handle = "null";
+  Shopify.theme.style = {"id":null,"handle":null};</script>
+  <script>window.ShopifyPay = window.ShopifyPay || {};
+  window.ShopifyPay.apiHost = "pay.shopify.com";</script>
+  <script>(function() {
+    function asyncLoad() {
+      var urls = ["https:\/\/chimpstatic.com\/mcjs-connected\/js\/users\/71b26b9004046acb7f5779352\/69f6b3c06f875ddc068ca486e.js?shop=barking-irons.myshopify.com","https:\/\/assets1.adroll.com\/shopify\/latest\/j\/shopify_rolling_bootstrap_v2.js?adroll_adv_id=M3MBU7DT4NAVBJGDABJ3IE\u0026adroll_pix_id=XQOEZXCXTRB7LNAR2SR3NX\u0026shop=barking-irons.myshopify.com"];
+      for (var i = 0; i < urls.length; i++) {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = urls[i];
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    };
+    if(window.attachEvent) {
+      window.attachEvent('onload', asyncLoad);
+    } else {
+      window.addEventListener('load', asyncLoad, false);
+    }
+  })();</script>
+  <script id="__st">var __st={"a":2174484547,"offset":-14400,"reqid":"de136591-33dc-4fdf-9d93-be2963797893","pageurl":"barkingirons.com\/","u":"17001e1ac12c","p":"home"};</script>
+  <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = 'USD';
+  var meta = {"page":{"pageType":"home"}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }</script>
+  <script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+  };
+  </script>
+  <script class="analytics">(window.gaDevIds=window.gaDevIds||[]).push('BwiEti');
+  
+  
+  (function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+  
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+  
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+  
+    var isDuplicatedThankYouPageView = function() {
+      return document.cookie.indexOf('loggedConversion=' + window.location.pathname) !== -1;
+    }
+  
+    var setCookieIfThankYouPage = function() {
+      if (window.location.pathname.indexOf('/checkouts') !== -1 &&
+          window.location.pathname.indexOf('/thank_you') !== -1) {
+  
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+  
+        document.cookie = 'loggedConversion=' + window.location.pathname + '; expires=' + twoMonthsFromNow;
+      }
+    }
+  
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config;
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) {
+        (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+      };
+      script.async = true;
+      script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1';
+      var first = document.getElementsByTagName('script')[0];
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2174484547,"isMerchantRequest":null,"themeId":34747613251,"themeCityHash":14490022623853272349,"contentLanguage":"en"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Google Analytics":{"trackingId":"UA-128435624-1","domain":"auto","siteSpeedSampleRate":"10","enhancedEcommerce":true,"doubleClick":true,"includeSearch":true},"Facebook Pixel":{"pixelIds":["181661095568646"],"agent":"plshopify1.2"},"Session Attribution":{}}
+    );
+  
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+  
+      window.ShopifyAnalytics.lib = window.trekkie;
+  
+        ga('require', 'linker');
+        function addListener(element, type, callback) {
+          if (element.addEventListener) {
+            element.addEventListener(type, callback);
+          }
+          else if (element.attachEvent) {
+            element.attachEvent('on' + type, callback);
+          }
+        }
+        function decorate(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement;
+          if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
+            ga(function (tracker) {
+              var linkerParam = tracker.get('linkerParam');
+              document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+            });
+          }
+        }
+        addListener(window, 'load', function(){
+          for (var i=0; i < document.forms.length; i++) {
+            var action = document.forms[i].getAttribute('action');
+            if(action && action.indexOf('/cart') >= 0) {
+              addListener(document.forms[i], 'submit', decorate);
+            }
+          }
+          for (var i=0; i < document.links.length; i++) {
+            var href = document.links[i].getAttribute('href');
+            if(href && href.indexOf('/checkout') >= 0) {
+              addListener(document.links[i], 'click', decorate);
+            }
+          }
+        });
+  
+  
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+  
+      if (!isDuplicatedThankYouPageView()) {
+        setCookieIfThankYouPage();
+  
+          window.ShopifyAnalytics.lib.page(
+            null,
+            {"pageType":"home"}
+          );
+  
+  
+      }
+    });
+  
+  
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-acf771159f9849ef6e5265782c99efe8b99406214c96a4373224ecafe285d7bb.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+  
+  })();</script>
+  <script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/s/assets/shopify_pay/storefront-8ddbd55cc19e1ebbff92d676e1481c8e6b42e0c2714d3fdf6b810b1f193347b8.js?v=20190107"></script>
+  <script integrity="sha256-qzPTa4Ven/Yc2yyXr9BKZWCTXSrPTCnbGdWsxA7YCw0=" defer="defer" src="//cdn.shopify.com/s/assets/storefront/features-ab33d36b855e9ff61cdb2c97afd04a6560935d2acf4c29db19d5acc40ed80b0d.js" crossorigin="anonymous"></script>
+  <script defer="defer" src="//cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js"></script>
+  
   </head>
   <body>
-	<div class="overflow" id="main">
-	<header class="header">
-		<div class="container">
-			<div class="row main-menu">
-				<nav class="col-xs-7 col-sm-6 col-md-9">
-					<ul class="main-menu__list">
-						<li class="main-menu__item">
-							<a href="/" class="main-menu__logo">
-								<img src="img/icons/logo.png" class="main-menu__logo-img" alt="logo">
-								BARKING IRONS
-							</a>
-						</li>
-						<li class="main-menu__item hidden-sm hidden-xs">
-							<a href="category.html" class="main-menu__link">Collections</a>
-							<ul class="main-menu__item-dropdown">
-								<li>
-									<a href="collection.html">BILLY JOEL</a>
-								</li>
-								<li>
-									<a href="collection.html">KINGS OF LEON</a>
-								</li>
-								<li>
-									<a href="collection.html">ROCKSTAR GAMES</a>
-								</li>
-							</ul>
-							<!--
-							<div class="main-menu__item-dropdown archive">
-									<a href="#">ARCHIVE</a>
-							</div>
-						-->
-						</li>
-						<li class="main-menu__item  hidden-sm hidden-xs">
-							<a href="" class="main-menu__link">Shop</a>
-							<ul class="main-menu__item-dropdown">
-								<li>
-									<a href="category.html">T-SHIRTS</a>
-								</li>
-								<li>
-									<a href="category.html">SHIRTS</a>
-								</li>
-								<li>
-									<a href="category.html">OUTERWEAR</a>
-								</li>
-								<li>
-									<a href="category.html">ACCESSORIES</a>
-								</li>
-							</ul>
-						</li>
-						<li class="main-menu__item hidden-sm hidden-xs"><a href="mixtape.html" class="main-menu__link">MixTape</a></li>
-						<li class="main-menu__item hidden-sm hidden-xs"><a href="https://www.barkingironsspirits.com/" class="main-menu__link">Spirits</a></li>
-					</ul>
-				</nav>
-				<div class="main-menu__right  col-xs-5 col-sm-6 col-md-3">
-					<div class="main-menu__list main-menu__list--about">
-						<div class="main-menu__item hidden-sm hidden-xs"><a href="about.html" class="main-menu__link">About</a></div>
-						<div class="main-menu__item main-menu__item--search">
-							<a href="#" class="main-menu__search">
-								<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/search.png?7967595314032897309" alt="search" class="main-menu__icon">
-							</a>
-						</div>
-						<div class="main-menu__item main-menu__item--bag">
-	
-							<a href="checkout.html" class="main-menu__bag">
-								<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/bag.png?17898793877323763864" alt="bag" class="main-menu__icon main-menu__icon--bag">
-								<span id="in-bag-count" class="main-menu__bag-count">(1)</span>
-							</a>
-							<div class="main-menu__checkout text-small">
-								<div class="main-menu__checkout-info">
-									<div class="flex-list flex-list--spb">
-										<div class="flex-list__item text-xsmall pr15">
-											<div class="heading">
-												<div>
-													Vuestro Jefe Tee Vuestro Jefe Tee Vuestro Jefe Tee Vuestro Jefe Tee
-												</div>
-												<div>
-													$75.00 X 1
-												</div>
-											</div>
-											<div class="flex-list">
-												<div class="flex-list__item">
-													SIZE: XS
-												</div>
-												<div class="flex-list__item">
-													EDIT
-												</div>
-											</div>
-										</div>
-										<div class="flex-list__item main-menu__checkout-img">
-											<img src="img/img7.jpg" alt="alt">
-										</div>
-									</div>
-								</div>
-								<div class="main-menu__checkout-view">
-									<a href="checkout.html">VIEW BAG 1 ITEM</a>
-								</div>
-								<div class="main-menu__checkout-btn">
-									<a href="checkout.html">CHECKOUT NOW</a>
-								</div>
-							</div>
-						</div>
-						<div class="main-menu__item  main-menu__item--hamburger hidden-lg hidden-md">
-							<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/hamburger.png?9506922319219167815" alt="mobile-menu" id="mobile-menu-icon" width="30px" class="main-menu__icon main-menu__mobile-icon">
-						</div>
-						<div class="header__change-country hidden-md hidden-sm hidden-xs">
-							<span title="US store"><img src="https://cdn.shopify.com/s/files/1/0122/7210/7579/files/usa_shield.jpg?9959677250617114958" alt=""></span>
-							<span data-modal="show" data-modal-id="change-geo-block" title="Visit EU store"><img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/uk_shield.jpg?16290922601961994090" alt=""></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="header__search-wrap hidden">
-			<div class="header__search">
-				<div class="container">
-					<form class="header__search-form" action="search.html" method="GET">
-						<input type="text" name="search" value="" placeholder="SEARCH HERE" class="header__search-control">
-						<button type="button" class="header__search-btn">X</button>
-					</form>
-				</div>
-			</div>
-			<div class="header__suggestions">
-				<div class="container">
-					<ul class="header__suggestions-list">
-						<li class="header__suggestions-item">
-							<a href="#" class="header__suggestions-link">Suggestions</a>
-						</li>
-						<li class="header__suggestions-item">
-							<a href="#" class="header__suggestions-link">Bags</a>
-						</li>
-						<li class="header__suggestions-item">
-							<a href="#" class="header__suggestions-link">T-SHIRTS</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="main-menu__mobile hidden" id="mobile-menu">
-			<div class="container">
-				<ul class="main-menu__mobile-list">
-		      <li class="main-menu__mobile-item">
-						<a href="#" class="main-menu__mobile-link">COLLECTIONS</a>
-		        <ul class="main-menu__mobile-dropdown">
-		            <li>
-		              <a href="/collections/bob-dylan" class="site-nav__link site-nav__child-link ">
-		                Bob Dylan Collection
-		              </a>
-		            </li>
-		            <li>
-		              <a href="/collections/billy-joel-1" class="site-nav__link site-nav__child-link ">
-		                Billy Joel
-		              </a>
-		            </li>
-		            <li>
-		              <a href="/collections/vintage-reissue" class="site-nav__link site-nav__child-link site-nav__link--last ">
-		                Vintage Re-issues
-		              </a>
-		            </li>
-		        </ul>
-		      </li>
-		      <li class="main-menu__mobile-item">
-						<a href="#" class="main-menu__mobile-link">SHOP</a>
-		          <ul class="main-menu__mobile-dropdown">
-		              <li>
-		                <a href="/collections/outerwear" class="site-nav__link site-nav__child-link ">
-		                  OUTERWEAR
-		                </a>
-		              </li>
-		              <li>
-		                <a href="/collections/shirts" class="site-nav__link site-nav__child-link ">
-		                  SHIRTS
-		                </a>
-		              </li>
-		              <li>
-		                <a href="/collections/t-shirts" class="site-nav__link site-nav__child-link ">
-		                  T-SHIRTS
-		                </a>
-		              </li>
-		              <li>
-		                <a href="/collections/accessories" class="site-nav__link site-nav__child-link site-nav__link--last ">
-		                  ACCESSORIES
-		                </a>
-		              </li>
-		          </ul>
-		      </li>
-		      <li class="main-menu__mobile-item">
-		        <a href="/pages/mixtapes" class="main-menu__mobile-link ">MIXTAPES</a>
-		      </li>
-		      <li class="main-menu__mobile-item">
-		        <a href="https://www.barkingironsspirits.com/" class="main-menu__mobile-link " target="_blank">SPIRITS</a>
-		      </li>
-		      <li class="main-menu__mobile-item">
-		        <a href="/pages/about" class="main-menu__mobile-link ">ABOUT</a>
-		      </li>
-				</ul>
-			</div>
-		</div>
-	</header>
-
-    <section class="main-screen" id="main-screen">
-    
-    	<div class="main-screen__slider owl-carousel owl-theme" id="about-established" data-autoplay="true" data-speed="5000">
-    	  <div class="main-screen__slider-item">
-    	    <a href="hui.html">
-    	      <img src="img/header/heder-1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
-    	    </a>
-    	  </div>
-    	  <div class="main-screen__slider-item">
-    	    <a href="hui.html">
-    	      <img src="img/header/heder-2.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
-    	    </a>
-    	  </div>
+  	<div class="overflow" id="main">
+    	<header class="header">
+    		<div class="container">
+    			<div class="row main-menu">
+    				<nav class="col-xs-7 col-sm-6 col-md-9">
+    					<ul class="main-menu__list">
+    						<li class="main-menu__item">
+    							<a href="/" class="main-menu__logo">
+    								<img src="img/icons/logo.png" class="main-menu__logo-img" alt="logo">
+    								BARKING IRONS
+    							</a>
+    						</li>
+    						<li class="main-menu__item hidden-sm hidden-xs">
+    							<a href="category.html" class="main-menu__link">Collections</a>
+    							<ul class="main-menu__item-dropdown">
+    								<li>
+    									<a href="collection.html">BILLY JOEL</a>
+    								</li>
+    								<li>
+    									<a href="collection.html">KINGS OF LEON</a>
+    								</li>
+    								<li>
+    									<a href="collection.html">ROCKSTAR GAMES</a>
+    								</li>
+    							</ul>
+    							<!--
+    							<div class="main-menu__item-dropdown archive">
+    									<a href="#">ARCHIVE</a>
+    							</div>
+    						-->
+    						</li>
+    						<li class="main-menu__item  hidden-sm hidden-xs">
+    							<a href="" class="main-menu__link">Shop</a>
+    							<ul class="main-menu__item-dropdown">
+    								<li>
+    									<a href="category.html">T-SHIRTS</a>
+    								</li>
+    								<li>
+    									<a href="category.html">SHIRTS</a>
+    								</li>
+    								<li>
+    									<a href="category.html">OUTERWEAR</a>
+    								</li>
+    								<li>
+    									<a href="category.html">ACCESSORIES</a>
+    								</li>
+    							</ul>
+    						</li>
+    						<li class="main-menu__item hidden-sm hidden-xs"><a href="mixtape.html" class="main-menu__link">MixTape</a></li>
+    						<li class="main-menu__item hidden-sm hidden-xs"><a href="https://www.barkingironsspirits.com/" class="main-menu__link">Spirits</a></li>
+    					</ul>
+    				</nav>
+    				<div class="main-menu__right  col-xs-5 col-sm-6 col-md-3">
+    					<div class="main-menu__list main-menu__list--about">
+    						<div class="main-menu__item hidden-sm hidden-xs"><a href="about.html" class="main-menu__link">About</a></div>
+    						<div class="main-menu__item main-menu__item--search">
+    							<a href="#" class="main-menu__search">
+    								<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/search.png?7967595314032897309" alt="search" class="main-menu__icon">
+    							</a>
+    						</div>
+    						<div class="main-menu__item main-menu__item--bag">
+    	
+    							<a href="checkout.html" class="main-menu__bag">
+    								<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/bag.png?17898793877323763864" alt="bag" class="main-menu__icon main-menu__icon--bag">
+    								<span id="in-bag-count" class="main-menu__bag-count">(1)</span>
+    							</a>
+    							<div class="main-menu__checkout text-small">
+    								<div class="main-menu__checkout-info">
+    									<div class="flex-list flex-list--spb">
+    										<div class="flex-list__item text-xsmall pr15">
+    											<div class="heading">
+    												<div>
+    													Vuestro Jefe Tee Vuestro Jefe Tee Vuestro Jefe Tee Vuestro Jefe Tee
+    												</div>
+    												<div>
+    													$75.00 X 1
+    												</div>
+    											</div>
+    											<div class="flex-list">
+    												<div class="flex-list__item">
+    													SIZE: XS
+    												</div>
+    												<div class="flex-list__item">
+    													EDIT
+    												</div>
+    											</div>
+    										</div>
+    										<div class="flex-list__item main-menu__checkout-img">
+    											<img src="img/img7.jpg" alt="alt">
+    										</div>
+    									</div>
+    								</div>
+    								<div class="main-menu__checkout-view">
+    									<a href="checkout.html">VIEW BAG 1 ITEM</a>
+    								</div>
+    								<div class="main-menu__checkout-btn">
+    									<a href="checkout.html">CHECKOUT NOW</a>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="main-menu__item  main-menu__item--hamburger hidden-lg hidden-md">
+    							<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/hamburger.png?9506922319219167815" alt="mobile-menu" id="mobile-menu-icon" width="30px" class="main-menu__icon main-menu__mobile-icon">
+    						</div>
+    						<div class="header__change-country hidden-md hidden-sm hidden-xs">
+    							<span title="US store"><img src="https://cdn.shopify.com/s/files/1/0122/7210/7579/files/usa_shield.jpg?9959677250617114958" alt=""></span>
+    							<span data-modal="show" data-modal-id="change-geo-block" title="Visit EU store"><img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/uk_shield.jpg?16290922601961994090" alt=""></span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="header__search-wrap hidden">
+    			<div class="header__search">
+    				<div class="container">
+    					<form class="header__search-form" action="search.html" method="GET">
+    						<input type="text" name="search" value="" placeholder="SEARCH HERE" class="header__search-control">
+    						<button type="button" class="header__search-btn">X</button>
+    					</form>
+    				</div>
+    			</div>
+    			<div class="header__suggestions">
+    				<div class="container">
+    					<ul class="header__suggestions-list">
+    						<li class="header__suggestions-item">
+    							<a href="#" class="header__suggestions-link">Suggestions</a>
+    						</li>
+    						<li class="header__suggestions-item">
+    							<a href="#" class="header__suggestions-link">Bags</a>
+    						</li>
+    						<li class="header__suggestions-item">
+    							<a href="#" class="header__suggestions-link">T-SHIRTS</a>
+    						</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="main-menu__mobile hidden" id="mobile-menu">
+    			<div class="container">
+    				<ul class="main-menu__mobile-list">
+    		      <li class="main-menu__mobile-item">
+    						<a href="#" class="main-menu__mobile-link">COLLECTIONS</a>
+    		        <ul class="main-menu__mobile-dropdown">
+    		            <li>
+    		              <a href="/collections/bob-dylan" class="site-nav__link site-nav__child-link ">
+    		                Bob Dylan Collection
+    		              </a>
+    		            </li>
+    		            <li>
+    		              <a href="/collections/billy-joel-1" class="site-nav__link site-nav__child-link ">
+    		                Billy Joel
+    		              </a>
+    		            </li>
+    		            <li>
+    		              <a href="/collections/vintage-reissue" class="site-nav__link site-nav__child-link site-nav__link--last ">
+    		                Vintage Re-issues
+    		              </a>
+    		            </li>
+    		        </ul>
+    		      </li>
+    		      <li class="main-menu__mobile-item">
+    						<a href="#" class="main-menu__mobile-link">SHOP</a>
+    		          <ul class="main-menu__mobile-dropdown">
+    		              <li>
+    		                <a href="/collections/outerwear" class="site-nav__link site-nav__child-link ">
+    		                  OUTERWEAR
+    		                </a>
+    		              </li>
+    		              <li>
+    		                <a href="/collections/shirts" class="site-nav__link site-nav__child-link ">
+    		                  SHIRTS
+    		                </a>
+    		              </li>
+    		              <li>
+    		                <a href="/collections/t-shirts" class="site-nav__link site-nav__child-link ">
+    		                  T-SHIRTS
+    		                </a>
+    		              </li>
+    		              <li>
+    		                <a href="/collections/accessories" class="site-nav__link site-nav__child-link site-nav__link--last ">
+    		                  ACCESSORIES
+    		                </a>
+    		              </li>
+    		          </ul>
+    		      </li>
+    		      <li class="main-menu__mobile-item">
+    		        <a href="/pages/mixtapes" class="main-menu__mobile-link ">MIXTAPES</a>
+    		      </li>
+    		      <li class="main-menu__mobile-item">
+    		        <a href="https://www.barkingironsspirits.com/" class="main-menu__mobile-link " target="_blank">SPIRITS</a>
+    		      </li>
+    		      <li class="main-menu__mobile-item">
+    		        <a href="/pages/about" class="main-menu__mobile-link ">ABOUT</a>
+    		      </li>
+    				</ul>
+    			</div>
+    		</div>
+    	</header>
+      <section class="main-screen" id="main-screen">
+      
+      	<div class="main-screen__slider owl-carousel owl-theme" id="about-established" data-autoplay="true" data-speed="5000">
+      	  <div class="main-screen__slider-item">
+      	    <a href="hui.html">
+      	      <img src="img/header/heder-1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+      	    </a>
+      	  </div>
+      	  <div class="main-screen__slider-item">
+      	    <a href="hui.html">
+      	      <img src="img/header/heder-2.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+      	    </a>
+      	  </div>
+      	</div>
+      
+      	<div class="main-screen__slider--mobile">
+      	  <div class="main-screen__slider-item">
+      	    <a href="hui.html">
+      	      <img src="img/single/img1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+      	    </a>
+      	  </div>
+      	  <div class="main-screen__slider-item">
+      	    <a href="hui.html">
+      	      <img src="img/single/img1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
+      	    </a>
+      	  </div>
+      	</div>
+      </section>
+      <div class="main-page__grid">
+      	<div id="shopify-section-1537257398968" class="shopify-section index-section index-section--flush">
+      		<div class="grid grid--no-gutters image-bar image-bar--medium">
+      			<div class="grid__item medium-up--one-third" >
+      				<a class="image-bar__link" href="/collections/blanks">
+      		    	<div class="image-bar__item box ratio-container lazyload"
+      		      	data-bgset="//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image_180x.jpg?v=1540488238 180w 192h,
+      		    	//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image_360x.jpg?v=1540488238 360w 383h,
+      		    	//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image_540x.jpg?v=1540488238 540w 575h,
+      		    	//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image_720x.jpg?v=1540488238 720w 767h,
+      		    	//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image.jpg?v=1540488238 751w 800h"
+      		      	data-sizes="auto"
+      		        data-parent-fit="cover"
+      		        style="background-position: center; background-image: url('//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image.jpg?v=1540488238);">
+      			      <div class="image-bar__content">
+      			          <div class="image-bar__text">
+      			            <h3 class="image-bar__caption">Classic Brando Tees</h3>
+      			          </div>
+      			      </div>
+      
+      					</div>
+      				</a>
+      			</div>
+      		  <noscript>
+      		    <div class="grid__item medium-up--one-third" >
+      		      <div class="image-bar__item image-bar__item--1537257398968-0" style="background-image: url(//cdn.shopify.com/s/files/1/0021/7448/4547/files/Brando-bottom-image_2048x.jpg?v=1540488238);"></div>
+      		    </div>
+      		  </noscript>
+      		  <div class="grid__item medium-up--one-third" >
+      				<a class="image-bar__link" href="/collections/red-dead-redemption-2">
+      					<div class="image-bar__item box ratio-container lazyload"
+      					data-bgset="//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt_180x.jpg?v=1548193149 180w 192h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt_360x.jpg?v=1548193149 360w 384h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt_540x.jpg?v=1548193149 540w 576h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt_720x.jpg?v=1548193149 720w 768h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt.jpg?v=1548193149 750w 800h"
+      					data-sizes="auto"
+      					data-parent-fit="cover"
+      					style="background-position: center; background-image: url('//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt.jpg?v=1548193149);">
+      						<div class="image-bar__content">
+      							<div class="image-bar__text">
+      								<h3 class="image-bar__caption">RDR2 Collection</h3>
+      							</div>
+      						</div>
+      					</div>
+      				</a>
+      			</div>
+      		  <noscript>
+      		    <div class="grid__item medium-up--one-third" >
+      		      <div class="image-bar__item image-bar__item--1537257398968-1" style="background-image: url(//cdn.shopify.com/s/files/1/0021/7448/4547/files/Bottom_Image_Denim_Shirt_2048x.jpg?v=1548193149);"></div>
+      		    </div>
+      		  </noscript>
+      			<div class="grid__item medium-up--one-third" >
+      				<a class="image-bar__link" href="/collections/accessories">
+      					<div class="image-bar__item box ratio-container lazyload"
+      					data-bgset="//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom_180x.jpg?v=1540488365 180w 192h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom_360x.jpg?v=1540488365 360w 384h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom_540x.jpg?v=1540488365 540w 576h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom_720x.jpg?v=1540488365 720w 768h,
+      					//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom.jpg?v=1540488365 750w 800h"
+      					data-sizes="auto"
+      					data-parent-fit="cover"
+      					style="background-position: center; background-image: url('//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom.jpg?v=1540488365);">
+      						<div class="image-bar__content">
+      							<div class="image-bar__text">
+      								<h3 class="image-bar__caption">Accessories</h3>
+      							</div>
+      						</div>
+      					</div>
+      				</a>
+      			</div>
+      			<noscript>
+      				<div class="grid__item medium-up--one-third" >
+      					<div class="image-bar__item image-bar__item--1537257398968-2" style="background-image: url(//cdn.shopify.com/s/files/1/0021/7448/4547/files/Duffle-brown-bottom_2048x.jpg?v=1540488365);"></div>
+      				</div>
+      			</noscript>
+      		</div>
+      	</div>
+      
+      </div>
+    	<section class="instagram" id="instagram-wrap">
+    	<!-- InstaWidget -->
+    		<a class="instagram__text" href="https://www.instagram.com/barkingironsny/" target="_blank">
+    			<span class="instagram__text-head">#BARKINGINSTYLE</span>
+    			<span class="instagram__view">VIEW GALLERY</span>
+    		</a>
+    		<div class="" id="instagram">
+    	 		
+    		</div>
+    	</section>
+    	<footer class="footer">
+    		<div class="container">
+    			<div class="hidden-md hidden-lg footer__mobile-info">
+    				<div class="footer__mobile-info-txt" data-toggle="" data-href="footer-mobile-list"> INFORMATION</div>
+    				<div class="row footer__mobile-list" id="footer-mobile-list">
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link">shipping</a>
+    					</div>
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link">returns</a>
+    					</div>
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link" data-modal="show" data-modal-id="footer-sizing">sizing</a>
+    					</div>
+    	
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link">terms of use</a>
+    					</div>
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link">about</a>
+    					</div>
+    					<div class="col-sm-6 col-xs-6 footer__mobile-item">
+    						<a href="" class="footer__menu-link">contact</a>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-xs-6">
+    					<div class="footer__menu">
+    						<div class="footer__menu-logo">
+    							<a href="/" class="footer__menu-link">©Barking Irons - New York</a>
+    						</div>
+    						<div class="footer__menu-extra hidden-sm hidden-xs hidden-md">
+    							<ul class="footer__menu-list footer__menu-extra-list">
+    								<li class="footer__menu-item footer__menu-extra-item">
+    									<a href="terms.html" class="footer__menu-link">Terms of use</a>
+    								</li>
+    								<li class="footer__menu-item footer__menu-extra-item">
+    									<a href="terms.html#privacy-policy" class="footer__menu-link">Privacy policy</a>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="col-xs-6">
+    					<nav class="footer__menu footer__menu--end">
+    						<ul class="footer__menu-list  hidden-sm hidden-xs">
+    							<li class="footer__menu-item">
+    								<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="signup-block">Sign up</a>
+    							</li>
+    							<li class="footer__menu-item">
+    								<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="footer-sizing">Sizing</a>
+    							</li>
+    							<li class="footer__menu-item">
+    								<a href="shipping-returns.html" class="footer__menu-link">Shipping</a>
+    							</li>
+    							<li class="footer__menu-item">
+    								<a href="shipping-returns.html" class="footer__menu-link">Returns</a>
+    							</li>
+    							<li class="footer__menu-item">
+    								<a href="about.html" class="footer__menu-link">About</a>
+    							</li>
+    							<li class="footer__menu-item">
+    								<a href="about.html#about-contact-acnhor" class="footer__menu-link">Contact</a>
+    							</li>
+    						</ul>
+    						<div class="footer__menu-social">
+    							<a href="https://www.facebook.com/Barking-Irons-114392436064/" class="footer__menu-social-a">
+    								<img src="img/icons/icon-fb.png" alt="social" class="footer__menu-social-i">
+    							</a>
+    							<a href="https://twitter.com/barkingironsny" class="footer__menu-social-a">
+    								<img src="img/icons/icon-twit.png" alt="social" class="footer__menu-social-i">
+    							</a>
+    							<a href="https://www.instagram.com/barkingironsny/" class="footer__menu-social-a">
+    								<img src="img/icons/icon-inst.png" alt="social" class="footer__menu-social-i">
+    							</a>
+    						</div>
+    					</nav>
+    				</div>
+    	
+    			</div>
+    	
+    		</div>
+    	</footer>
+    	
+    	<div class="modal-block modal-block--darken" id="footer-sizing">
+    		<div class="container modal-block__container">
+    		  <div class="modal-block__innner modal-block__innner--full">
+    		  	<h4 class="modal-block__title heading text-medium bold">GENERAL SIZING CHART</h4>
+    		  	<div class="sizing-chart">
+    			    <div class="sizing-chart__item">
+    					<div class="mb30">
+    						<div class="sizing-chart__item-title">
+    							<span class="bold">ITEM:</span>
+    							<span>Brando T-shirt </span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Classic, Fitted Tee</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Slightly Raised Sleeves</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Quarter Inch neck rib </span>
+    						</div>
+    					</div>
+    	
+    					<table>
+    						<tbody>
+    							<tr>
+    								<td>(inches)</td>
+    								<td>SMALL </td>
+    								<td>MEDIUM </td>
+    								<td>LARGE</td>
+    								<td>XL </td>
+    								<td>XXL </td>
+    								<td></td>
+    							</tr>
+    							<tr>
+    								<td>Chest</td>
+    								<td>39.5"</td>
+    								<td>41.5"</td>
+    								<td>44"</td>
+    								<td>46"</td>
+    								<td>50"</td>
+    								<td></td>
+    							</tr>
+    							<tr>
+    								<td>Length </td>
+    								<td>26"</td>
+    								<td>27.5"</td>
+    								<td>28.5"</td>
+    								<td>30"</td>
+    								<td>31"</td>
+    								<td></td>
+    							</tr>
+    							<tr>
+    								<td>Sleeve</td>
+    								<td>8"</td>
+    								<td>8.25"</td>
+    								<td>9"</td>
+    								<td>9.25"</td>
+    								<td>9.5"</td>
+    								<td></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    				<div class="sizing-chart__item">
+    					<div class="mb30">
+    						<div class="sizing-chart__item-title">
+    							<span class="bold">ITEM:</span>
+    							<span>1984 T-shirt</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Wide Body 1980's Fit</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Half Inch Neck Rib</span>
+    						</div>
+    					</div>
+    					<table>
+    						<tbody>
+    							<tr>
+    								<td>(inches)</td>
+    								<td>XS</td>
+    								<td>SMALL </td>
+    								<td>MEDIUM </td>
+    								<td>LARGE</td>
+    								<td>XL</td>
+    							</tr>
+    							<tr>
+    								<td>Chest</td>
+    								<td>45"</td>
+    								<td>47"</td>
+    								<td>51"</td>
+    								<td>52"</td>
+    								<td>52"</td>
+    							</tr>
+    							<tr>
+    								<td>Length </td>
+    								<td>24.5"</td>
+    								<td>24.5"</td>
+    								<td>25.5"</td>
+    								<td>26"</td>
+    								<td>27.5"</td>
+    							</tr>
+    							<tr>
+    								<td>Sleeve</td>
+    								<td>5.5"</td>
+    								<td>6"</td>
+    								<td>7"</td>
+    								<td>7"</td>
+    								<td>8"</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    				<div class="sizing-chart__item">
+    					<div class="mb30">
+    						<div class="sizing-chart__item-title">
+    							<span class="bold">ITEM:</span>
+    							<span>Denim Jacket</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Drop shoulder 1990's fit</span>
+    						</div>
+    					</div>
+    					<table>
+    						<tbody>
+    							<tr>
+    								<td>(inches)</td>
+    								<td>XS</td>
+    								<td>SMALL </td>
+    								<td>MEDIUM </td>
+    								<td>LARGE</td>
+    								<td>XL</td>
+    							</tr>
+    							<tr>
+    								<td>Chest</td>
+    								<td>NA</td>
+    								<td>41"</td>
+    								<td>42"</td>
+    								<td>43"</td>
+    								<td>44"</td>
+    							</tr>
+    							<tr>
+    								<td>Length </td>
+    								<td>NA</td>
+    								<td>24"</td>
+    								<td>25.25"</td>
+    								<td>26.5"</td>
+    								<td>28"</td>
+    							</tr>
+    							<tr>
+    								<td>Sleeve</td>
+    								<td>NA</td>
+    								<td>22.5"</td>
+    								<td>23"</td>
+    								<td>23.5"</td>
+    								<td>24"</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    				<div class="sizing-chart__item">
+    					<div class="mb30">
+    						<div class="sizing-chart__item-title">
+    							<span class="bold">ITEM:</span>
+    							<span>Sweatshirts</span>
+    						</div>
+    						<div>
+    							<span>☑️</span>
+    							<span>Roomy Fit</span>
+    						</div>
+    					</div>
+    					<table>
+    						<tbody>
+    							<tr>
+    								<td>(inches)</td>
+    								<td>SMALL </td>
+    								<td>MEDIUM </td>
+    								<td>LARGE</td>
+    								<td>XL</td>
+    								<td>XXL</td>
+    							</tr>
+    							<tr>
+    								<td>Chest</td>
+    								<td>45"</td>
+    								<td>48"</td>
+    								<td>50"</td>
+    								<td>52"</td>
+    								<td>56"</td>
+    							</tr>
+    							<tr>
+    								<td>Length </td>
+    								<td>26"</td>
+    								<td>27"</td>
+    								<td>27.5"</td>
+    								<td>28.5"</td>
+    								<td>29"</td>
+    							</tr>
+    							<tr>
+    								<td>Sleeve</td>
+    								<td>23"</td>
+    								<td>24"</td>
+    								<td>25"</td>
+    								<td>25.5"</td>
+    								<td>27"</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			  </div>
+    			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
+    		  </div>
+    		</div>
     	</div>
-    
-    	<div class="main-screen__slider--mobile">
-    	  <div class="main-screen__slider-item">
-    	    <a href="hui.html">
-    	      <img src="img/single/img1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
-    	    </a>
-    	  </div>
-    	  <div class="main-screen__slider-item">
-    	    <a href="hui.html">
-    	      <img src="img/single/img1.jpg" alt="heder-1.jpg" class="main-screen__slider-obj">
-    	    </a>
-    	  </div>
+    	<div class="modal-block modal-block--darken" id="change-geo-block">
+    		<div class="container modal-block__container">
+    		  <div class="modal-block__innner modal-block__innner--smpd">
+    		  	<div class="popup">
+    					<div class="popup__header">
+    						<h4 class="popup__header-title text-big">Shopping from outside of North America?</h4>
+    						<p class="popup__header-txt text-xlarge">Visit our EU site to
+    	save on shipping</p>
+    					</div>
+    	
+    					<div class="popup__btn-wrap">
+    						<a href="https://barkingirons-uk.com" class="popup__btn">VISIT</a>
+    					</div>
+    			  </div>
+    			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
+    		  </div>
+    		</div>
     	</div>
-    </section>
-	<section class="instagram" id="instagram-wrap">
-	<!-- InstaWidget -->
-		<a class="instagram__text" href="https://www.instagram.com/barkingironsny/" target="_blank">
-			<span class="instagram__text-head">#BARKINGINSTYLE</span>
-			<span class="instagram__view">VIEW GALLERY</span>
-		</a>
-		<div class="" id="instagram">
-	 		
-		</div>
-	</section>
-	<section class="main-screen__collection">
-		<div class="owl-carousel owl-theme" id="collection-slider">
-			<div class="main-screen__collection-wrap">
-		        <a href="single.html" class="main-screen__collection-item">
-		          	<img src="img/home/img4.jpg" class="flex-list__img main-screen__collection-img" alt="img">
-		  			<div class="main-screen__collection-title">
-		            	VUESTRO JEFE TEE<br>$ 75.00
-		          	</div>
-		        </a>
-			</div>
-			<div class="main-screen__collection-wrap">
-		        <a href="single.html" class="main-screen__collection-item">
-		          	<img src="img/home/img5.jpg" class="flex-list__img main-screen__collection-img" alt="img">
-	  				<div class="main-screen__collection-title">
-		            	VUESTRO JEFE TEE<br>$ 75.00
-		          	</div>
-		        </a>
-			</div>
-			<div class="main-screen__collection-wrap">
-		        <a href="single.html" class="main-screen__collection-item">
-		          	<img src="img/home/img4.jpg" class="flex-list__img main-screen__collection-img" alt="img">
-	  				<div class="main-screen__collection-title">
-			            VUESTRO JEFE TEE<br>$ 75.00
-			          </div>
-		        </a>
-			</div>
-			<div class="main-screen__collection-wrap">
-		        <a href="single.html" class="main-screen__collection-item">
-		        	<img src="img/home/img5.jpg" class="flex-list__img main-screen__collection-img" alt="img">
-		  			<div class="main-screen__collection-title">
-		            	VUESTRO JEFE TEE<br>$ 75.00
-		          	</div>
-		        </a>
-			</div>
-		</div>
-	</section>
-	<section class="flex-list">
-		<div class="flex-list__item">
-			<img src="img/home/img1.jpg" class="flex-list__img" alt="img">
-		</div>
-		<div class="flex-list__item">
-			<img src="img/home/img2.jpg" class="flex-list__img" alt="img">
-		</div>
-		<div class="flex-list__item">
-			<img src="img/home/img3.jpg" class="flex-list__img" alt="img">
-		</div>
-	</section>
-  	<footer class="footer">
-  		<div class="container">
-  			<div class="hidden-md hidden-lg footer__mobile-info">
-  				<div class="footer__mobile-info-txt" data-toggle="" data-href="footer-mobile-list"> INFORMATION</div>
-  				<div class="row footer__mobile-list" id="footer-mobile-list">
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link">shipping</a>
-  					</div>
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link">returns</a>
-  					</div>
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link" data-modal="show" data-modal-id="footer-sizing">sizing</a>
-  					</div>
-  	
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link">terms of use</a>
-  					</div>
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link">about</a>
-  					</div>
-  					<div class="col-sm-6 col-xs-6 footer__mobile-item">
-  						<a href="" class="footer__menu-link">contact</a>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div class="col-xs-6">
-  					<div class="footer__menu">
-  						<div class="footer__menu-logo">
-  							<a href="/" class="footer__menu-link">©Barking Irons - New York</a>
-  						</div>
-  						<div class="footer__menu-extra hidden-sm hidden-xs hidden-md">
-  							<ul class="footer__menu-list footer__menu-extra-list">
-  								<li class="footer__menu-item footer__menu-extra-item">
-  									<a href="terms.html" class="footer__menu-link">Terms of use</a>
-  								</li>
-  								<li class="footer__menu-item footer__menu-extra-item">
-  									<a href="terms.html#privacy-policy" class="footer__menu-link">Privacy policy</a>
-  								</li>
-  							</ul>
-  						</div>
-  					</div>
-  				</div>
-  				<div class="col-xs-6">
-  					<nav class="footer__menu footer__menu--end">
-  						<ul class="footer__menu-list  hidden-sm hidden-xs">
-  							<li class="footer__menu-item">
-  								<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="signup-block">Sign up</a>
-  							</li>
-  							<li class="footer__menu-item">
-  								<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="footer-sizing">Sizing</a>
-  							</li>
-  							<li class="footer__menu-item">
-  								<a href="shipping-returns.html" class="footer__menu-link">Shipping</a>
-  							</li>
-  							<li class="footer__menu-item">
-  								<a href="shipping-returns.html" class="footer__menu-link">Returns</a>
-  							</li>
-  							<li class="footer__menu-item">
-  								<a href="about.html" class="footer__menu-link">About</a>
-  							</li>
-  							<li class="footer__menu-item">
-  								<a href="about.html#about-contact-acnhor" class="footer__menu-link">Contact</a>
-  							</li>
-  						</ul>
-  						<div class="footer__menu-social">
-  							<a href="https://www.facebook.com/Barking-Irons-114392436064/" class="footer__menu-social-a">
-  								<img src="img/icons/icon-fb.png" alt="social" class="footer__menu-social-i">
-  							</a>
-  							<a href="https://twitter.com/barkingironsny" class="footer__menu-social-a">
-  								<img src="img/icons/icon-twit.png" alt="social" class="footer__menu-social-i">
-  							</a>
-  							<a href="https://www.instagram.com/barkingironsny/" class="footer__menu-social-a">
-  								<img src="img/icons/icon-inst.png" alt="social" class="footer__menu-social-i">
-  							</a>
-  						</div>
-  					</nav>
-  				</div>
-  	
-  			</div>
-  	
-  		</div>
-  	</footer>
-  	
-  	<div class="modal-block modal-block--darken" id="footer-sizing">
-  		<div class="container modal-block__container">
-  		  <div class="modal-block__innner modal-block__innner--full">
-  		  	<h4 class="modal-block__title heading text-medium bold">GENERAL SIZING CHART</h4>
-  		  	<div class="sizing-chart">
-  			    <div class="sizing-chart__item">
-  					<div class="mb30">
-  						<div class="sizing-chart__item-title">
-  							<span class="bold">ITEM:</span>
-  							<span>Brando T-shirt </span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Classic, Fitted Tee</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Slightly Raised Sleeves</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Quarter Inch neck rib </span>
-  						</div>
-  					</div>
-  	
-  					<table>
-  						<tbody>
-  							<tr>
-  								<td>(inches)</td>
-  								<td>SMALL </td>
-  								<td>MEDIUM </td>
-  								<td>LARGE</td>
-  								<td>XL </td>
-  								<td>XXL </td>
-  								<td></td>
-  							</tr>
-  							<tr>
-  								<td>Chest</td>
-  								<td>39.5"</td>
-  								<td>41.5"</td>
-  								<td>44"</td>
-  								<td>46"</td>
-  								<td>50"</td>
-  								<td></td>
-  							</tr>
-  							<tr>
-  								<td>Length </td>
-  								<td>26"</td>
-  								<td>27.5"</td>
-  								<td>28.5"</td>
-  								<td>30"</td>
-  								<td>31"</td>
-  								<td></td>
-  							</tr>
-  							<tr>
-  								<td>Sleeve</td>
-  								<td>8"</td>
-  								<td>8.25"</td>
-  								<td>9"</td>
-  								<td>9.25"</td>
-  								<td>9.5"</td>
-  								<td></td>
-  							</tr>
-  						</tbody>
-  					</table>
-  				</div>
-  				<div class="sizing-chart__item">
-  					<div class="mb30">
-  						<div class="sizing-chart__item-title">
-  							<span class="bold">ITEM:</span>
-  							<span>1984 T-shirt</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Wide Body 1980's Fit</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Half Inch Neck Rib</span>
-  						</div>
-  					</div>
-  					<table>
-  						<tbody>
-  							<tr>
-  								<td>(inches)</td>
-  								<td>XS</td>
-  								<td>SMALL </td>
-  								<td>MEDIUM </td>
-  								<td>LARGE</td>
-  								<td>XL</td>
-  							</tr>
-  							<tr>
-  								<td>Chest</td>
-  								<td>45"</td>
-  								<td>47"</td>
-  								<td>51"</td>
-  								<td>52"</td>
-  								<td>52"</td>
-  							</tr>
-  							<tr>
-  								<td>Length </td>
-  								<td>24.5"</td>
-  								<td>24.5"</td>
-  								<td>25.5"</td>
-  								<td>26"</td>
-  								<td>27.5"</td>
-  							</tr>
-  							<tr>
-  								<td>Sleeve</td>
-  								<td>5.5"</td>
-  								<td>6"</td>
-  								<td>7"</td>
-  								<td>7"</td>
-  								<td>8"</td>
-  							</tr>
-  						</tbody>
-  					</table>
-  				</div>
-  				<div class="sizing-chart__item">
-  					<div class="mb30">
-  						<div class="sizing-chart__item-title">
-  							<span class="bold">ITEM:</span>
-  							<span>Denim Jacket</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Drop shoulder 1990's fit</span>
-  						</div>
-  					</div>
-  					<table>
-  						<tbody>
-  							<tr>
-  								<td>(inches)</td>
-  								<td>XS</td>
-  								<td>SMALL </td>
-  								<td>MEDIUM </td>
-  								<td>LARGE</td>
-  								<td>XL</td>
-  							</tr>
-  							<tr>
-  								<td>Chest</td>
-  								<td>NA</td>
-  								<td>41"</td>
-  								<td>42"</td>
-  								<td>43"</td>
-  								<td>44"</td>
-  							</tr>
-  							<tr>
-  								<td>Length </td>
-  								<td>NA</td>
-  								<td>24"</td>
-  								<td>25.25"</td>
-  								<td>26.5"</td>
-  								<td>28"</td>
-  							</tr>
-  							<tr>
-  								<td>Sleeve</td>
-  								<td>NA</td>
-  								<td>22.5"</td>
-  								<td>23"</td>
-  								<td>23.5"</td>
-  								<td>24"</td>
-  							</tr>
-  						</tbody>
-  					</table>
-  				</div>
-  				<div class="sizing-chart__item">
-  					<div class="mb30">
-  						<div class="sizing-chart__item-title">
-  							<span class="bold">ITEM:</span>
-  							<span>Sweatshirts</span>
-  						</div>
-  						<div>
-  							<span>☑️</span>
-  							<span>Roomy Fit</span>
-  						</div>
-  					</div>
-  					<table>
-  						<tbody>
-  							<tr>
-  								<td>(inches)</td>
-  								<td>SMALL </td>
-  								<td>MEDIUM </td>
-  								<td>LARGE</td>
-  								<td>XL</td>
-  								<td>XXL</td>
-  							</tr>
-  							<tr>
-  								<td>Chest</td>
-  								<td>45"</td>
-  								<td>48"</td>
-  								<td>50"</td>
-  								<td>52"</td>
-  								<td>56"</td>
-  							</tr>
-  							<tr>
-  								<td>Length </td>
-  								<td>26"</td>
-  								<td>27"</td>
-  								<td>27.5"</td>
-  								<td>28.5"</td>
-  								<td>29"</td>
-  							</tr>
-  							<tr>
-  								<td>Sleeve</td>
-  								<td>23"</td>
-  								<td>24"</td>
-  								<td>25"</td>
-  								<td>25.5"</td>
-  								<td>27"</td>
-  							</tr>
-  						</tbody>
-  					</table>
-  				</div>
-  			  </div>
-  			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
-  		  </div>
-  		</div>
+    	<script src="js/global/owl.carousel.min.js"></script>
+    	<script src="js/global/bootstrap.min.js"></script>
+    	<script src="js/common.js"></script>
+    	<div class="modal-block modal-block--darken" id="signup-block">
+    		<div class="container modal-block__container">
+    		  <div class="modal-block__innner modal-block__innner--smpd">
+    		  	<div class="popup">
+    					<div class="popup__header">
+    						<h4 class="popup__header-title text-big">JOIN UP</h4>
+    						<p class="popup__header-txt text-regular">Get all our updates and an<br> additional 10% off your order</p>
+    					</div>
+    					<form class="popup__form" action="" method="post">
+    						<input type="text" class="popup__form-inp" name="" value="" placeholder="Email">
+    						<div class="popup__btn-wrap">
+    							<button type="submit" name="button" class="popup__btn">SUBMIT</button>
+    						</div>
+    	
+    					</form>
+    			  </div>
+    			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
+    		  </div>
+    		</div>
+    	</div>
+      <a href="#" class="footer__menu-link hidden" data-modal="show" data-modal-id="signup-block">Subscribe</a>
   	</div>
-  	<div class="modal-block modal-block--darken" id="change-geo-block">
-  		<div class="container modal-block__container">
-  		  <div class="modal-block__innner modal-block__innner--smpd">
-  		  	<div class="popup">
-  					<div class="popup__header">
-  						<h4 class="popup__header-title text-big">Shopping from outside of North America?</h4>
-  						<p class="popup__header-txt text-xlarge">Visit our EU site to
-  	save on shipping</p>
-  					</div>
-  	
-  					<div class="popup__btn-wrap">
-  						<a href="https://barkingirons-uk.com" class="popup__btn">VISIT</a>
-  					</div>
-  			  </div>
-  			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
-  		  </div>
-  		</div>
-  	</div>
-  	<script src="js/global/owl.carousel.min.js"></script>
-  	<script src="js/global/bootstrap.min.js"></script>
-  	<script src="js/common.js"></script>
-  	<div class="modal-block modal-block--darken" id="signup-block">
-  		<div class="container modal-block__container">
-  		  <div class="modal-block__innner modal-block__innner--smpd">
-  		  	<div class="popup">
-  					<div class="popup__header">
-  						<h4 class="popup__header-title text-big">JOIN UP</h4>
-  						<p class="popup__header-txt text-regular">Get all our updates and an<br> additional 10% off your order</p>
-  					</div>
-  					<form class="popup__form" action="" method="post">
-  						<input type="text" class="popup__form-inp" name="" value="" placeholder="Email">
-  						<div class="popup__btn-wrap">
-  							<button type="submit" name="button" class="popup__btn">SUBMIT</button>
-  						</div>
-  	
-  					</form>
-  			  </div>
-  			  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>
-  		  </div>
-  		</div>
-  	</div>
-    <a href="#" class="footer__menu-link" data-modal="show" data-modal-id="signup-block">Subscribe</a>
-	</div>
-
-
   	<script src="js/pages/index.js"></script>
   	<script src="js/components/instagram.js"></script>
   </body>
