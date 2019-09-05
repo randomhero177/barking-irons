@@ -2435,7 +2435,7 @@ section {
 }
 @media (max-width: 767px) {
   .about__contacts-row {
-    display: block;
+    display: flex;
   }
 }
 .about__contacts-item {
