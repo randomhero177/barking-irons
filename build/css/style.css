@@ -2713,12 +2713,15 @@ section {
 }
 .category-box {
   font-size: 0;
+  margin: 0 -7.5px;
 }
 .category-box__item {
+  padding: 7.5px;
   display: inline-block;
   position: relative;
   width: 50%;
   color: #000;
+  vertical-align: top;
 }
 .category-box__item:hover,
 .category-box__item:active,
@@ -2758,12 +2761,9 @@ section {
   text-transform: uppercase;
 }
 .category-box__item-title {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 30px;
+  padding: 15px 15px 30px 15px;
   font-size: 17px;
+  text-align: center;
 }
 @media (min-width: 2200px) {
   .category-box__item-title {

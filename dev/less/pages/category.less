@@ -1,11 +1,14 @@
 .category {
   &-box {
     font-size: 0;
+    margin: 0 -@pad/2;
     &__item {
+      padding: @pad/2;
       display: inline-block;
       position: relative;
       width: 50%;
       color: @primary;
+      vertical-align: top;
       .hover(@primary);
 
       @media @screen-xs-only {
@@ -38,12 +41,9 @@
       }
 
       &-title {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: @pad*2;
+        padding: @pad @pad @pad*2 @pad;
         font-size: @fz;
+        text-align: center;
 
         @media @screen-xlarge {
           font-size: @fz*1.25;
