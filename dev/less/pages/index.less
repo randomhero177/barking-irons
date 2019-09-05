@@ -82,10 +82,18 @@
 }
 
 .main-page__grid {
+  padding: @pad/2;
   & .grid__item {
-    padding: @pad;
+    padding: @pad/2;
   }
   & .image-bar__link {
     display: block;
+  }
+
+  &-text {
+    background: #992f2b;
+    padding: @pad 0;
+    text-transform: uppercase;
+    font-size: @fz*1.25;
   }
 }

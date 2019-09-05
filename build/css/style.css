@@ -2353,11 +2353,20 @@ section {
   width: 20px;
   height: 20px;
 }
+.main-page__grid {
+  padding: 7.5px;
+}
 .main-page__grid .grid__item {
-  padding: 15px;
+  padding: 7.5px;
 }
 .main-page__grid .image-bar__link {
   display: block;
+}
+.main-page__grid-text {
+  background: #992f2b;
+  padding: 15px 0;
+  text-transform: uppercase;
+  font-size: 21.25px;
 }
 .about--est {
   color: #fff;
