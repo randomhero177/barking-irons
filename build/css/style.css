@@ -2019,6 +2019,7 @@ section {
 @media (min-width: 992px) {
   .collection-alt {
     display: block!important;
+    margin-bottom: 15px;
   }
 }
 .collection-alt__quote {
