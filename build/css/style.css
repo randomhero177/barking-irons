@@ -2019,7 +2019,7 @@ section {
 @media (min-width: 992px) {
   .collection-alt {
     display: block!important;
-    margin-bottom: 15px;
+    margin-bottom: 7.5px;
   }
 }
 .collection-alt__quote {
@@ -2069,6 +2069,11 @@ section {
 }
 .collection-alt__slider .owl-next {
   right: 30px;
+}
+.collection-grid-item__title {
+  background: #992f2b;
+  color: #fff;
+  padding: 15px 0;
 }
 .modal-block {
   display: none;

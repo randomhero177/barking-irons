@@ -54,7 +54,7 @@
     display: none!important;
       @media @screen-desktop {
         display: block!important;
-        margin-bottom: @pad;
+        margin-bottom: @pad/2;
     }
 
     &__quote {
@@ -101,6 +101,14 @@
       & .owl-next  {
         right: @pad*2;
       }
+    }
+  }
+
+  &-grid-item {
+    &__title {
+        background: #992f2b;
+        color: #fff;
+        padding: @pad 0;
     }
   }
 }
