@@ -2796,6 +2796,35 @@ section {
   color: #fff;
   text-decoration: none;
 }
+.category-box__item-img {
+  position: relative;
+}
+.category-box__item-buy {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  font-size: 17px;
+  text-align: center;
+  display: none;
+}
+.category-box__item:hover .category-box__item-buy {
+  display: block;
+}
+.category-box__item-btn {
+  margin-bottom: 7.5px;
+}
+.category-box__item-size {
+  display: inline-block;
+  padding: 2px 5px;
+  border: 2px solid #000;
+  margin: 0 7.5px;
+}
+.category-box__item-size.active {
+  background: #fff;
+}
 .checkout {
   min-height: 80vh;
 }
