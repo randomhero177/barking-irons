@@ -155,3 +155,84 @@ var ConfirmPopup = function (options) {
   setOptions(options);
   this.show();
 };
+
+
+/**
+ * Feature for popping alert notices
+ * @param {string} message - text to be shown in notice
+ * @param {string} type - bootstrap style of alert decoration
+ */
+var PanelNotice = function (message, type) {
+
+  if (typeof message === 'undefined') {
+    throw 'To create notice, you must provide text description';
+  }
+
+  var n = this;
+  var c = {
+    blockClass: 'notices',
+    elemClass: 'notices__item',
+    elemClassActive: 'notices__item--active',
+    elemClassHidden: 'notices__item--hidden',
+    elemCloseClass: 'notices__item-close',
+    timeout: 7000 // 7 seconds
+  }
+  this.interval = false;
+
+  this.showNotice = function () {
+    var existingBlock = document.querySelector('.' + c.blockClass);
+    var isBlockAlreadyCreated = existingBlock !== null;
+    var resultBlock = (isBlockAlreadyCreated) ? existingBlock : createBlock();
+    var notice = createNotice(resultBlock);
+
+    if (!isBlockAlreadyCreated) {
+      document.body.appendChild(resultBlock);
+    }
+
+    resultBlock.appendChild(notice);
+
+    setTimeout(function () {
+      notice.classList.add(c.elemClassActive);
+    }, 200);
+
+    n.interval = setTimeout(function () {
+      n.removeNotice(notice, resultBlock);
+    }, c.timeout);
+  };
+  this.removeNotice = function (item, parentBlock) {
+    item.classList.add(c.elemClassHidden);
+    setTimeout(function () {
+      if (item) {
+        parentBlock.removeChild(item);
+      }
+    }, 400);
+    clearTimeout(n.interval);
+  };
+
+  function createBlock() {
+    var block = document.createElement('div');
+    block.classList.add(c.blockClass);
+    return block;
+  }
+  function createNotice(parentBlock) {
+    var notice = document.createElement('div');
+    var close = document.createElement('button');
+    var noticeType = (typeof type !== 'undefined') ? type : 'warning';
+
+    notice.className = 'notices__item alert alert-dissmissable';
+    notice.classList.add('alert-' + noticeType);
+    notice.innerHTML = message;
+
+    close.className = 'notices__item-close close';
+    close.innerHTML = '&times;';
+
+    notice.appendChild(close);
+    close.addEventListener('click', function () {
+      n.removeNotice(notice, parentBlock);
+    });
+
+    return notice;
+  }
+
+  n.showNotice();
+};

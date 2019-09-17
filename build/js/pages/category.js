@@ -17,8 +17,37 @@ $(window).load(function () {
 
     },
     quickBuy: function(){
-      let config = document.querySelectorAll('[data-item-buy="block"]');
-      console.log(config);
+      let config = {
+        blockSelector: '[data-item-buy="block"]',
+        blockId: '[data-item-id]',
+        blockBtn: '[data-item-buy="button"]',
+        sizeBtn: '[data-size]'
+      };
+      let blockArr = document.querySelectorAll(config.blockSelector);
+
+      [].forEach.call(blockArr, (block) => {
+
+          let buttons = block.querySelectorAll(config.sizeBtn);
+          let curId = block.dataset.itemId;
+
+
+          [].forEach.call(buttons, (button) => {
+            console.log(block, buttons, curId);
+            button.addEventListener('click', (e) => {
+              e.preventDefault();
+              var confirm = new ConfirmPopup({
+                title: 'Do you want to add this item to basket',
+                text: 'Cancel',
+                proceedText: 'Buy now',
+
+                cbProceed: function () {
+                //  location.href = urlToAddMoney; // urlToAddMoney is defined in Layout
+                  let notice = new PanelNotice('Item added to cart', 'success');
+                }
+              });
+            })
+          });
+      });
     },
     init: function(){
       Category.setHeight();

@@ -120,7 +120,7 @@ $(document).ready(function() {
     dataType: 'jsonp',
     success: function(location) {
       var countryArray = ['US', 'MX', 'CA'];
-      
+
       console.log(location);
       if(location.country_code && findInArr(countryArray, location.country_code) == -1){
         if (!sessionStorage.popIsShown){
@@ -128,7 +128,7 @@ $(document).ready(function() {
           	sessionStorage.setItem('popIsShown', true);
         };
       };
-      
+
     },
     error: function(msg) {
     	console.log(msg);
@@ -143,21 +143,21 @@ var resources = {
   Shared_MaxValue: 'Максимальное значение',
   Shared_MinValue: 'Миниимальное значение',
   Shared_ClosestValue: 'Ближайшее значение',
-  Shared_Next: 'Вперед',
-  Shared_Prev: 'Назад',
+  Shared_Next: 'Forward',
+  Shared_Prev: 'Back',
   Shared_Required: 'Поле обязательно для заполнения',
   Shared_Incorrect_Data: 'Отправленные данные содержать ошибку. Исправьте ошибки и повторите попытку',
   ConfirmRequired: 'Необходимо подтвердить свое согласие',
   Shared_Action_Undone: 'Это действие нельзя отменить',
-  Common_copy: 'Копировать',
-  Common_delete: 'Удалить',
-  Shared_BtnDownload: 'Скачать',
+  Common_copy: 'Copy',
+  Common_delete: 'Delete',
+  Shared_BtnDownload: 'Download',
   Shared_Rename: 'Переименовать',
   Shared_Move: 'Переместить',
   Shared_Edit: 'Редактировать',
   Shared_Confirm_Title: 'Подтверждение действия',
-  Shared_Confirm: 'Подтвердить',
-  Shared_Cancel: 'Отменить',
+  Shared_Confirm: 'Confirm',
+  Shared_Cancel: 'Cancel',
   Sending: 'Отправляем...',
   Sent: 'Успешно отправлено',
   Completed_Successful_Text: 'Успешно выполнено',
