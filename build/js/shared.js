@@ -12,7 +12,7 @@
  * @param {string} proceedText - if provided, button 'Proceed' text will be changed
  * @param {string} cancelText - if provided, button 'Cancel' text will be changed
  */
-var ConfirmPopup = function (options) {
+let ConfirmPopup = function (options) {
   if (typeof options === 'undefined') {
     throw new ReferenceError('No confirm object provided!');
   }
@@ -21,7 +21,7 @@ var ConfirmPopup = function (options) {
     throw new ReferenceError('No appropriate confirm text provided!');
   }
 
-  var c = {
+  let c = {
     classBlock: 'confirm',
     classBlockActive: 'confirm--active',
     classInner: 'confirm__inner',
@@ -33,7 +33,7 @@ var ConfirmPopup = function (options) {
     classProceed: 'confirm__btn-proceed'
   }
 
-  var confirm = this;
+  let confirm = this;
 
   this.options = {
     text: '',
@@ -52,12 +52,12 @@ var ConfirmPopup = function (options) {
   };
 
   this.create = function () {
-    var opts = confirm.options;
-    var blockElem = document.createElement('div');
-    var innerElem = document.createElement('div');
-    var titleElem = document.createElement('h3');
-    var textElem = document.createElement('p');
-    var buttonsElem = document.createElement('div');
+    let opts = confirm.options;
+    let blockElem = document.createElement('div');
+    let innerElem = document.createElement('div');
+    let titleElem = document.createElement('h3');
+    let textElem = document.createElement('p');
+    let buttonsElem = document.createElement('div');
 
     blockElem.classList.add(c.classBlock);
     innerElem.classList.add(c.classInner);
@@ -85,9 +85,9 @@ var ConfirmPopup = function (options) {
     return blockElem;
 
     function addConfirmBtn(type) {
-      var btn = document.createElement('button');
-      var isProceed = type === 'proceed';
-      var callback = isProceed ? opts.cbProceed : opts.cbCancel;
+      let btn = document.createElement('button');
+      let isProceed = type === 'proceed';
+      let callback = isProceed ? opts.cbProceed : opts.cbCancel;
 
       btn.setAttribute('type', 'button');
       btn.setAttribute('class', isProceed ? 'btn btn-primary confirm__btn confirm__btn-proceed' : 'btn btn-default confirm__btn confirm__btn-cancel');
@@ -107,7 +107,7 @@ var ConfirmPopup = function (options) {
     }
 
     function getAlertBlock() {
-      var alertElem = document.createElement('div');
+      let alertElem = document.createElement('div');
       alertElem.classList.add(c.classAlert, 'alert', 'alert-' + opts.alertType);
       alertElem.innerHTML = opts.alertText;
 
@@ -116,7 +116,7 @@ var ConfirmPopup = function (options) {
   };
 
   this.show = function () {
-    var block = confirm.create();
+    let block = confirm.create();
 
     document.body.appendChild(block);
     setTimeout(function () {
@@ -127,7 +127,7 @@ var ConfirmPopup = function (options) {
   };
 
   this.close = function () {
-    var block = document.querySelector('.' + c.classBlockActive);
+    let block = document.querySelector('.' + c.classBlockActive);
 
     if (block) {
       block.classList.remove(c.classBlockActive);
@@ -162,14 +162,14 @@ var ConfirmPopup = function (options) {
  * @param {string} message - text to be shown in notice
  * @param {string} type - bootstrap style of alert decoration
  */
-var PanelNotice = function (message, type) {
+let PanelNotice = function (message, type) {
 
   if (typeof message === 'undefined') {
     throw 'To create notice, you must provide text description';
   }
 
-  var n = this;
-  var c = {
+  let n = this;
+  let c = {
     blockClass: 'notices',
     elemClass: 'notices__item',
     elemClassActive: 'notices__item--active',
@@ -180,10 +180,10 @@ var PanelNotice = function (message, type) {
   this.interval = false;
 
   this.showNotice = function () {
-    var existingBlock = document.querySelector('.' + c.blockClass);
-    var isBlockAlreadyCreated = existingBlock !== null;
-    var resultBlock = (isBlockAlreadyCreated) ? existingBlock : createBlock();
-    var notice = createNotice(resultBlock);
+    let existingBlock = document.querySelector('.' + c.blockClass);
+    let isBlockAlreadyCreated = existingBlock !== null;
+    let resultBlock = (isBlockAlreadyCreated) ? existingBlock : createBlock();
+    let notice = createNotice(resultBlock);
 
     if (!isBlockAlreadyCreated) {
       document.body.appendChild(resultBlock);
@@ -210,14 +210,14 @@ var PanelNotice = function (message, type) {
   };
 
   function createBlock() {
-    var block = document.createElement('div');
+    let block = document.createElement('div');
     block.classList.add(c.blockClass);
     return block;
   }
   function createNotice(parentBlock) {
-    var notice = document.createElement('div');
-    var close = document.createElement('button');
-    var noticeType = (typeof type !== 'undefined') ? type : 'warning';
+    let notice = document.createElement('div');
+    let close = document.createElement('button');
+    let noticeType = (typeof type !== 'undefined') ? type : 'warning';
 
     notice.className = 'notices__item alert alert-dissmissable';
     notice.classList.add('alert-' + noticeType);
@@ -236,3 +236,8 @@ var PanelNotice = function (message, type) {
 
   n.showNotice();
 };
+
+function getProductInfo(handle, cbSuccess){
+  let url = '/products/' + handle + '.js';
+  sendAjaxRequest(null, url, null, cbSuccess, 'GET');
+}
