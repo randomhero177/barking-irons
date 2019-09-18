@@ -239,5 +239,5 @@ let PanelNotice = function (message, type) {
 
 function getProductInfo(handle, cbSuccess){
   let url = '/products/' + handle + '.js';
-  sendAjaxRequest(null, url, null, cbSuccess, 'GET');
+  sendAjaxRequest(null, url, null, cbSuccess, null, 'GET');
 }
