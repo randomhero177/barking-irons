@@ -48,7 +48,7 @@ $(window).load(function () {
             let curBtn = button.cloneNode();
 
             curBtn.dataset.variantId = el.id;
-            curBtn.textContent = el.title;
+            curBtn.textContent = (el.title !== 'Default Title') ? el.title : 'Default size';
 
             curBtn.addEventListener('click', (e) => {
               e.preventDefault();
