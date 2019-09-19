@@ -30,7 +30,6 @@ $(window).load(function () {
       function hoverLisetener(){
         event.stopPropagation();
         let curBlock = event.currentTarget
-        console.log(curBlock);
 
         getProductInfo(curBlock.dataset.itemHandle, drawButtons);
         curBlock.dataset.itemChecked = 'true';
@@ -48,7 +47,7 @@ $(window).load(function () {
             let curBtn = button.cloneNode();
 
             curBtn.dataset.variantId = el.id;
-            curBtn.textContent = (el.title !== 'Default Title') ? el.title : 'Default size';
+            curBtn.textContent = (el.title !== 'Default Title') ? el.title : 'One Size';
 
             curBtn.addEventListener('click', (e) => {
               e.preventDefault();
@@ -63,12 +62,21 @@ $(window).load(function () {
                     quantity: 1,
                     id: curId
                   }, function(){
-                    let notice = new PanelNotice('Item added to cart', 'success');
-                    let bagElem = document.getElementById('in-bag-count');
+                    let
+                      notice = new PanelNotice('Item added to cart', 'success'),
+                      bagElem = document.getElementById('in-bag-count');
                     if(bagElem) {
                       bagCount = parseInt(bagElem.textContent.replace("(", "").replace(")", ""));
                       bagCount++;
                       bagElem.textContent = '(' + bagCount + ')';
+                    } else {
+                      let
+                        bagWrap = document.querySelector('.main-menu__bag'),
+                        elem = document.createElement('span');
+                        elem.classList.add('main-menu__bag-count');
+                        elem.setAttribute('id', 'in-bag-count');
+                        elem.textContent = '(1)';
+                        bagWrap.appendChild(elem);
                     }
                   });
                 }
