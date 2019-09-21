@@ -91,6 +91,35 @@
         padding: 2px 5px;
         border: 2px solid @primary;
         margin: 0 @pad/2;
+        &_out {
+          position: relative;
+          pointer-events: none;
+          cursor: initial;
+          &:after, &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 200%;
+            width: 2px;
+            background: @red;
+            top: -50%;
+            left: 43%;
+          }
+          &:before {
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          &:after {
+            -moz-transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+          }
+        }
         &.active {
           background: @inverse;
         }
