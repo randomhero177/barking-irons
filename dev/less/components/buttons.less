@@ -3,12 +3,20 @@
   border-radius: @bth-radius;
 
   &-checkout {
-    background: #4285f4;
+    background: #426db2;
     color: #fff;
-    padding: @pad 0;
+    padding: @pad/7;
     margin-bottom: @pad;
+
     &:focus, &:active, &:hover {
       color: #fff;
+    }
+    &__item {
+      display: block;
+      padding: @pad/2 0;
+      width: 100%;
+      text-align: center;
+      border: 2px solid #fff;
     }
   }
 

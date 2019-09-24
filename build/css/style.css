@@ -988,15 +988,22 @@ section {
   border-radius: 0;
 }
 .btn-checkout {
-  background: #4285f4;
+  background: #426db2;
   color: #fff;
-  padding: 15px 0;
+  padding: 2.14285714px;
   margin-bottom: 15px;
 }
 .btn-checkout:focus,
 .btn-checkout:active,
 .btn-checkout:hover {
   color: #fff;
+}
+.btn-checkout__item {
+  display: block;
+  padding: 7.5px 0;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #fff;
 }
 .btn-go-back {
   background: #000;
