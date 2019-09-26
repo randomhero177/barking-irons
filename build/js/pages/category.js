@@ -52,10 +52,11 @@ $(window).load(function () {
               e.preventDefault();
               let curId = e.currentTarget.dataset.variantId;
               let confirm = new ConfirmPopup({
-                title: 'Are you sure you want to add this item to your cart?',
+                title: 'ADD THIS ITEM TO CART?',
                 text: ' ',
-                proceedText: 'Yes, Add to my Cart',
+                proceedText: 'YES',
                 cancelText: 'No, Cancel',
+                isOnlyProceed: true,
                 cbProceed: function () {
                   sendAjaxRequest(null, '/cart/add.js', {
                     quantity: 1,
