@@ -1004,6 +1004,7 @@ section {
   width: 100%;
   text-align: center;
   border: 2px solid #fff;
+  color: #fff;
 }
 .btn-go-back {
   background: #000;
@@ -2328,6 +2329,9 @@ section {
 }
 .confirm__title {
   margin-top: 0;
+  text-align: center;
+  font-size: 21.25px;
+  font-weight: 600;
 }
 .confirm__alert {
   border-radius: 3px;
@@ -2344,12 +2348,11 @@ section {
 .confirm__buttons {
   padding-top: 20px;
   margin-top: 20px;
-  border-top: 1px solid 3px;
-  text-align: right;
+  text-align: center;
 }
 .confirm__btn {
-  border-radius: 5px;
-  font-size: 17px;
+  font-size: 19.55px;
+  padding: 15px 30px;
 }
 .confirm__btn + .confirm__btn {
   margin-left: 10px;
