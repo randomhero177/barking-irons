@@ -7,7 +7,12 @@
     color: #fff;
     padding: @pad/7;
     margin-bottom: @pad;
-
+    & a {
+      &:focus, &:active, &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
     &:focus, &:active, &:hover {
       color: #fff;
     }

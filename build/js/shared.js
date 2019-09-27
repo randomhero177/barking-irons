@@ -30,7 +30,8 @@ let ConfirmPopup = function (options) {
     classText: 'confirm__text',
     classButtons: 'confirm__buttons',
     classCancel: 'confirm__btn-cancel',
-    classProceed: 'confirm__btn-proceed'
+    classProceed: 'confirm__btn-proceed',
+    classClose: 'confirm__btn-close'
   }
 
   let confirm = this;
@@ -58,12 +59,16 @@ let ConfirmPopup = function (options) {
     let titleElem = document.createElement('h3');
     let textElem = document.createElement('p');
     let buttonsElem = document.createElement('div');
+    let closeElem = document.createElement('span');
 
     blockElem.classList.add(c.classBlock);
     innerElem.classList.add(c.classInner);
     titleElem.classList.add(c.classTitle);
     textElem.classList.add(c.classText);
     buttonsElem.classList.add(c.classButtons);
+    closeElem.classList.add(c.classClose, 'glyphicon', 'glyphicon-remove');
+
+    closeElem.addEventListener('click', confirm.close);
 
     textElem.innerHTML = opts.text;
     titleElem.textContent = opts.title;
@@ -79,6 +84,7 @@ let ConfirmPopup = function (options) {
     }
     innerElem.appendChild(textElem);
     innerElem.appendChild(buttonsElem);
+    innerElem.appendChild(closeElem);
 
     blockElem.appendChild(innerElem);
 
@@ -162,80 +168,80 @@ let ConfirmPopup = function (options) {
  * @param {string} message - text to be shown in notice
  * @param {string} type - bootstrap style of alert decoration
  */
-let PanelNotice = function (message, type) {
+ let PanelNotice = function (message, type) {
 
-  if (typeof message === 'undefined') {
-    throw 'To create notice, you must provide text description';
-  }
+   if (typeof message === 'undefined') {
+     throw 'To create notice, you must provide text description';
+   }
 
-  let n = this;
-  let c = {
-    blockClass: 'notices',
-    elemClass: 'notices__item',
-    elemClassActive: 'notices__item--active',
-    elemClassHidden: 'notices__item--hidden',
-    elemCloseClass: 'notices__item-close',
-    timeout: 7000 // 7 seconds
-  }
-  this.interval = false;
+   let n = this;
+   let c = {
+     blockClass: 'notices',
+     elemClass: 'notices__item',
+     elemClassActive: 'notices__item--active',
+     elemClassHidden: 'notices__item--hidden',
+     elemCloseClass: 'notices__item-close',
+     timeout: 7000 // 7 seconds
+   }
+   this.interval = false;
 
-  this.showNotice = function () {
-    let existingBlock = document.querySelector('.' + c.blockClass);
-    let isBlockAlreadyCreated = existingBlock !== null;
-    let resultBlock = (isBlockAlreadyCreated) ? existingBlock : createBlock();
-    let notice = createNotice(resultBlock);
+   this.showNotice = function () {
+     let existingBlock = document.querySelector('.' + c.blockClass);
+     let isBlockAlreadyCreated = existingBlock !== null;
+     let resultBlock = (isBlockAlreadyCreated) ? existingBlock : createBlock();
+     let notice = createNotice(resultBlock);
 
-    if (!isBlockAlreadyCreated) {
-      document.body.appendChild(resultBlock);
-    }
+     if (!isBlockAlreadyCreated) {
+       document.body.appendChild(resultBlock);
+     }
 
-    resultBlock.appendChild(notice);
+     resultBlock.appendChild(notice);
 
-    setTimeout(function () {
-      notice.classList.add(c.elemClassActive);
-    }, 200);
+     setTimeout(function () {
+       notice.classList.add(c.elemClassActive);
+     }, 200);
 
-    n.interval = setTimeout(function () {
-      n.removeNotice(notice, resultBlock);
-    }, c.timeout);
-  };
-  this.removeNotice = function (item, parentBlock) {
-    item.classList.add(c.elemClassHidden);
-    setTimeout(function () {
-      if (item) {
-        parentBlock.removeChild(item);
-      }
-    }, 400);
-    clearTimeout(n.interval);
-  };
+     n.interval = setTimeout(function () {
+       n.removeNotice(notice, resultBlock);
+     }, c.timeout);
+   };
+   this.removeNotice = function (item, parentBlock) {
+     item.classList.add(c.elemClassHidden);
+     setTimeout(function () {
+       if (item) {
+         parentBlock.removeChild(item);
+       }
+     }, 400);
+     clearTimeout(n.interval);
+   };
 
-  function createBlock() {
-    let block = document.createElement('div');
-    block.classList.add(c.blockClass);
-    return block;
-  }
-  function createNotice(parentBlock) {
-    let notice = document.createElement('div');
-    let close = document.createElement('button');
-    let noticeType = (typeof type !== 'undefined') ? type : 'warning';
+   function createBlock() {
+     let block = document.createElement('div');
+     block.classList.add(c.blockClass);
+     return block;
+   }
+   function createNotice(parentBlock) {
+     let notice = document.createElement('div');
+     let close = document.createElement('button');
+     let noticeType = (typeof type !== 'undefined') ? type : 'warning';
 
-    notice.className = 'notices__item alert alert-dissmissable';
-    notice.classList.add('alert-' + noticeType);
-    notice.innerHTML = message;
+     notice.className = 'notices__item alert alert-dissmissable';
+     notice.classList.add('alert-' + noticeType);
+     notice.innerHTML = message;
 
-    close.className = 'notices__item-close close';
-    close.innerHTML = '&times;';
+     close.className = 'notices__item-close close';
+     close.innerHTML = '&times;';
 
-    notice.appendChild(close);
-    close.addEventListener('click', function () {
-      n.removeNotice(notice, parentBlock);
-    });
+     notice.appendChild(close);
+     close.addEventListener('click', function () {
+       n.removeNotice(notice, parentBlock);
+     });
 
-    return notice;
-  }
+     return notice;
+   }
 
-  n.showNotice();
-};
+   n.showNotice();
+ };
 
 function getProductInfo(handle, cbSuccess){
   let url = '/products/' + handle + '.js';

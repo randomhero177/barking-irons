@@ -993,6 +993,12 @@ section {
   padding: 2.14285714px;
   margin-bottom: 15px;
 }
+.btn-checkout a:focus,
+.btn-checkout a:active,
+.btn-checkout a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 .btn-checkout:focus,
 .btn-checkout:active,
 .btn-checkout:hover {
@@ -2356,6 +2362,12 @@ section {
 }
 .confirm__btn + .confirm__btn {
   margin-left: 10px;
+}
+.confirm__btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 /****** NOTIFICATION STYLES *****/
 .notification__info {
