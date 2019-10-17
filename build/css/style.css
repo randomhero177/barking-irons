@@ -1920,6 +1920,18 @@ section {
   margin-bottom: -7.5px;
   position: relative;
 }
+.instagram__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.instagram__item {
+  width: 50%;
+}
+@media (min-width: 992px) {
+  .instagram__item {
+    width: 25%;
+  }
+}
 .instagram__text {
   width: 100%;
   display: block;

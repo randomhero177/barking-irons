@@ -2,6 +2,18 @@
   margin-bottom: -@pad/2;
   position: relative;
 
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+      width: 50%;
+      @media @screen-desktop {
+        width: 25%;
+      }
+  }
+
   &__text {
   	width: 100%;
   	display: block;
