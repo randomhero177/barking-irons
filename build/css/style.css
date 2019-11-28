@@ -1936,6 +1936,7 @@ section {
   width: 100%;
   display: block;
   position: absolute;
+  z-index: 6;
   text-align: center;
   color: #fff;
   top: 50%;

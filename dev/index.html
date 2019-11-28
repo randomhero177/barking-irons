@@ -11,6 +11,20 @@
       <a href="#" class="footer__menu-link hidden" data-modal="show" data-modal-id="signup-block">Subscribe</a>
   	</div>
   	<script src="js/pages/index.js"></script>
-  	 
+
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  	 <button id="open-popup">Subscribe to our mailing list</button>
+     <script>
+      function showMailingPopUp() {
+
+          sendAjaxRequest(null, 'https://mc.us19.list-manage.com/subscribe/form-post-json?u=71b26b9004046acb7f5779352&id=789a242c92&popup=true&EMAIL=crazy_rock%40mail.ru&b_71b26b9004046acb7f5779352_789a242c92=&c=dojo_request_script_callbacks.dojo_request_script1',
+          null, hui, null, 'GET');
+      };
+      function hui(data) {
+        console.log(data);
+      }
+
+      document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+    </script>
   </body>
 </html>
