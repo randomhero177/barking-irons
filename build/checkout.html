@@ -260,6 +260,11 @@
     			<div class="main-menu__right  col-xs-5 col-sm-6 col-md-3">
     				<div class="main-menu__list main-menu__list--about">
     					<div class="main-menu__item hidden-sm hidden-xs"><a href="about.html" class="main-menu__link">About</a></div>
+    					<div class="main-menu__item">
+    						<span class="main-menu__subscribe"  data-modal="show" data-modal-id="signup-newsletter">
+    							<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/email-icon.png?412" alt="search" class="main-menu__icon">
+    						</span>
+    					</div>
     					<div class="main-menu__item main-menu__item--search">
     						<a href="#" class="main-menu__search">
     							<img src="https://cdn.shopify.com/s/files/1/0021/7448/4547/files/search.png?7967595314032897309" alt="search" class="main-menu__icon">
@@ -579,7 +584,7 @@
     				<nav class="footer__menu footer__menu--end">
     					<ul class="footer__menu-list  hidden-sm hidden-xs">
     						<li class="footer__menu-item">
-    							<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="signup-block">Sign up</a>
+    							<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="signup-newsletter">Sign up</a>
     						</li>
     						<li class="footer__menu-item">
     							<a href="#" class="footer__menu-link" data-modal="show" data-modal-id="footer-sizing">Sizing</a>
@@ -853,25 +858,23 @@
     	  </div>
     	</div>
     </div>
-    <script src="js/require.js"></script>
     <script src="js/global/owl.carousel.min.js"></script>
     <script src="js/global/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/shared.js"></script>
-    <div class="modal-block modal-block--darken" id="signup-block">
+    <div class="modal-block modal-block--darken" id="signup-newsletter">
     	<div class="container modal-block__container">
     	  <div class="modal-block__innner modal-block__innner--smpd">
     	  	<div class="popup">
     				<div class="popup__header">
     					<h4 class="popup__header-title text-big">JOIN UP</h4>
-    					<p class="popup__header-txt text-regular">Get all our updates and an<br> additional 10% off your order</p>
+    					<p class="popup__header-txt text-regular">GET ALL OUR UPDATES AND ADDITIONAL BONUSES</p>
     				</div>
-    				<form class="popup__form" action="" method="post">
-    					<input type="text" class="popup__form-inp" name="" value="" placeholder="Email">
+    				<form class="popup__form" action="" method="post" id="signup-form">
+    					<input type="email" class="popup__form-inp" name="signup-email" value="" placeholder="Email" required>
     					<div class="popup__btn-wrap">
     						<button type="submit" name="button" class="popup__btn">SUBMIT</button>
     					</div>
-    
     				</form>
     		  </div>
     		  <span class="modal-block__button modal-block__button--close" data-modal="close"></span>

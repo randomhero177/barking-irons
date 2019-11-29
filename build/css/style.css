@@ -1160,6 +1160,7 @@ section {
 @media (min-width: 1200px) {
   .main-menu__item--search {
     padding-right: 33.75px;
+    padding-left: 3px;
   }
 }
 .main-menu__bag {
@@ -1188,6 +1189,11 @@ section {
   width: 35px;
   display: block;
   padding-left: 12px;
+}
+.main-menu__subscribe {
+  width: 30px;
+  display: block;
+  cursor: pointer;
 }
 .main-menu__logo {
   position: relative;
@@ -1930,6 +1936,17 @@ section {
 @media (min-width: 992px) {
   .instagram__item {
     width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .instagram .instafeed-container {
+    width: 50%!important;
+    min-height: 150px;
+  }
+}
+@media (max-width:479px) {
+  .instagram .instafeed-container {
+    width: 100%!important;
   }
 }
 .instagram__text {

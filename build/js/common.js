@@ -113,8 +113,29 @@ $(document).ready(function() {
   $('.header a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
   $('.footer a[href^="http"]').not('a[href^="'+$(location).attr('hostname')+'"]').attr('target', '_blank');
 
+  function signUp(){
+    let block = document.getElementById('signup-newsletter');
+    let form = document.getElementById('signup-form');
+    let emailField = form.querySelector('[name="signup-email"]')
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      block.click();
+      sendSignUpForm(emailField.value);
+    })
 
 
+    function sendSignUpForm(emailQuery) {
+      let mailChimpUrl = 'https://mc.us19.list-manage.com/subscribe/form-post-json?u=71b26b9004046acb7f5779352&id=789a242c92&popup=true&EMAIL=' + emailQuery +'&b_71b26b9004046acb7f5779352_789a242c92=&c=dojo_request_script_callbacks.dojo_request_script1';
+
+      let notice = new PanelNotice('Thanks for subscribing! Please checkout your email', 'success');
+      sendAjaxRequest('#signup-newsletter', mailChimpUrl, null, getResponse, null, 'GET');
+    };
+
+    function getResponse() {
+      console.log(data);
+    };
+  };
+  signUp();
 });
 
 var resources = {
